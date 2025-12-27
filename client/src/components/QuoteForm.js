@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
+import ReactGA from 'react-ga4';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuoteForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -21,8 +24,67 @@ const QuoteForm = () => {
 
   // Validation function
   const validateStep = (step) => {
-    // Implement validation logic here
-    return true;
+    const newErrors = { ...errors };
+    let isValid = true;
+
+    if (step === 1) {
+      if (!formData.home_type) {
+        newErrors.step1 = 'Please select whether this is for your own home or a rental property.';
+        isValid = false;
+      } else {
+        delete newErrors.step1;
+      }
+    } else if (step === 2) {
+      if (!formData.property_type) {
+        newErrors.step2 = 'Please select your property type.';
+        isValid = false;
+      } else {
+        delete newErrors.step2;
+      }
+    } else if (step === 3) {
+      if (!formData.bedrooms) {
+        newErrors.step3 = 'Please select the number of bedrooms.';
+        isValid = false;
+      } else {
+        delete newErrors.step3;
+      }
+    } else if (step === 4) {
+      if (!formData.bathrooms) {
+        newErrors.step4 = 'Please select the number of bathrooms.';
+        isValid = false;
+      } else {
+        delete newErrors.step4;
+      }
+      if (!formData.occupants) {
+        newErrors.step4_occupants = 'Please select the number of occupants.';
+        isValid = false;
+      } else {
+        delete newErrors.step4_occupants;
+      }
+    } else if (step === 14) {
+      if (!formData.name || formData.name.trim() === '') {
+        newErrors.step14_name = 'Please enter your full name.';
+        isValid = false;
+      } else {
+        delete newErrors.step14_name;
+      }
+      if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        newErrors.step14_email = 'Please enter a valid email address.';
+        isValid = false;
+      } else {
+        delete newErrors.step14_email;
+      }
+    } else if (step === 15) {
+      if (!formData.boiler_option) {
+        newErrors.step15 = 'Please select a boiler option before proceeding.';
+        isValid = false;
+      } else {
+        delete newErrors.step15;
+      }
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   // Next step
@@ -43,11 +105,14 @@ const QuoteForm = () => {
     if (validateStep(currentStep)) {
       setLoading(true);
       try {
-        const dataToSubmit = { ...formData, price };
+        const dataToSubmit = { name: formData.name, email: formData.email, boilerType: formData.boiler_option, propertySize: formData.property_type };
         await axios.post('/contact', dataToSubmit);
         setCompleted(true);
+        toast.success('Quote submitted successfully! We will contact you soon.');
+        ReactGA.event({ category: 'Form', action: 'Submit', label: 'Quote Form' });
       } catch (error) {
         console.error('Submission error:', error);
+        toast.error('Failed to submit quote. Please try again.');
       } finally {
         setLoading(false);
       }
@@ -744,7 +809,7 @@ const QuoteForm = () => {
                 <p style={{ color: '#64748b', marginBottom: '16px', textAlign: 'center' }}>
                   We need to understand your situation to provide the right advice and comply with Building Regulations.
                 </p>
-                <label>Are you installing for your own home or a rental property?</label>
+                <label>Are you installing for your own home or a rental property? *</label>
                 <div aria-labelledby="home-type-label" className="radio-group" role="radiogroup">
                   <label className="radio-card">
                     <input aria-describedby="error-step1" name="home_type" type="radio" value="own_home" onChange={handleChange} />
@@ -759,7 +824,7 @@ const QuoteForm = () => {
                     <small>Investment property installation</small>
                   </label>
                 </div>
-                <div className="error" id="error-step1" role="alert">Please select whether this is for your own home or a rental property.</div>
+                {errors.step1 && <div className="error" id="error-step1" role="alert">{errors.step1}</div>}
                 <button type="button" onClick={() => nextStep(2)}>Next: Property Type →</button>
               </div>
             )}
@@ -768,7 +833,7 @@ const QuoteForm = () => {
             {currentStep === 2 && (
               <div className="form-step active" id="step2">
                 <h2>🏠 Property Type</h2>
-                <label>What type of property is it?</label>
+                <label>What type of property is it? *</label>
                 <div aria-labelledby="property-type-label" className="radio-group" role="radiogroup">
                   <label className="radio-card">
                     <input aria-describedby="error-step2" name="property_type" type="radio" value="flat" onChange={handleChange} />
@@ -795,7 +860,7 @@ const QuoteForm = () => {
                     <small>Standalone property</small>
                   </label>
                 </div>
-                <div className="error" id="error-step2" role="alert">Please select your property type.</div>
+                {errors.step2 && <div className="error" id="error-step2" role="alert">{errors.step2}</div>}
                 <button type="button" onClick={() => prevStep(1)}>← Previous</button>
                 <button type="button" onClick={() => nextStep(3)}>Next Step →</button>
               </div>
@@ -805,7 +870,7 @@ const QuoteForm = () => {
             {currentStep === 3 && (
               <div className="form-step active" id="step3">
                 <h2>🛏️ Number of Bedrooms</h2>
-                <label>How many bedrooms does your property have?</label>
+                <label>How many bedrooms does your property have? *</label>
                 <div aria-labelledby="bedrooms-label" className="radio-group" role="radiogroup">
                   <label className="radio-card">
                     <input aria-describedby="error-step3" name="bedrooms" type="radio" value="1" onChange={handleChange} />
@@ -832,7 +897,7 @@ const QuoteForm = () => {
                     <small>Large family home</small>
                   </label>
                 </div>
-                <div className="error" id="error-step3" role="alert">Please select the number of bedrooms.</div>
+                {errors.step3 && <div className="error" id="error-step3" role="alert">{errors.step3}</div>}
                 <button type="button" onClick={() => prevStep(2)}>← Previous</button>
                 <button type="button" onClick={() => nextStep(4)}>Next Step →</button>
               </div>
@@ -842,7 +907,7 @@ const QuoteForm = () => {
             {currentStep === 4 && (
               <div className="form-step active" id="step4">
                 <h2>🚿 Number of Bathrooms</h2>
-                <label>How many bathrooms and WCs do you have?</label>
+                <label>How many bathrooms and WCs do you have? *</label>
                 <div aria-labelledby="bathrooms-label" className="radio-group" role="radiogroup">
                   <label className="radio-card">
                     <input aria-describedby="error-step4" name="bathrooms" type="radio" value="1" onChange={handleChange} />
@@ -869,8 +934,8 @@ const QuoteForm = () => {
                     <small>Multiple bathrooms</small>
                   </label>
                 </div>
-                <div className="error" id="error-step4" role="alert">Please select the number of bathrooms.</div>
-                <label>How many people live in the house?</label>
+                {errors.step4 && <div className="error" id="error-step4" role="alert">{errors.step4}</div>}
+                <label>How many people live in the house? *</label>
                 <div aria-labelledby="occupants-label" className="radio-group" role="radiogroup">
                   <label className="radio-card">
                     <input aria-describedby="error-step4-occupants" name="occupants" type="radio" value="1-2" onChange={handleChange} />
@@ -891,7 +956,7 @@ const QuoteForm = () => {
                     <small>Large household</small>
                   </label>
                 </div>
-                <div className="error" id="error-step4-occupants" role="alert">Please select the number of occupants.</div>
+                {errors.step4_occupants && <div className="error" id="error-step4-occupants" role="alert">{errors.step4_occupants}</div>}
                 <button type="button" onClick={() => prevStep(3)}>← Previous</button>
                 <button type="button" onClick={() => nextStep(5)}>Next Step →</button>
               </div>
@@ -910,9 +975,9 @@ const QuoteForm = () => {
                     <p style={{ fontSize: '18px', color: '#64748b' }}>Note: Eligible for £7,500 Boiler Upgrade Scheme grant.</p>
                   </div>
                 </div>
-                <label>Select Your Preferred Boiler Option:</label>
+                <label>Select Your Preferred Boiler Option: *</label>
                 {/* Boiler options carousel would go here */}
-                <div className="error" id="error-step15" role="alert">Please select a boiler option before proceeding.</div>
+                {errors.step15 && <div className="error" id="error-step15" role="alert">{errors.step15}</div>}
                 <button className="pay-button" disabled id="pay-button" type="button">
                   Secure Payment - Pay Now
                 </button>
@@ -1279,6 +1344,7 @@ const QuoteForm = () => {
           /* Add more styles as needed */
         `}
       </style>
+      <ToastContainer />
     </>
   );
 };
