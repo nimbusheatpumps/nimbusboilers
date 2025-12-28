@@ -4,56 +4,42 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Audrey Lal',
-      text: 'Very happy with the gas boiler installation in Scunthorpe. Professional team, highly recommend!',
-      stars: 5,
-      date: '2024-12-25'
+      text: 'positive note',
+      stars: 5
     },
     {
       name: 'Dean Bonner',
-      text: 'Excellent service with gas boiler repair carried out, would definitely use again in North Lincolnshire.',
-      stars: 5,
-      date: '2024-12-22'
-    },
-    {
-      name: 'Sarah Thompson',
-      text: 'Outstanding gas boiler service in Scunthorpe. Prompt response and excellent workmanship. Highly recommend for gas boiler service Scunthorpe!',
-      stars: 5,
-      date: '2024-12-20'
-    },
-    {
-      name: 'Mike Patel',
-      text: 'Gas boiler installation Scunthorpe was flawless. Competitive pricing, Gas Safe registered, reliable service from Nimbus Boilers.',
-      stars: 5,
-      date: '2024-12-18'
-    },
-    {
-      name: 'Lisa Green',
-      text: 'Best gas boiler repair in North Lincolnshire. Friendly engineers fixed the issue quickly and efficiently. 5 stars!',
-      stars: 5,
-      date: '2024-12-15'
-    },
+      text: 'Excellent service with work carried out would defo use again',
+      stars: 5
+    }
   ];
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AggregateReview",
-    "itemReviewed": {
-      "@type": "LocalBusiness",
-      "name": "Nimbus Boilers",
-      "address": {
-        "addressLocality": "Scunthorpe",
-        "addressRegion": "North Lincolnshire"
-      }
+    "@type": "LocalBusiness",
+    "name": "Nimbus Boilers & Heat Pumps",
+    "description": "gas boiler installation Scunthorpe, gas boiler repair North Lincolnshire, gas boiler service Scunthorpe",
+    "address": {
+      "addressLocality": "Scunthorpe",
+      "addressRegion": "North Lincolnshire"
     },
-    "ratingValue": 4.9,
-    "reviewCount": 123,
-    "reviews": testimonials.map((t) => ({
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2"
+    },
+    "review": testimonials.map((t) => ({
       "@type": "Review",
       "author": {
+        "@type": "Person",
         "name": t.name
       },
       "reviewBody": t.text,
-      "reviewRating": 5
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
     }))
   };
 
@@ -85,9 +71,11 @@ const Testimonials = () => {
                 <h3 className="font-bold text-xl md:text-2xl text-gray-900">
                   {testimonial.name}
                 </h3>
-                <time className="text-sm text-gray-500 font-medium" dateTime={testimonial.date.replace(/ /g, 'T00:00:00')}>
-                  {testimonial.date}
-                </time>
+                {testimonial.date && (
+                  <time className="text-sm text-gray-500 font-medium" dateTime={testimonial.date.replace(/ /g, 'T00:00:00')}>
+                    {testimonial.date}
+                  </time>
+                )}
               </div>
             </div>
           ))}

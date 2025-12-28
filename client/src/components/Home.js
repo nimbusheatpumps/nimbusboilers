@@ -1046,48 +1046,7 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="testimonials-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">What Our Customers Say</h2>
-            <div className="testimonials-carousel-wrapper">
-              <div className="testimonials-carousel">
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Brilliant bloke. Always explains everything. Tries to save us money, genuine and caring. Definitely looks after us. Would highly recommend. Top service." - Sharon Rhodes, Scunthorpe (Facebook Post Comment)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Thanks Brian for your help, it was amazing how you sorted all out while we were away. I love that you polish the copper pipes when you finish. Jaja" - Manuel (Google Review)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Can't thank Brian enough he really goes above and beyond. Would recommend everytime ." - Audrey Lal (Google Review)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Excellent service with work carried out would defo use again" - Dean Bonner (Google Review)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Brilliant bloke. Always explains everything. Tries to save us money, genuine and caring. Definitely looks after us. Would highly recommend. Top service." - Sharon Rhodes (Facebook Post Comment)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Thanks Brian for your help, it was amazing how you sorted all out while we were away. I love that you polish the copper pipes when you finish. Jaja" - Manuel (Google Review)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Can't thank Brian enough he really goes above and beyond. Would recommend everytime ." - Audrey Lal (Google Review)</p>
-                </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p style={{whiteSpace: 'normal'}}>"Excellent service with work carried out would defo use again" - Dean Bonner (Google Review)</p>
-                </div>
-              </div>
-            </div>
-            <div className="section-cta-group section-cta-group--spaced" style={{marginTop: '10px'}}>
-              <a href="https://share.google/yk7F28G9VpVstANKx" target="_blank" rel="noopener noreferrer" className="cta-button cta-button--nowrap" aria-label="Read all Nimbus Boilers & Heat Pumps reviews on Google">
-                Read all Google reviews
-              </a>
-            </div>
+            <Testimonials />
           </div>
         </section>
         {/* FAQs Section */}

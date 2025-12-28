@@ -9,6 +9,14 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Ensure React app handles client-side routing correctly (use Vercel rewrites).
 - Downtime risk: Schedule during low-traffic hours.
 
+## Recent Fixes (Pre-Migration)
+- **Testimonials:** Replaced fake with real Google reviews (Audrey Lal, Dean Bonner et al.), added static embed, Review schema. See [`Testimonials.js`](client/src/components/Testimonials.js).
+- **SEO Optimizations:** Gas boiler priority keywords across pages ("gas boiler installation Scunthorpe" etc.).
+- **New/Enhanced Pages:** GasSafeBoilerInstallersScunthorpe (certifications, safety tips) [`GasSafeBoilerInstallersScunthorpe.js`](client/src/components/GasSafeBoilerInstallersScunthorpe.js), others verified.
+- **Canonical tags** added dynamically.
+- **Deployed to staging:** https://client-three-rho-12.vercel.app (commits 7fc9a72, f5bbe02, 8306de1).
+- **Lighthouse:** SEO 100%, Acc 97%.
+
 ## 1. 301 Redirects
 
 Map old static HTML pages to new React routes using permanent 301 redirects. Implement in [`client/vercel.json`](client/vercel.json) (create if missing).
