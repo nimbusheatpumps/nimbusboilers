@@ -24,17 +24,16 @@ Map old static HTML pages to new React routes using permanent 301 redirects. Imp
 |---------|---------|-------|
 | `/Homepage.html` | `/` | Homepage |
 | `/BoilerInstantQuote.html` | `/quote` | Instant quote form ([`QuoteForm.js`](client/src/components/QuoteForm.js)) |
-| `/AreasCovered.html` | `/areas-covered` | Areas served ([`AreasCovered.js`](client/src/components/AreasCovered.js)) |
+| `/AreasCovered.html` | `/areas` | Areas served ([`AreasCovered.js`](client/src/components/AreasCovered.js)) |
 | `/HeatPumpFAQ.html` | `/faq` | FAQ section ([`FAQ.js`](client/src/components/FAQ.js)) |
 | `/HeaderSchema.html` | `/` | Schema markup (redirect to home) |
-
 ### vercel.json Example
 ```json
 {
   "redirects": [
     { "source": "/Homepage.html", "destination": "/", "permanent": true },
     { "source": "/BoilerInstantQuote.html", "destination": "/quote", "permanent": true },
-    { "source": "/AreasCovered.html", "destination": "/areas-covered", "permanent": true },
+    { "source": "/AreasCovered.html", "destination": "/areas", "permanent": true },
     { "source": "/HeatPumpFAQ.html", "destination": "/faq", "permanent": true },
     { "source": "/HeaderSchema.html", "destination": "/", "permanent": true }
   ],

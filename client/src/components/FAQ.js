@@ -631,12 +631,24 @@ const FAQ = () => {
           <div className="faq-accordion" style={{maxWidth: '800px', margin: '0 auto', border: 'none', overflow: 'hidden', boxShadow: 'none'}}>
             {faqData.map((faq, index) => (
               <div key={index} className="faq-item" style={{marginBottom: '20px', border: '2px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', overflow: 'hidden'}}>
-                <div className="faq-question" onClick={() => toggleItem(index)} style={{background: '#ffffff', padding: '15px 20px', cursor: 'pointer', position: 'relative', fontWeight: '600', color: '#1a1a1a', transition: 'background 0.3s ease, color 0.3s ease, border-color 0.3s ease', textAlign: 'left'}}>
+                <button
+                  type="button"
+                  className="faq-question"
+                  aria-expanded={openItems[index]}
+                  aria-controls={`faq-answer-${index}`}
+                  onClick={() => toggleItem(index)}
+                  style={{background: '#ffffff', padding: '15px 20px', cursor: 'pointer', position: 'relative', fontWeight: '600', color: '#1a1a1a', transition: 'background 0.3s ease, color 0.3s ease, border-color 0.3s ease', textAlign: 'left', width: '100%', display: 'block', border: 'none', fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit'}}
+                >
                   {faq.question}
                   <span style={{position: 'absolute', right: '20px', fontSize: '20px', transition: 'transform 0.3s ease'}}>{openItems[index] ? '-' : '+'}</span>
-                </div>
+                </button>
                 {openItems[index] && (
-                  <div className="faq-answer" style={{padding: '15px 20px', background: '#ffffff', textAlign: 'left', color: '#4a5568'}} dangerouslySetInnerHTML={{__html: faq.answer}} />
+                  <div
+                    id={`faq-answer-${index}`}
+                    className="faq-answer"
+                    style={{padding: '15px 20px', background: '#ffffff', textAlign: 'left', color: '#4a5568'}}
+                    dangerouslySetInnerHTML={{__html: faq.answer}}
+                  />
                 )}
               </div>
             ))}

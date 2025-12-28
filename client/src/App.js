@@ -40,7 +40,7 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips';
 
   return (
     <>
@@ -63,6 +63,7 @@ function AppContent() {
           <Route path="/gas-boiler-service-scunthorpe" element={<GasBoilerServiceScunthorpe />} />
           <Route path="/gas-boiler-installation-scunthorpe" element={<GasBoilerInstallationScunthorpe />} />
           <Route path="/gas-boiler-service-north-lincolnshire" element={<GasBoilerServiceNorthLincolnshire />} />
+          <Route path="/gas-boiler-repair-scunthorpe" element={<BoilerRepairScunthorpe />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/boiler-maintenance-tips" element={<BoilerMaintenanceTips />} />

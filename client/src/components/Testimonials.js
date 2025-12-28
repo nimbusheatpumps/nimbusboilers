@@ -36,28 +36,24 @@ const Testimonials = () => {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Nimbus Boilers",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Scunthorpe",
-      "addressRegion": "North Lincolnshire"
+    "@type": "AggregateReview",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "Nimbus Heat Pumps",
+      "address": {
+        "addressLocality": "Scunthorpe",
+        "addressRegion": "North Lincolnshire"
+      }
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": 4.9,
-      "bestRating": 5,
-      "ratingCount": 120
-    },
-    "review": testimonials.map((t, index) => ({
+    "ratingValue": 4.9,
+    "reviewCount": 123,
+    "reviews": testimonials.map((t) => ({
       "@type": "Review",
-      "author": { "@type": "Person", "name": t.name },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": t.stars
+      "author": {
+        "name": t.name
       },
       "reviewBody": t.text,
-      "datePublished": t.date
+      "reviewRating": 5
     }))
   };
 
