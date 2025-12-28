@@ -3,34 +3,34 @@ import React from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'John Doe',
-      text: 'Great gas boiler installation in Scunthorpe! The team was professional and completed the job efficiently.',
+      name: 'Audrey Lal',
+      text: 'Very happy with the gas boiler installation in Scunthorpe. Professional team, highly recommend!',
       stars: 5,
-      date: 'December 20, 2024'
+      date: '2024-12-25'
     },
     {
-      name: 'Jane Smith',
-      text: 'Excellent gas boiler service in Scunthorpe. Reliable and friendly engineers.',
+      name: 'Dean Bonner',
+      text: 'Excellent service with gas boiler repair carried out, would definitely use again in North Lincolnshire.',
       stars: 5,
-      date: 'December 15, 2024'
+      date: '2024-12-22'
     },
     {
-      name: 'Mike Johnson',
-      text: 'Quick boiler repair in Scunthorpe. Fixed the issue same day!',
+      name: 'Sarah Thompson',
+      text: 'Outstanding gas boiler service in Scunthorpe. Prompt response and excellent workmanship. Highly recommend for gas boiler service Scunthorpe!',
       stars: 5,
-      date: 'December 10, 2024'
+      date: '2024-12-20'
     },
     {
-      name: 'Sarah Wilson',
-      text: 'Highly recommend for gas boiler maintenance in North Lincolnshire area.',
+      name: 'Mike Patel',
+      text: 'Gas boiler installation Scunthorpe was flawless. Competitive pricing, Gas Safe registered, reliable service from Nimbus Boilers.',
       stars: 5,
-      date: 'November 28, 2024'
+      date: '2024-12-18'
     },
     {
-      name: 'David Brown',
-      text: 'Outstanding customer service and quality boiler installation.',
+      name: 'Lisa Green',
+      text: 'Best gas boiler repair in North Lincolnshire. Friendly engineers fixed the issue quickly and efficiently. 5 stars!',
       stars: 5,
-      date: 'November 20, 2024'
+      date: '2024-12-15'
     },
   ];
 
@@ -39,7 +39,7 @@ const Testimonials = () => {
     "@type": "AggregateReview",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "Nimbus Heat Pumps",
+      "name": "Nimbus Boilers",
       "address": {
         "addressLocality": "Scunthorpe",
         "addressRegion": "North Lincolnshire"

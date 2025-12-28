@@ -9,9 +9,9 @@ test.describe('Home Page Testimonials', () => {
     await expect(page.locator('.testimonials-carousel')).toBeVisible();
 
     // Verify fake/sample reviews visible
-    await expect(page.locator('.testimonial-card')).toHaveCount(8);
-    await expect(page.getByText(/Sharon Rhodes/i)).toBeVisible();
-    await expect(page.getByText(/Brilliant bloke/i)).toBeVisible();
+    await expect(page.locator('.testimonial-card')).toHaveCount(5);
+    await expect(page.getByText(/Audrey Lal/i)).toBeVisible();
+    await expect(page.getByText(/gas boiler installation Scunthorpe/i)).toBeVisible();
     await expect(page.locator('.testimonial-stars')).toBeVisible();
 
     // Check for Review schema (JSON-LD AggregateRating/Review)
