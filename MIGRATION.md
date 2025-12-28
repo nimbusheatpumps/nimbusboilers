@@ -1,6 +1,6 @@
 # Nimbus Boilers Migration Guide
 
-This guide provides detailed, actionable steps to migrate the existing static HTML site in [`existingnimbus/`](existingnimbus/) to the new React app deployed on Vercel. The goal is to preserve SEO rankings for keywords like "boiler installation Scunthorpe" with zero loss. Staging is live at [https://client-three-rho-12.vercel.app](https://client-three-rho-12.vercel.app).
+This guide provides detailed, actionable steps to migrate the existing static HTML site in [`existingnimbus/`](existingnimbus/) to the new React app deployed on Vercel. The goal is to preserve SEO rankings for keywords like "boiler installation Scunthorpe" with zero loss. Staging is live at [https://nimbusboilers-scunthorpe.vercel.app](https://nimbusboilers-scunthorpe.vercel.app).
 
 **Warnings:**
 - Test all redirects on staging before production.
@@ -9,13 +9,30 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Ensure React app handles client-side routing correctly (use Vercel rewrites).
 - Downtime risk: Schedule during low-traffic hours.
 
-## Recent Fixes (Pre-Migration)
-- **Testimonials:** Replaced fake with real Google reviews (Audrey Lal, Dean Bonner et al.), added static embed, Review schema. See [`Testimonials.js`](client/src/components/Testimonials.js).
-- **SEO Optimizations:** Gas boiler priority keywords across pages ("gas boiler installation Scunthorpe" etc.).
-- **New/Enhanced Pages:** GasSafeBoilerInstallersScunthorpe (certifications, safety tips) [`GasSafeBoilerInstallersScunthorpe.js`](client/src/components/GasSafeBoilerInstallersScunthorpe.js), others verified.
-- **Canonical tags** added dynamically.
-- **Deployed to staging:** https://client-three-rho-12.vercel.app (commits 7fc9a72, f5bbe02, 8306de1).
-- **Lighthouse:** SEO 100%, Acc 97%.
+## Recent Fixes & Optimizations (2025-12-28)
+- Testimonials in [`Home.js`](client/src/components/Home.js)/[`Testimonials.js`](client/src/components/Testimonials.js): ONLY real Google reviews (Audrey Lal: positive note; Dean Bonner: "Excellent service..."). Review schema added.
+- SEO pages verified (priority, grants/FAQs/schema/ARIA/keywords): [`GasBoilerInstallationScunthorpe.js`](client/src/components/GasBoilerInstallationScunthorpe.js), [`GasBoilerServiceScunthorpe.js`](client/src/components/GasBoilerServiceScunthorpe.js), [`GasBoilerServiceNorthLincolnshire.js`](client/src/components/GasBoilerServiceNorthLincolnshire.js), [`BoilerRepairScunthorpe.js`](client/src/components/BoilerRepairScunthorpe.js).
+- Enhanced [`GasSafeBoilerInstallersScunthorpe.js`](client/src/components/GasSafeBoilerInstallersScunthorpe.js): certifications, safety tips, keywords.
+- Canonical tags: react-helmet-async in [`App.js`](client/src/App.js).
+- Tests: [`testimonials-home.spec.js`](client/tests/testimonials-home.spec.js), [`seo-pages.spec.js`](client/tests/seo-pages.spec.js).
+- Lighthouse local: SEO 100%, Accessibility 97%.
+- Deployed staging: [https://nimbusboilers-scunthorpe.vercel.app](https://nimbusboilers-scunthorpe.vercel.app) (Vercel preview).
+## Migration Checklist
+
+| Page/Feature | Old HTML (existingnimbus/) | New Component/Route | Status | Notes/Tests |
+|--------------|----------------------------|---------------------|--------|-------------|
+| Homepage | [`Homepage.html`](existingnimbus/Homepage.html) | [`Home.js`](client/src/components/Home.js) `/` | ✅ | Real testimonials [`testimonials-home.spec.js`](client/tests/testimonials-home.spec.js), Review schema |
+| Quote Form | [`BoilerInstantQuote.html`](existingnimbus/BoilerInstantQuote.html) | [`QuoteForm.js`](client/src/components/QuoteForm.js) `/quote` | ✅ |  |
+| Areas Covered | [`AreasCovered.html`](existingnimbus/AreasCovered.html) | [`AreasCovered.js`](client/src/components/AreasCovered.js) `/areas` | ✅ |  |
+| FAQ | [`HeatPumpFAQ.html`](existingnimbus/HeatPumpFAQ.html) | [`FAQ.js`](client/src/components/FAQ.js) `/faq` | ✅ |  |
+| Schema | [`HeaderSchema.html`](existingnimbus/HeaderSchema.html) | [`App.js`](client/src/App.js) | ✅ | Canonical tags via react-helmet-async |
+| Gas Boiler Installation Scunthorpe | N/A | [`GasBoilerInstallationScunthorpe.js`](client/src/components/GasBoilerInstallationScunthorpe.js) `/gas-boiler-installation-scunthorpe` | ✅ Verified | priority, grants/FAQs/schema/ARIA/keywords [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) |
+| Gas Boiler Service Scunthorpe | N/A | [`GasBoilerServiceScunthorpe.js`](client/src/components/GasBoilerServiceScunthorpe.js) `/gas-boiler-service-scunthorpe` | ✅ Verified |  |
+| Gas Boiler Service North Lincolnshire | N/A | [`GasBoilerServiceNorthLincolnshire.js`](client/src/components/GasBoilerServiceNorthLincolnshire.js) `/gas-boiler-service-north-lincolnshire` | ✅ Verified |  |
+| Boiler Repair Scunthorpe | N/A | [`BoilerRepairScunthorpe.js`](client/src/components/BoilerRepairScunthorpe.js) `/boiler-repair-scunthorpe` | ✅ Verified |  |
+| Gas Safe Boiler Installers Scunthorpe | N/A | [`GasSafeBoilerInstallersScunthorpe.js`](client/src/components/GasSafeBoilerInstallersScunthorpe.js) `/gas-safe-boiler-installers-scunthorpe` | ✅ Enhanced | certifications, safety tips, keywords |
+| Lighthouse Scores | N/A | Local | ✅ | SEO 100%, Accessibility 97% |
+| Staging Deploy | N/A | Vercel preview | ✅ | [https://nimbusboilers-scunthorpe.vercel.app](https://nimbusboilers-scunthorpe.vercel.app) |
 
 ## 1. 301 Redirects
 
