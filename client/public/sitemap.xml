@@ -19,10 +19,10 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://client-three-rho-12.vercel.app/areas</loc>
-    <lastmod>2025-12-26</lastmod>
+    <loc>https://client-three-rho-12.vercel.app/areas-covered</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://client-three-rho-12.vercel.app/blog</loc>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://client-three-rho-12.vercel.app/gas-boiler-service-scunthorpe</loc>
-    <lastmod>2025-12-27</lastmod>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,7 +49,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://client-three-rho-12.vercel.app/boiler-repair-scunthorpe</loc>
+    <loc>https://client-three-rho-12.vercel.app/gas-boiler-repair-scunthorpe</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
