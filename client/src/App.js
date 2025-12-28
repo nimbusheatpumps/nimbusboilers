@@ -44,7 +44,7 @@ function AppContent() {
 
   const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe';
 
-  const canonicalUrl = `https://nimbusboilers-scunthorpe.vercel.app${location.pathname}`;
+  const canonicalUrl = `https://nimbusboilers.co.uk${location.pathname}`;
 return (
   <>
 
