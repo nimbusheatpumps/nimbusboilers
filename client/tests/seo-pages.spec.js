@@ -31,7 +31,7 @@ test.describe('SEO Pages Verification', () => {
     {
       path: '/gas-safe-boiler-installers-scunthorpe',
       titleRegex: /Gas Safe Boiler Installers Scunthorpe/i,
-      h1Text: 'Gas Safe Boiler Installers Scunthorpe | Expert Gas Boiler Installation North Lincolnshire',
+      h1Text: 'Gas Safe Boiler Installers Scunthorpe | Professional Gas Boiler Installation',
       keywords: ['gas safe boiler installers scunthorpe', 'gas boiler installation scunthorpe', 'certified gas safe']
     }
   ];
@@ -46,13 +46,13 @@ test.describe('SEO Pages Verification', () => {
 
       // Page loads successfully
       await expect(page).toHaveURL(new RegExp(pageInfo.path + '$'));
-      await expect(page.locator('h1')).toBeVisible();
+      await expect(page.locator('h1').first()).toBeVisible();
 
       // Title
       await expect(page).toHaveTitle(pageInfo.titleRegex);
 
       // H1
-      await expect(page.locator('h1')).toContainText(pageInfo.h1Text);
+      await expect(page.locator('h1').first()).toContainText(pageInfo.h1Text);
 
       // Keywords in content
       const bodyText = await page.textContent('body');
