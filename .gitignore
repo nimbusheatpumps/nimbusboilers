@@ -1,1 +1,5 @@
 node_modules
+backups/
+.lighthouseci/
+lighthouse*.json
+client/test-results/

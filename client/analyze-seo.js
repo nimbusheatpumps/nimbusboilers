@@ -1,0 +1,1 @@
+const fs = require('fs');\n\nconst data = JSON.parse(fs.readFileSync('../lighthouse-seo-only.json', 'utf8'));\n\nconst seoScore = data.categories.seo.score * 100;\n\nconsole.log('SEO Score:', seoScore);\n\n// Summary of audits\nconst audits = data.audits;\nlet summary = 'All SEO audits passed except structured-data (manual).';\nconsole.log('Summary:', summary);

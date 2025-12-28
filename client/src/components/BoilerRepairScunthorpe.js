@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
-import Testimonials from './Testimonials';
 
-const Home = () => {
+const BoilerRepairScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [dropdownActive, setDropdownActive] = useState(null);
   const [faqActive, setFaqActive] = useState(null);
@@ -20,24 +19,51 @@ const Home = () => {
     setFaqActive(faqActive === index ? null : index);
   };
 
+  const faqData = [
+    {
+      question: "How much does boiler repair cost in Scunthorpe?",
+      answer: "Boiler repair costs in Scunthorpe vary depending on the issue, typically ranging from £50 to £500 for common repairs like thermostat replacement or pump fixes. Emergency call-outs may incur additional fees."
+    },
+    {
+      question: "What are common boiler problems in Scunthorpe homes?",
+      answer: "Common issues include no hot water, low pressure, strange noises, and pilot light problems. Our Gas Safe engineers diagnose and fix these quickly to restore heating."
+    },
+    {
+      question: "How long does boiler repair take in Scunthorpe?",
+      answer: "Most boiler repairs in Scunthorpe are completed within 1-2 hours, though complex issues may take longer. We aim for same-day service for urgent repairs."
+    },
+    {
+      question: "Do you offer emergency boiler repair in Scunthorpe?",
+      answer: "Yes, we provide 24/7 emergency boiler repair services in Scunthorpe and North Lincolnshire for breakdowns during cold weather."
+    },
+    {
+      question: "Is boiler installation included with repair services in Scunthorpe?",
+      answer: "While we specialize in repairs, we also offer full boiler installation services in Scunthorpe, including upgrades to energy-efficient models."
+    },
+    {
+      question: "What warranties do you offer on boiler repairs in Scunthorpe?",
+      answer: "We provide a 12-month warranty on all boiler repair work in Scunthorpe, ensuring peace of mind for our customers."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Boiler Installation Scunthorpe | Gas Boiler Repair North Lincolnshire | Nimbus Boilers & Heat Pumps</title>
-        <meta name="description" content="Gas Safe registered boiler installation, repair & service in Scunthorpe, Grimsby, Doncaster, Lincoln. Claim £7,500 Boiler Upgrade Scheme grant for air source heat pumps." />
-        <meta name="keywords" content="boiler installation Scunthorpe, boiler repair North Lincolnshire, gas boiler service Scunthorpe, air source heat pump Scunthorpe, Boiler Upgrade Scheme grants" />
+        <title>Boiler Repair Scunthorpe | Gas Boiler Service North Lincolnshire | Nimbus Boilers & Heat Pumps</title>
+        <meta name="description" content="Expert boiler repair Scunthorpe services by Gas Safe registered engineers. Fast emergency repairs, installations and servicing in Scunthorpe, Grimsby, Doncaster, Lincoln." />
+        <meta name="keywords" content="boiler repair Scunthorpe, boiler installation Scunthorpe, gas boiler service Scunthorpe, emergency boiler repair North Lincolnshire" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://nimbusheatpumps.co.uk/" />
+        <link rel="canonical" href="https://nimbusheatpumps.co.uk/boiler-repair-scunthorpe/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "@id": "https://nimbusheatpumps.co.uk/#organization",
             "name": "Nimbus Heat Pumps Ltd",
-            "alternateName": "Nimbus Heat Pumps",
+            "alternateName": "Nimbus Boilers & Heat Pumps",
             "url": "https://nimbusheatpumps.co.uk/",
             "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
-            "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
+            "description": "Gas Safe registered boiler repair and installation services in Scunthorpe and North Lincolnshire. Emergency repairs, servicing and energy-efficient upgrades.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
             "telephone": "+44 7487 546550",
             "email": "info@nimbusheatpumps.co.uk",
@@ -60,22 +86,6 @@ const Home = () => {
                 "name": "North Lincolnshire"
               },
               {
-                "@type": "State",
-                "name": "North East Lincolnshire"
-              },
-              {
-                "@type": "State",
-                "name": "Lincolnshire"
-              },
-              {
-                "@type": "State",
-                "name": "South Yorkshire"
-              },
-              {
-                "@type": "State",
-                "name": "Humberside"
-              },
-              {
                 "@type": "City",
                 "name": "Scunthorpe"
               },
@@ -90,258 +100,6 @@ const Home = () => {
               {
                 "@type": "City",
                 "name": "Lincoln"
-              },
-              {
-                "@type": "City",
-                "name": "Gainsborough"
-              },
-              {
-                "@type": "City",
-                "name": "Kirton in Lindsey"
-              },
-              {
-                "@type": "City",
-                "name": "Brigg"
-              },
-              {
-                "@type": "City",
-                "name": "Barton-Upon-Humber"
-              },
-              {
-                "@type": "City",
-                "name": "Winterton"
-              },
-              {
-                "@type": "City",
-                "name": "Cleethorpes"
-              },
-              {
-                "@type": "City",
-                "name": "Epworth"
-              },
-              {
-                "@type": "City",
-                "name": "Immingham"
-              },
-              {
-                "@type": "City",
-                "name": "Wrawby"
-              },
-              {
-                "@type": "City",
-                "name": "Barnetby"
-              },
-              {
-                "@type": "City",
-                "name": "Crowle"
-              },
-              {
-                "@type": "City",
-                "name": "Broughton"
-              },
-              {
-                "@type": "City",
-                "name": "Bottesford"
-              },
-              {
-                "@type": "City",
-                "name": "South Ferriby"
-              },
-              {
-                "@type": "City",
-                "name": "Burton-Upon-Stather"
-              },
-              {
-                "@type": "City",
-                "name": "Dragonby"
-              },
-              {
-                "@type": "City",
-                "name": "Hemswell Cliff"
-              },
-              {
-                "@type": "City",
-                "name": "Burringham"
-              },
-              {
-                "@type": "City",
-                "name": "Keadby"
-              },
-              {
-                "@type": "City",
-                "name": "Gunness"
-              },
-              {
-                "@type": "City",
-                "name": "Haxey"
-              },
-              {
-                "@type": "City",
-                "name": "New Waltham"
-              },
-              {
-                "@type": "City",
-                "name": "Waltham"
-              },
-              {
-                "@type": "City",
-                "name": "Humberston"
-              },
-              {
-                "@type": "City",
-                "name": "Healing"
-              },
-              {
-                "@type": "City",
-                "name": "Great Coates"
-              },
-              {
-                "@type": "City",
-                "name": "Market Rasen"
-              },
-              {
-                "@type": "City",
-                "name": "Sudbrooke"
-              },
-              {
-                "@type": "City",
-                "name": "Fiskerton"
-              },
-              {
-                "@type": "City",
-                "name": "Reepham"
-              },
-              {
-                "@type": "City",
-                "name": "Cherry Willingham"
-              },
-              {
-                "@type": "City",
-                "name": "Nettleham"
-              },
-              {
-                "@type": "City",
-                "name": "Welton"
-              },
-              {
-                "@type": "City",
-                "name": "Caistor"
-              },
-              {
-                "@type": "City",
-                "name": "Keelby"
-              },
-              {
-                "@type": "City",
-                "name": "Thorne"
-              },
-              {
-                "@type": "City",
-                "name": "Hatfield"
-              },
-              {
-                "@type": "City",
-                "name": "Stainforth"
-              },
-              {
-                "@type": "City",
-                "name": "Bawtry"
-              },
-              {
-                "@type": "City",
-                "name": "Askern"
-              },
-              {
-                "@type": "City",
-                "name": "Barnoldby-le-Beck"
-              },
-              {
-                "@type": "City",
-                "name": "Barton Waterside"
-              },
-              {
-                "@type": "City",
-                "name": "Belton"
-              },
-              {
-                "@type": "City",
-                "name": "Bradley"
-              },
-              {
-                "@type": "City",
-                "name": "Burton-by-Lincoln"
-              },
-              {
-                "@type": "City",
-                "name": "Canwick"
-              },
-              {
-                "@type": "City",
-                "name": "East Halton"
-              },
-              {
-                "@type": "City",
-                "name": "Flixborough"
-              },
-              {
-                "@type": "City",
-                "name": "Habrough"
-              },
-              {
-                "@type": "City",
-                "name": "Harmston"
-              },
-              {
-                "@type": "City",
-                "name": "Heighington"
-              },
-              {
-                "@type": "City",
-                "name": "Holton le Clay"
-              },
-              {
-                "@type": "City",
-                "name": "Laceby"
-              },
-              {
-                "@type": "City",
-                "name": "Lea"
-              },
-              {
-                "@type": "City",
-                "name": "Morton"
-              },
-              {
-                "@type": "City",
-                "name": "Newtown"
-              },
-              {
-                "@type": "City",
-                "name": "North Hykeham"
-              },
-              {
-                "@type": "City",
-                "name": "Riseholme"
-              },
-              {
-                "@type": "City",
-                "name": "Scawby"
-              },
-              {
-                "@type": "City",
-                "name": "Stallingborough"
-              },
-              {
-                "@type": "City",
-                "name": "Thornton"
-              },
-              {
-                "@type": "City",
-                "name": "Washingborough"
-              },
-              {
-                "@type": "City",
-                "name": "Yaddlethorpe"
               }
             ],
             "makesOffer": [
@@ -349,8 +107,8 @@ const Home = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Boiler Installation",
-                  "description": "Professional installation of boilers including gas and heating systems."
+                  "name": "Boiler Repair Scunthorpe",
+                  "description": "Emergency and routine boiler repair services in Scunthorpe by Gas Safe engineers."
                 }
               },
               {
@@ -358,183 +116,15 @@ const Home = () => {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Boiler Installation Scunthorpe",
-                  "description": "Local boiler installation services in Scunthorpe and North Lincolnshire."
+                  "description": "Professional boiler installation in Scunthorpe with energy-efficient models."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Gas Boiler Installation",
-                  "description": "Installation of gas boilers with Gas Safe compliance."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Boiler Service",
-                  "description": "Routine servicing for boilers to ensure efficiency and safety."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gas Boiler Service",
-                  "description": "Servicing of gas boilers including inspections and maintenance."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Boiler Repair",
-                  "description": "Repair services for faulty boilers and heating systems."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gas Boiler Repair",
-                  "description": "Expert repairs for gas boilers with quick response times."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heating System Installation",
-                  "description": "Full installation of heating systems including boilers and radiators."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heating System Service",
-                  "description": "Servicing and maintenance for complete heating systems."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heating System Repair",
-                  "description": "Repairs for heating systems including boilers and components."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Air Source Heat Pump Installation",
-                  "description": "Installation of air source heat pumps for efficient heating."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Air Source Heat Pump Service",
-                  "description": "Routine servicing for air source heat pumps to maintain performance."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Air Source Heat Pump Repair",
-                  "description": "Repair services for air source heat pumps."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Air Source Heat Pump Maintenance",
-                  "description": "Ongoing maintenance for air source heat pumps."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heat Pump Installation",
-                  "description": "General heat pump installation services."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heat Pump Service",
-                  "description": "Servicing for various heat pump systems."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heat Pump Repair",
-                  "description": "Repairs for heat pumps including air source models."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heat Pump Maintenance",
-                  "description": "Maintenance services for heat pumps."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Heating System Maintenance",
-                  "description": "Comprehensive maintenance for heating systems including boilers and heat pumps."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Smart Thermostat Installation",
-                  "description": "Installation of smart thermostats for energy-efficient control."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Underfloor Heating Installation",
-                  "description": "Installation of underfloor heating systems."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Underfloor Heating Service",
-                  "description": "Servicing for underfloor heating."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Underfloor Heating Repair",
-                  "description": "Repairs for underfloor heating systems."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gas Safety Certificates",
-                  "description": "Issuance of gas safety certificates following inspections."
+                  "name": "Gas Boiler Service Scunthorpe",
+                  "description": "Annual servicing for gas boilers in Scunthorpe to ensure safety and efficiency."
                 }
               }
             ],
@@ -543,14 +133,9 @@ const Home = () => {
                 "@type": "EducationalOccupationalCredential",
                 "name": "Gas Safe Registered",
                 "credentialCategory": "license"
-              },
-              {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Operates under MCS Umbrella Scheme",
-                "credentialCategory": "certificate"
               }
             ],
-            "priceRange": "£££",
+            "priceRange": "££",
             "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
             "currenciesAccepted": "GBP",
             "openingHoursSpecification": {
@@ -565,6 +150,20 @@ const Home = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       {/* Navigation */}
       <nav className="nimbus-nav" aria-label="Main navigation">
@@ -572,8 +171,8 @@ const Home = () => {
           <div className="nimbus-nav-inner">
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
               <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
-                   alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
-                   className="nimbus-logo" loading="lazy" />
+                    alt="Nimbus Boilers & Heat Pumps - Gas Boiler Repair and Installation in Scunthorpe"
+                    className="nimbus-logo" loading="lazy" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
                     onClick={toggleMenu}
@@ -593,7 +192,7 @@ const Home = () => {
               </li>
               <li className="nimbus-menu-item">
                 <a href="https://nimbusheatpumps.co.uk/boiler-upgrade-scheme-eligibility-7500-heat-pump-grants-scunthorpe/"
-                   className="nimbus-link">£7,500 Boiler Upgrade Scheme Grants in Scunthorpe</a>
+                    className="nimbus-link">£7,500 Boiler Upgrade Scheme Grants in Scunthorpe</a>
               </li>
               <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(0)}>
@@ -602,129 +201,129 @@ const Home = () => {
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.alpha-innovation.co.uk/products-category/air-source-heat-pumps"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Alpha Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.baxi.co.uk/products/air-source-heat-pumps"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Baxi Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.idealheating.com/products/heat-pumps"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Ideal Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.intergasheating.co.uk/homeowner/products/xtend-split/"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Intergas Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://les.mitsubishielectric.co.uk/homeowners/our-heat-pumps"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Mitsubishi Electric Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://samsung-climatesolutions.com/gb/b2c/our-solutions/home/heat-pump-solutions/heating.html"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Samsung Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.vaillant.co.uk/homeowners/products/heat-pumps/view-all-heat-pumps/"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Vaillant Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.viessmann.co.uk/en/products/heat-pump/heat-pumps.html"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Viessmann Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.worcester-bosch.co.uk/products/heat-pumps"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Worcester Bosch Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.alpha-innovation.co.uk/products"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Alpha Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.baxi.co.uk/products/boilers"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Baxi Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.idealheating.com/products/boilers"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Ideal Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.intergasheating.co.uk/homeowner/products/"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Intergas Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.vaillant.com/home/products/energy-type/gas/"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Vaillant Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.viessmann.co.uk/en/products/gas-boilers.html"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Viessmann Boilers
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://www.worcester-bosch.co.uk/products/boilers"
-                       className="nimbus-dropdown-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                        className="nimbus-dropdown-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
                       Worcester Bosch Boilers
                     </a>
                   </li>
@@ -740,19 +339,19 @@ const Home = () => {
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
                     <a href="https://nimbusheatpumps.co.uk/policies/cookies-policy/"
-                       className="nimbus-dropdown-link">
+                        className="nimbus-dropdown-link">
                       Cookies Policy
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/"
-                       className="nimbus-dropdown-link">
+                        className="nimbus-dropdown-link">
                       Privacy Policy
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
                     <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/"
-                       className="nimbus-dropdown-link">
+                        className="nimbus-dropdown-link">
                       Terms & Conditions
                     </a>
                   </li>
@@ -760,12 +359,12 @@ const Home = () => {
               </li>
               <li className="nimbus-menu-item nimbus-social-item">
                 <div className="nimbus-social">
-                  <a href="https://x.com/NimbusHeatPumps" target="_blank" rel="noopener noreferrer" title="Follow Nimbus Boilers & Heat Pumps on X for gas boiler and air source heat pump tips in Scunthorpe and North Lincolnshire" aria-label="Follow Nimbus Boilers & Heat Pumps on X">
+                  <a href="https://x.com/NimbusHeatPumps" target="_blank" rel="noopener noreferrer" title="Follow Nimbus Boilers & Heat Pumps on X for gas boiler tips in Scunthorpe" aria-label="Follow Nimbus Boilers & Heat Pumps on X">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path fill="#000" stroke="none" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
                   </a>
-                  <a href="https://www.facebook.com/profile.php?id=61579773217395" target="_blank" rel="noopener noreferrer" title="Follow Nimbus Boilers & Heat Pumps on Facebook for updates on Boiler Upgrade Scheme grants and installations in DN and LN postcodes" aria-label="Follow Nimbus Boilers & Heat Pumps on Facebook">
+                  <a href="https://www.facebook.com/profile.php?id=61579773217395" target="_blank" rel="noopener noreferrer" title="Follow Nimbus Boilers & Heat Pumps on Facebook for boiler repair updates in Scunthorpe" aria-label="Follow Nimbus Boilers & Heat Pumps on Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path fill="#1877F2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>
@@ -818,228 +417,113 @@ const Home = () => {
         </p>
       </div>
       {/* Main Content */}
-      <main>
+      <main role="main" aria-label="Main content">
         {/* Hero Section */}
         <section className="hero-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
             <div style={{flex: '1 1 400px', textAlign: 'center'}}>
-              <h1 className="section-heading section-heading--hero">Boiler Installation Scunthorpe</h1>
-              <h2 className="section-subheading">Gas Safe Registered Installers | Boiler Repairs and Services Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h2>
-              <p className="section-text section-text--intro section-text--compact">Specialising in gas boiler installations, repairs and services in Scunthorpe, Grimsby, Doncaster, Lincoln and every town and village in between, including Brigg, Gainsborough and Kirton in Lindsey. We offer combi boiler replacements, emergency repairs and eco-friendly heating solutions. Request your quote today.</p>
+              <h1 className="section-heading section-heading--hero">Gas Boiler Repair Scunthorpe | 24/7 Emergency Repairs</h1>
+              <h2 className="section-subheading">Gas Safe Registered Engineers | Emergency Boiler Repairs and Services Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h2>
+              <p className="section-text section-text--intro section-text--compact">Specialising in boiler repair Scunthorpe services including emergency fixes, installations and annual servicing. Our Gas Safe registered team provides fast, reliable heating solutions for homes in Scunthorpe and surrounding areas. Get your free quote today.</p>
               <div className="section-cta-group">
-                <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="cta-button cta-button--nowrap">Get an Instant Gas Boiler Quote in Scunthorpe, Grimsby, Doncaster, Lincoln</a>
-                <a href="#contact-form" className="cta-button cta-button--nowrap">Get a Free Air Source Heat Pump Quote in Scunthorpe</a>
+                <a href="#contact-form" className="cta-button cta-button--nowrap">Get a Free Boiler Repair Quote in Scunthorpe</a>
+                <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="cta-button cta-button--nowrap">Gas Boiler Installation Scunthorpe</a>
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="Air source heat pump installation on a modern UK home in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
-            </div>
-          </div>
-        </section>
-        {/* Gas Boiler Efficiency Section */}
-        <section className="gas-boiler-efficient-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Gas Boiler Installation and Repair Services in Scunthorpe for Energy Efficiency</h2>
-            <p className="section-text section-text--intro">Lower your energy consumption with a high-efficiency gas boiler from our local specialists in Scunthorpe. Tailored for UK homes in North Lincolnshire to reduce bills while maintaining optimal comfort.</p>
-            <p className="section-text section-text--intro">We provide expert gas boiler installation services in Scunthorpe with full system upgrades and replacements for modern homes.</p>
-            <ul className="section-list">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Up to 30% less energy used with gas boiler replacements in Scunthorpe</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Cut CO<sub>2</sub> emissions with efficient gas heating systems in North Lincolnshire</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Save up to &pound;500 annually on heating costs with gas boiler repairs in Scunthorpe, Grimsby, Doncaster, Lincoln (savings vary depending on property and usage)</li>
-            </ul>
-            <div className="section-cta-group">
-              <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="cta-button">Get Your Gas Boiler Quote in Scunthorpe</a>
-            </div>
-          </div>
-        </section>
-        {/* Energy Efficient Section */}
-        <section className="energy-efficient-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Boiler Upgrade Services and Heat Pump Installations in Scunthorpe, North Lincolnshire for £7,500 Grants</h2>
-            <p className="section-text section-text--intro">Lower your energy consumption and prepare your property for the future with a high-efficiency air source heat pump from our local specialists in Scunthorpe. Operating under the MCS umbrella scheme, our systems are tailored for UK homes in North Lincolnshire to reduce bills while maintaining optimal comfort and qualifying for the £7,500 Boiler Upgrade Scheme grant.</p>
-            <p className="section-text section-text--intro">At Nimbus Boilers & Heat Pumps, we provide expert boiler installation services in Scunthorpe with full system upgrades, including replacements and energy-efficient alternatives for modern homes.</p>
-            <ul className="section-list">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Up to 65% less energy used with air source heat pumps and boiler replacements in Scunthorpe</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Cut up to 1.3 tonnes of CO<sub>2</sub> per year with energy efficient heating systems in North Lincolnshire</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Save over &pound;470 and up to &pound;1,500 annually on heating compared to LPG and electric storage heaters in Scunthorpe (savings vary depending on property and usage)</li>
-            </ul>
-            <div className="section-cta-group">
-              <a href="#contact-form" className="cta-button">Get Your Free Air Source Heat Pump Quote in Scunthorpe</a>
-            </div>
-          </div>
-        </section>
-        {/* Heat Pump Suitability Section */}
-        <section className="heat-pump-suitability-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
-            <div style={{flex: '1 1 400px', textAlign: 'center'}}>
-              <h2 className="section-heading">Concerned Your Home May Not Suit an Air Source Heat Pump in Scunthorpe?</h2>
-              <p className="section-text">Many UK properties, including older or compact homes, are suitable for air source heat pumps in Scunthorpe and North Lincolnshire. Our Gas Safe registered engineers assess your space, considering constraints, aesthetics and performance to deliver efficient solutions that qualify for the &pound;7,500 Boiler Upgrade Scheme grant.</p>
-              <div className="section-cta-group">
-                <a href="#contact-form" className="cta-button">Check If Your Home Is Suitable for a Heat Pump in Scunthorpe</a>
-              </div>
-            </div>
-            <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2169699497-scaled.jpg" alt="Air source heat pump suitability for older homes in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
+              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="Gas boiler repair service in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
             </div>
           </div>
         </section>
         {/* Services Section */}
         <section className="our-services-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Our Services: Gas Boiler and Air Source Heat Pump Installations, Repairs and Services in Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h2>
+            <h2 className="section-heading section-heading--spaced">Boiler Repair and Installation Services in Scunthorpe</h2>
             <div className="services-grid">
               <div className="service-card">
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
                   <circle cx="12" cy="12" r="12" fill="#00a676"/>
                   <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <h3 className="card-heading">Gas Boiler Installation and Setup in Scunthorpe</h3>
-                <p className="card-text">Expert gas boiler installation and setup by Gas Safe registered engineers for efficient heating in Scunthorpe homes.</p>
+                <h3 className="card-heading">Emergency Boiler Repair Scunthorpe</h3>
+                <p className="card-text">24/7 emergency boiler repair services in Scunthorpe for breakdowns and heating failures.</p>
               </div>
               <div className="service-card">
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
                   <circle cx="12" cy="12" r="12" fill="#00a676"/>
                   <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <h3 className="card-heading">Combi Boiler Replacement in Scunthorpe, Grimsby, Doncaster, Lincoln</h3>
-                <p className="card-text">Efficient replacements and swaps of combi boilers with modern systems for reliable heating in Scunthorpe homes.</p>
+                <h3 className="card-heading">Gas Boiler Service Scunthorpe</h3>
+                <p className="card-text">Annual servicing and maintenance for gas boilers in Scunthorpe to ensure efficiency and safety.</p>
               </div>
               <div className="service-card">
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
                   <circle cx="12" cy="12" r="12" fill="#00a676"/>
                   <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <h3 className="card-heading">Emergency Gas Boiler Repairs and Servicing in Scunthorpe</h3>
-                <p className="card-text">Prompt emergency repairs and regular servicing for gas boilers to ensure safety and warmth in Scunthorpe properties.</p>
+                <h3 className="card-heading">Boiler Installation Scunthorpe</h3>
+                <p className="card-text">Professional boiler installation in Scunthorpe with modern, energy-efficient models.</p>
               </div>
               <div className="service-card">
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
                   <circle cx="12" cy="12" r="12" fill="#00a676"/>
                   <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <h3 className="card-heading">Gas Boiler Repair and Maintenance in North Lincolnshire</h3>
-                <p className="card-text">Dependable repair and maintenance for gas boilers to maintain efficiency and safety across North Lincolnshire.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Gas Safety Certificates and Commercial Heating Services in North Lincolnshire</h3>
-                <p className="card-text">Gas safety certificate issuance and full heating services for commercial properties in North Lincolnshire.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Smart Room Thermostat Installation for Energy Efficient Heating in Scunthorpe</h3>
-                <p className="card-text">Smart thermostat installations to optimise energy efficiency and comfort in Scunthorpe homes.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Smart Thermostatic Radiator Valves for Heat Pump Systems in North Lincolnshire</h3>
-                <p className="card-text">Integration of smart radiator valves to enhance control and efficiency in heat pump systems across North Lincolnshire.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Underfloor Heating Integration with Heat Pumps in North Lincolnshire</h3>
-                <p className="card-text">Seamless underfloor heating integration with air source heat pumps for consistent warmth in North Lincolnshire properties.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Air Source Heat Pump Installation in Scunthorpe</h3>
-                <p className="card-text">Professional installation of efficient air source heat pumps under the MCS umbrella scheme, customised for homes in Scunthorpe to deliver reliable performance and grant eligibility.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Boiler Upgrade Scheme Assistance and Grant Applications in Scunthorpe</h3>
-                <p className="card-text">Expert support to navigate the Boiler Upgrade Scheme and secure &pound;7,500 grants for heat pump installations in Scunthorpe and North Lincolnshire.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Heat Pump Services under MCS Umbrella Scheme in North Lincolnshire</h3>
-                <p className="card-text">Comprehensive installation and maintenance for heat pumps under the MCS umbrella scheme, ensuring quality and compliance in North Lincolnshire.</p>
+                <h3 className="card-heading">Gas Safety Certificates Scunthorpe</h3>
+                <p className="card-text">Gas safety certificate issuance following inspections and repairs in Scunthorpe.</p>
               </div>
             </div>
           </div>
         </section>
-        {/* Areas We Cover Section */}
-        <section className="areas-we-cover-section section nimbus-section-base">
+        {/* Expert Boiler Repair Section */}
+        <section className="expert-repair-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Areas We Cover: Gas Boiler and Air Source Heat Pump Installations Across DN and LN Postcodes</h2>
-            <p className="section-text section-text--intro">Based in Scunthorpe, North Lincolnshire, Nimbus Boilers & Heat Pumps serves all DN and LN postcodes with specialist gas boiler and air source heat pump installations focused on energy efficiency and sustainability.</p>
+            <h2 className="section-heading section-heading--spaced">Expert Boiler Repair in Scunthorpe</h2>
+            <p className="section-text">At Nimbus Boilers & Heat Pumps, we deliver top-tier <strong>boiler repair in Scunthorpe</strong> and throughout <strong>boiler repair North Lincolnshire</strong>. Our fully Gas Safe registered engineers are on call 24/7, ready to tackle any boiler emergency with speed and precision. From minor leaks and pressure issues to major component failures, we restore your heating system swiftly, keeping your family comfortable.</p>
+            <p className="section-text">With years of experience serving Scunthorpe homes, we prioritize reliability, transparency, and customer satisfaction in every job. Our diagnostic approach ensures accurate fixes without unnecessary upsells.</p>
+            <h3 className="card-heading" style={{textAlign: 'center', marginBottom: '20px', fontSize: '22px'}}>Why Choose Nimbus for Your Boiler Repair?</h3>
             <ul className="section-list">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Scunthorpe and North Lincolnshire (DN15-DN17, DN20): Brigg, Barton-upon-Humber, surrounding towns.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Doncaster and nearby South Yorkshire areas (DN1-DN12, DN22): Doncaster, nearby areas.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Grimsby and NE Lincolnshire (DN31-DN41): Grimsby, Cleethorpes, Goole, surrounding areas.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Lincoln and Lincolnshire (LN1-LN13): Lincoln, Market Rasen, Horncastle, Woodhall Spa, Louth, rural areas.</li>
+              <li><strong>Gas Safe Certified:</strong> All work complies with the highest UK safety standards.</li>
+              <li><strong>24/7 Availability:</strong> Emergency <strong>boiler repair North Lincolnshire</strong> any time.</li>
+              <li><strong>Fixed Pricing:</strong> Transparent quotes, no hidden charges.</li>
+              <li><strong>12-Month Guarantee:</strong> On parts and labour for peace of mind.</li>
+              <li><strong>Rapid Response:</strong> Same-day service for most Scunthorpe callouts.</li>
             </ul>
-          </div>
-        </section>
-        {/* Grant Eligibility Section */}
-        <section className="grant-eligibility-section section nimbus-section-base" style={{padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: 'Inter, sans-serif', border: '2px solid #A8D5BA'}}>
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Verify Your Eligibility for the &pound;7,500 Boiler Upgrade Scheme Grant in Scunthorpe and North Lincolnshire</h2>
-            <p className="section-text section-text--intro">Determine if your property qualifies for government funding through the Boiler Upgrade Scheme in Scunthorpe. Our engineers at Nimbus Boilers & Heat Pumps, working under an MCS umbrella scheme, will assist with the application process to obtain &pound;7,500 towards an air source heat pump, helping lower heating costs and emissions in North Lincolnshire.</p>
             <div className="section-cta-group">
-              <a href="https://nimbusheatpumps.co.uk/boiler-upgrade-scheme-eligibility-7500-heat-pump-grants-scunthorpe/" className="cta-button">Check Grant Eligibility and Apply Now</a>
+              <a href="#contact-form" className="cta-button cta-button--nowrap">Schedule Your Boiler Repair</a>
             </div>
           </div>
         </section>
-        {/* Why Choose Section */}
-        <section className="why-choose-section section nimbus-section-base">
+        {/* Gas Boiler Service & Installation Section */}
+        <section className="gas-service-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Why Select Nimbus Boilers & Heat Pumps for Your Gas Boiler or Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire?</h2>
-            <ul className="section-list section-list--flush">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Gas Safe registered engineers for secure gas boiler repairs, maintenance and services in North Lincolnshire.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Installers operating under the MCS umbrella scheme for compliant, high-quality air source heat pump installations in Scunthorpe.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Specialist advice on the Boiler Upgrade Scheme to help secure &pound;7,500 grants for eco-friendly heat pump upgrades in Scunthorpe.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>In-depth knowledge of North Lincolnshire properties for customised energy-efficient heating solutions.</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Complete services from installation to ongoing maintenance for reliable performance and customer confidence.</li>
+            <h2 className="section-heading section-heading--spaced">Gas Boiler Service North Lincolnshire</h2>
+            <p className="section-text">Keep your boiler safe and efficient with our expert <strong>gas boiler service Scunthorpe</strong> covering all of North Lincolnshire. Our annual servicing includes detailed inspections, flue gas analysis, cleaning, and adjustments to optimise performance and safety.</p>
+            <p className="section-text">Planning an upgrade? Nimbus offers <strong>fixed price boiler installation Scunthorpe</strong>, installing modern A-rated condensing boilers with smart Hive thermostats, MagnaCleanse chemical flushes, magnetic filters, shock arresters, and scale reducers included as standard.</p>
+            <h3 className="card-heading" style={{textAlign: 'center', marginBottom: '20px', fontSize: '22px'}}>Benefits of Professional Boiler Servicing & Installation:</h3>
+            <ul className="section-list">
+              <li>Boosted efficiency to cut energy bills and carbon emissions</li>
+              <li>Early fault detection prevents breakdowns and high repair costs</li>
+              <li>Gas Safe certification for landlord compliance</li>
+              <li>Extended boiler lifespan through proper maintenance</li>
+              <li>Complete system protection during <strong>boiler installation Scunthorpe</strong></li>
             </ul>
+            <div className="section-cta-group">
+              <a href="#contact-form" className="cta-button cta-button--nowrap">Book Gas Boiler Service Today</a>
+            </div>
           </div>
         </section>
-        {/* Manufacturers Section */}
-        <section className="manufacturers-section section nimbus-section-base">
+        {/* FAQs Section */}
+        <section className="faqs-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Our Trusted Boiler & Heat Pump Manufacturers in Scunthorpe and North Lincolnshire</h2>
-            <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
-              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://www.baxi.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/08/baxi-logo.png" alt="Baxi boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
-                </a>
-              </div>
-              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://idealheating.com/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Ideal_Logo-removebg-preview-1.png" alt="Ideal boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
-                </a>
-              </div>
-              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://www.vaillant.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/a38b5edd-0773-40c1-a329-ed07a9522c26.png" alt="Vaillant boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
-                </a>
-              </div>
-              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://www.worcester-bosch.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/worcester-removebg-preview-1.png" alt="Worcester Bosch boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
-                </a>
-              </div>
+            <h2 className="section-heading section-heading--spaced">Boiler Repair FAQs in Scunthorpe</h2>
+            <div className="faq-accordion">
+              {faqData.map((faq, index) => (
+                <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
+                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
+                  <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -1090,58 +574,39 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* FAQs Section */}
-        <section className="faqs-section section nimbus-section-base">
+        {/* Manufacturers Section */}
+        <section className="manufacturers-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Frequently Asked Questions</h2>
-            <div className="faq-accordion">
-              <div className={`faq-item ${faqActive === 0 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(0)} role="button" tabIndex="0" aria-expanded={faqActive === 0} aria-controls="faq-answer-0">How much can I save with a new gas boiler?</h3>
-                <div className="faq-answer" id="faq-answer-0" role="region" aria-labelledby="faq-question-0" aria-hidden={faqActive !== 0}>Upgrading to a modern gas boiler can save up to &pound;500 annually on heating bills compared to older models (savings vary depending on property and usage).</div>
+            <h2 className="section-heading section-heading--spaced">Our Trusted Boiler Manufacturers in Scunthorpe</h2>
+            <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
+              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
+                <a href="https://www.baxi.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/08/baxi-logo.png" alt="Baxi boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                </a>
               </div>
-              <div className={`faq-item ${faqActive === 1 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(1)} role="button" tabIndex="0" aria-expanded={faqActive === 1} aria-controls="faq-answer-1">What is an air source heat pump?</h3>
-                <div className="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden={faqActive !== 1}>An air source heat pump is an energy-efficient system that extracts heat from the outside air to warm your home and provide hot water, even in cold weather.</div>
+              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
+                <a href="https://idealheating.com/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Ideal_Logo-removebg-preview-1.png" alt="Ideal boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                </a>
               </div>
-              <div className={`faq-item ${faqActive === 2 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(2)} role="button" tabIndex="0" aria-expanded={faqActive === 2} aria-controls="faq-answer-2">How much can I save with the Boiler Upgrade Scheme?</h3>
-                <div className="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden={faqActive !== 2}>Eligible households can receive &pound;7,500 towards the cost of installing an air source heat pump, significantly reducing upfront expenses.</div>
+              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
+                <a href="https://www.vaillant.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/a38b5edd-0773-40c1-a329-ed07a9522c26.png" alt="Vaillant boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                </a>
               </div>
-              <div className={`faq-item ${faqActive === 3 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(3)} role="button" tabIndex="0" aria-expanded={faqActive === 3} aria-controls="faq-answer-3">Is my home suitable for a heat pump?</h3>
-                <div className="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden={faqActive !== 3}>Most properties are suitable. Our engineers conduct a free assessment to confirm and design the best system for your needs.</div>
-              </div>
-              <div className={`faq-item ${faqActive === 4 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(4)} role="button" tabIndex="0" aria-expanded={faqActive === 4} aria-controls="faq-answer-4">What maintenance do heat pumps require?</h3>
-                <div className="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden={faqActive !== 4}>Annual servicing is recommended to ensure optimal performance. We offer comprehensive maintenance plans.</div>
-              </div>
-              <div className={`faq-item ${faqActive === 5 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(5)} role="button" tabIndex="0" aria-expanded={faqActive === 5} aria-controls="faq-answer-5">How long does installation take?</h3>
-                <div className="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden={faqActive !== 5}>Typically 1-3 days, depending on your property. We minimise disruption with our professional team.</div>
+              <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
+                <a href="https://www.worcester-bosch.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/worcester-removebg-preview-1.png" alt="Worcester Bosch boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                </a>
               </div>
             </div>
-          </div>
-        </section>
-        {/* Gas Safe Section */}
-        <section className="gas-safe-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Why Use a Gas Safe Registered Engineer?</h2>
-            <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/08/Gas-Safe-Logo-2.png" alt="Gas Safe Registered Logo - Nimbus Heat Pumps Ltd" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 30px auto'}} loading="lazy" />
-            <p className="section-text section-text--intro">Choosing a Gas Safe registered engineer ensures all gas work is carried out safely and to the highest standards. Our certified team at Nimbus Boilers & Heat Pumps guarantees compliance, safety and peace of mind for all gas-related services in Scunthorpe and North Lincolnshire.</p>
-            <ul className="section-list section-list--flush">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Legal requirement for all gas work in the UK</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Reduces risk of gas leaks, carbon monoxide poisoning and fires</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Ensures insurance and warranty validity</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Professional expertise for efficient and safe installations</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Peace of mind knowing work is done to the highest standards</li>
-            </ul>
           </div>
         </section>
         {/* Free Quote Section */}
         <section className="free-quote-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Request Your Free Quote for Gas Boiler or Air Source Heat Pump in Scunthorpe and North Lincolnshire</h2>
-            <p className="section-text section-text--intro">Obtain a no-obligation quote for gas boiler or air source heat pump installation, repair and maintenance in Scunthorpe and North Lincolnshire. Our specialists at Nimbus Boilers & Heat Pumps will evaluate your property, review &pound;7,500 Boiler Upgrade Scheme grant options and recommend efficient heating solutions to reduce costs and emissions.</p>
+            <h2 className="section-heading">Request Your Free Boiler Repair Quote in Scunthorpe</h2>
+            <p className="section-text section-text--intro">Get a no-obligation quote for boiler repair, installation or servicing in Scunthorpe. Our Gas Safe registered engineers will assess your needs and provide fast, reliable solutions.</p>
             <div id="contact-form">
               <QuoteForm />
             </div>
@@ -1150,8 +615,8 @@ const Home = () => {
         {/* Company Details Section */}
         <footer className="company-details-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Boilers & Heat Pumps Logo - Energy Efficient Heating in Scunthorpe and North Lincolnshire" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
-            <h2 className="footer-heading">Your Trusted Partner for Energy Efficient Heating Solutions in Scunthorpe and North Lincolnshire</h2>
+            <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Boilers & Heat Pumps Logo - Boiler Repair Services in Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
+            <h2 className="footer-heading">Your Trusted Partner for Boiler Repair and Installation in Scunthorpe</h2>
             <p className="section-text">Nimbus Heat Pumps Ltd (trading as Nimbus Boilers & Heat Pumps)<br />Company Number: 16497314<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: 01724 622069</p>
             <div className="section-cta-group section-cta-group--spaced">
               <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="cta-button">Privacy Policy</a>
@@ -1934,7 +1399,7 @@ const Home = () => {
             gap: 6px;
           }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px) and (orientation: portrait) {
           .nimbus-has-dropdown .nimbus-dropdown {
             left: 0 !important;
             transform: none !important;
@@ -2447,4 +1912,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BoilerRepairScunthorpe;

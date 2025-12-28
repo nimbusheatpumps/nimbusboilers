@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <>
+      <header role="banner">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -555,6 +556,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
+    </header>
     </>
   );
 };

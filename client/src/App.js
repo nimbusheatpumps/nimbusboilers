@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +8,19 @@ import QuoteForm from './components/QuoteForm';
 import FAQ from './components/FAQ';
 import AreasCovered from './components/AreasCovered';
 import Blog from './components/Blog';
+import GasBoilerServiceScunthorpe from './components/GasBoilerServiceScunthorpe';
+import GasBoilerInstallationScunthorpe from './components/GasBoilerInstallationScunthorpe';
+import GasBoilerServiceNorthLincolnshire from './components/GasBoilerServiceNorthLincolnshire';
+import BoilerRepairScunthorpe from './components/BoilerRepairScunthorpe';
+import Login from './components/Login';
+import Admin from './components/Admin';
+import Contact from './components/Contact';
+import BoilerMaintenanceTips from './components/BoilerMaintenanceTips';
+
+const ProtectedRoute = ({ children }) => {
+  const token = localStorage.getItem('token');
+  return token ? children : <Navigate to="/login" />;
+};
 
 function App() {
   return (
@@ -27,18 +40,35 @@ function AppContent() {
     }
   }, [location]);
 
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips';
+
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quote" element={<QuoteForm />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/areas" element={<AreasCovered />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
-      <button onClick={() => { throw new Error('Test frontend error'); }}>Trigger Frontend Error</button>
-      <Footer />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:rounded focus:shadow-lg"
+        aria-label="Skip to main content"
+      >
+        Skip to main content
+      </a>
+      <main id="main-content" role="main" tabIndex="-1">
+        {!isSeoPage && <Header />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quote" element={<QuoteForm />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/areas" element={<AreasCovered />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gas-boiler-service-scunthorpe" element={<GasBoilerServiceScunthorpe />} />
+          <Route path="/gas-boiler-installation-scunthorpe" element={<GasBoilerInstallationScunthorpe />} />
+          <Route path="/gas-boiler-service-north-lincolnshire" element={<GasBoilerServiceNorthLincolnshire />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+          <Route path="/boiler-maintenance-tips" element={<BoilerMaintenanceTips />} />
+        </Routes>
+        {!isSeoPage && <Footer />}
+      </main>
     </>
   );
 }
