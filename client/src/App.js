@@ -16,6 +16,7 @@ import Login from './components/Login';
 import Admin from './components/Admin';
 import Contact from './components/Contact';
 import BoilerMaintenanceTips from './components/BoilerMaintenanceTips';
+import GasSafeBoilerInstallersScunthorpe from './components/GasSafeBoilerInstallersScunthorpe';
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -40,7 +41,7 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe';
 
   return (
     <>
@@ -67,6 +68,7 @@ function AppContent() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/boiler-maintenance-tips" element={<BoilerMaintenanceTips />} />
+          <Route path="/gas-safe-boiler-installers-scunthorpe" element={<GasSafeBoilerInstallersScunthorpe />} />
         </Routes>
         {!isSeoPage && <Footer />}
       </main>
