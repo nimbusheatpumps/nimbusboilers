@@ -565,7 +565,7 @@ const GasBoilerServiceNorthLincolnshire = () => {
           </div>
         </footer>
       </main>
-      <style jsx>{`
+      <style>{`
         :root {
           --primary-green: #00a676;
           --dark-green: #007a57;

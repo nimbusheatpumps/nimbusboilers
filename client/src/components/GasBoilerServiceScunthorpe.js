@@ -418,7 +418,7 @@ const GasBoilerServiceScunthorpe = () => {
         </footer>
       </main>
       {/* Styles - copy entire <style jsx> from model lines 631-1910 */}
-      <style jsx>{`
+      <style>{`
         /* Paste the entire CSS from the model here */
         :root {
           --primary-green: #00a676;

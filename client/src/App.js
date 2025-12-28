@@ -42,7 +42,7 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = `https://nimbusboilers.co.uk${location.pathname}`;
 return (

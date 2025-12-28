@@ -628,7 +628,7 @@ const BoilerRepairScunthorpe = () => {
         </footer>
       </main>
       {/* Styles */}
-      <style jsx>{`
+      <style>{`
         :root {
           --primary-green: #00a676;
           --dark-green: #007a57;
