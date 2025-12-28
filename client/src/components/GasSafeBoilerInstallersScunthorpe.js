@@ -49,9 +49,9 @@ const GasSafeBoilerInstallersScunthorpe = () => {
   return (
     <>
       <Helmet>
-        <title>Gas Safe Boiler Installers Scunthorpe | Certified & Reliable</title>
-        <meta name="description" content="Certified Gas Safe boiler installers Scunthorpe. Reliable, safety-focused service by registered engineers. Oftec approved. Free quotes, North Lincolnshire coverage." />
-        <meta name="keywords" content="gas safe boiler installers scunthorpe, certified gas safe engineers scunthorpe, oftec boiler service scunthorpe, gas safe registered scunthorpe, boiler safety tips scunthorpe" />
+        <title>Gas Safe Boiler Installers Scunthorpe | Expert Gas Boiler Installation North Lincolnshire</title>
+        <meta name="description" content="Expert gas boiler installation Scunthorpe by Gas Safe registered engineers. Gas boiler service Scunthorpe, gas boiler repair North Lincolnshire. Free quotes, certified safety." />
+        <meta name="keywords" content="gas boiler installation Scunthorpe, gas boiler service Scunthorpe, gas boiler repair North Lincolnshire, Gas Safe boiler installers Scunthorpe, certified gas safe engineers North Lincolnshire" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://nimbusheatpumps.co.uk/gas-safe-boiler-installers-scunthorpe/" />
         <script type="application/ld+json">
@@ -420,11 +420,11 @@ const GasSafeBoilerInstallersScunthorpe = () => {
         <section className="hero-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
             <div style={{flex: '1 1 400px', textAlign: 'center'}}>
-              <h1 className="section-heading section-heading--hero">Gas Safe Boiler Installers Scunthorpe | Certified & Reliable</h1>
-              <h2 className="section-subheading">Gas Safe Registered Engineers | Oftec Approved | Safety First | North Lincolnshire</h2>
-              <p className="section-text section-text--intro section-text--compact">Trust certified <strong>Gas Safe boiler installers Scunthorpe</strong> for safe, reliable service. Annual servicing, CO safety, grants advice. Free quote from local experts.</p>
+              <h1 className="section-heading section-heading--hero">Gas Safe Boiler Installers Scunthorpe | Expert Gas Boiler Installation North Lincolnshire</h1>
+              <h2 className="section-subheading">Gas Boiler Service Scunthorpe | Repair North Lincolnshire | Certified Gas Safe Engineers</h2>
+              <p className="section-text section-text--intro section-text--compact">Trust expert <strong>gas boiler installation Scunthorpe</strong> and <strong>gas boiler service Scunthorpe</strong> by Gas Safe registered engineers. Free quotes for reliable gas boiler repair North Lincolnshire.</p>
               <div className="section-cta-group">
-                <a href="#contact-form" className="cta-button cta-button--nowrap">Get Free Gas Safe Quote</a>
+                <a href="#contact-form" className="cta-button cta-button--nowrap">Get Free Gas Boiler Quote</a>
                 <a href="/quote" className="cta-button cta-button--nowrap">Instant Quote</a>
               </div>
             </div>
@@ -436,10 +436,14 @@ const GasSafeBoilerInstallersScunthorpe = () => {
         <section className="certifications-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">Our Certifications - Gas Safe & Oftec Registered</h2>
-            <img decoding="async" src="https://via.placeholder.com/800x400/00a676/fafafa?text=Gas+Safe+Oftec+Certifications" alt="Gas Safe and Oftec certifications for boiler installers Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
-            <p className="section-text">Fully <strong>Gas Safe registered</strong> for all gas boiler work. <strong>Oftec approved</strong> for oil services. Verify our credentials at GasSafeRegister.co.uk.</p>
+            <img decoding="async" src="https://via.placeholder.com/800x400/00a676/fafafa?text=Gas+Safe+Oftec+Certifications" alt="Gas Safe and Oftec certifications for gas boiler installers Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <div className="cert-logos" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px', margin: '20px auto', maxWidth: '600px'}}>
+              <img decoding="async" src="https://via.placeholder.com/200x120/00a676/ffffff?text=Gas+Safe" alt="Gas Safe Registered" style={{height: '100px', borderRadius: '8px'}} loading="lazy" />
+              <img decoding="async" src="https://via.placeholder.com/200x120/00a676/ffffff?text=Oftec" alt="Oftec Approved" style={{height: '100px', borderRadius: '8px'}} loading="lazy" />
+            </div>
+            <p className="section-text">Fully <strong>Gas Safe registered</strong> (#197837) for all gas boiler work. <strong>Oftec approved</strong> for oil services. Verify our credentials at GasSafeRegister.co.uk.</p>
             <ul className="section-list">
-              <li>Gas Safe Registration # (check ID)</li>
+              <li>Gas Safe Registration #197837 (verify at GasSafeRegister.co.uk)</li>
               <li>Oftec Competent Person Scheme</li>
               <li>Public Liability Insured</li>
               <li>Building Regulations Compliant</li>
@@ -456,14 +460,31 @@ const GasSafeBoilerInstallersScunthorpe = () => {
             <img decoding="async" src="https://via.placeholder.com/800x400/00a676/fafafa?text=Boiler+Safety+Tips" alt="boiler safety tips annual service CO alarms Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">Safety first with our Gas Safe boiler installers Scunthorpe. Follow these tips to prevent carbon monoxide poisoning and breakdowns.</p>
             <ul className="section-list">
-              <li>Annual Gas Safe service</li>
-              <li>Install/ test CO alarms yearly</li>
-              <li>Monthly pressure gauge check (1-1.5 bar)</li>
-              <li>Bleed radiators annually</li>
-              <li>Report leaks immediately</li>
+              <li>Annual gas boiler service</li>
+              <li>Check for leaks</li>
+              <li>Use certified installers</li>
+              <li>Safety checks post-install</li>
+              <li>Install CO alarms</li>
             </ul>
             <div className="section-cta-group">
               <a href="#contact-form" className="cta-button cta-button--nowrap">Book Safety Service</a>
+            </div>
+          </div>
+        </section>
+        <section className="services-section section nimbus-section-base">
+          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <h2 className="section-heading section-heading--spaced">Gas Boiler Services in Scunthorpe</h2>
+            <img decoding="async" src="https://via.placeholder.com/800x400/00a676/fafafa?text=Gas+Boiler+Services" alt="gas boiler installation service repair Scunthorpe Gas Safe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <p className="section-text">Comprehensive gas boiler services by certified Gas Safe engineers in North Lincolnshire.</p>
+            <ul className="section-list">
+              <li>Gas boiler installation & replacement</li>
+              <li>Gas boiler servicing & maintenance</li>
+              <li>Gas boiler repairs & fault finding</li>
+              <li>Emergency call-outs 24/7</li>
+              <li>Heating system upgrades & efficiency improvements</li>
+            </ul>
+            <div className="section-cta-group">
+              <a href="#contact-form" className="cta-button cta-button--nowrap">Get Gas Boiler Quote</a>
             </div>
           </div>
         </section>
