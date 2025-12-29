@@ -33,6 +33,24 @@ test.describe('SEO Pages Verification', () => {
       titleRegex: /Gas Safe Boiler Installers Scunthorpe/i,
       h1Text: 'Gas Safe Boiler Installers Scunthorpe | Professional Gas Boiler Installation',
       keywords: ['gas safe boiler installers scunthorpe', 'gas boiler installation scunthorpe', 'certified gas safe']
+    },
+    {
+      path: '/gas-boiler-servicing-scunthorpe',
+      titleRegex: /Gas Boiler Servicing Scunthorpe/i,
+      h1Text: 'Gas Boiler Servicing Scunthorpe',
+      keywords: ['gas boiler servicing scunthorpe', 'boiler service north lincolnshire', 'annual boiler service scunthorpe']
+    },
+    {
+      path: '/gas-boiler-brands-scunthorpe',
+      titleRegex: /Gas Boiler Brands Scunthorpe/i,
+      h1Text: 'Gas Boiler Brands Scunthorpe',
+      keywords: ['gas boiler brands scunthorpe', 'worcester bosch scunthorpe', 'vaillant boilers north lincolnshire']
+    },
+    {
+      path: '/boiler-finance-scunthorpe',
+      titleRegex: /Boiler Finance Scunthorpe/i,
+      h1Text: 'Boiler Finance Scunthorpe',
+      keywords: ['boiler finance scunthorpe', '0% boiler finance north lincolnshire', 'boiler installation finance']
     }
   ];
 
