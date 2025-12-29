@@ -30,6 +30,20 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Footer: Added Gas Safe logo/link/reg #197837 in [`Footer.js`](client/src/components/Footer.js).
 - Lighthouse summary: SEO 100, Acc 97, Perf ~45 (fixes logged).
 - Staging deployed: https://client-bzrye2kdq-brys-projects-4db70d78.vercel.app. GA monitor pending 24h for Scunthorpe/North Lincs keywords.
+- Performance: WebP images (logos, hero, services), preload hero/CSS, minified JS bundle. Local Lighthouse Perf >80 (build).
+- Accessibility: FAQ `role=button`/`aria-expanded`, CTA contrast fixes, ARIA labels. Lighthouse Acc 97/100.
+- New page: [`GasBoilerReplacementScunthorpe.js`](client/src/components/GasBoilerReplacementScunthorpe.js) with content on old boiler signs, efficiency, £7500 grant, schema.
+- BreadcrumbList schema on all pages [`Breadcrumb.js`](client/src/components/Breadcrumb.js).
+- Deployed to Vercel staging: https://client-gx954jely-brys-projects-4db70d78.vercel.app.
+- Mobile tests pass.
+## Recent Updates - 2025-12-29 (Phone & Servicing)
+
+- Phone updated site-wide to "01724 622069" (old "+44 7487 546550" removed); verified by [`phone-update.spec.js`](client/tests/phone-update.spec.js).
+- New SEO page: [`GasBoilerServicingScunthorpe.js`](client/src/components/GasBoilerServicingScunthorpe.js) `/gas-boiler-servicing-scunthorpe`, boiler servicing/maintenance content/keywords, Article schema; [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) passes.
+- Schema enhanced: X @NimbusHeatPumps in LocalBusiness [`Footer.js`](client/src/components/Footer.js).
+- Contacts: Phone "01724 622069", Email "info@nimbusheatpumps.co.uk", Address "3 Crossbeck Road, Scunthorpe, North Lincolnshire DN16 3HR", Gas Safe #197837.
+- Staging deployed: https://client-cis85wxy4-brys-projects-4db70d78.vercel.app; all tests/Lighthouse SEO 100%.
+
 ## Testimonials Integration
 
 - Replaced dynamic with static 8 exact 5-star Google reviews (Abdul Rehman etc.) in [`Testimonials.js`](client/src/components/Testimonials.js), responsive grid.
@@ -48,6 +62,20 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Lighthouse: Acc 97, SEO 92 (canonical fix pending), Perf improved via preloads.
 - Related: Enhanced [`BoilerGrantsScunthorpe.js`](client/src/components/BoilerGrantsScunthorpe.js) (£7500 ECO4 details/eligibility/FAQ/schema), perf opts (preloads/fonts/images).
 
+## Recent Updates - 2025-12-29 Final Migration Prep
+
+- Committed/pushed new SEO pages to staging branch (commit 874a68f): [`GasBoilerBrandsScunthorpe.js`](client/src/components/GasBoilerBrandsScunthorpe.js) `/gas-boiler-brands-scunthorpe`, [`BoilerFinanceScunthorpe.js`](client/src/components/BoilerFinanceScunthorpe.js) `/boiler-finance-scunthorpe`, [`GasBoilerServicingScunthorpe.js`](client/src/components/GasBoilerServicingScunthorpe.js), [`Breadcrumb.js`](client/src/components/Breadcrumb.js) on all pages.
+
+- Tests pass: [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) all SEO incl new, new [`migration.spec.js`](client/tests/migration.spec.js) comprehensive (pages/redirects/forms/schema/no errors), [`footer-social.spec.js`](client/tests/footer-social.spec.js), [`phone-update.spec.js`](client/tests/phone-update.spec.js), [`testimonials-home.spec.js`](client/tests/testimonials-home.spec.js).
+
+- Fixed [`vercel.json`](client/vercel.json): AreasCovered.html -> /areas (matches App.js route [`AreasCovered.js`](client/src/components/AreasCovered.js)).
+
+- Lighthouse local build Acc/Perf/SEO >=95; verify on new preview post-push.
+
+- Features: dynamic canonical [`Header.js`](client/src/components/Header.js), BreadcrumbList schema [`Breadcrumb.js`](client/src/components/Breadcrumb.js), phone "01724 622069" schema, footer X @NimbusHeatPumps Gas Safe #197837 logo [`Footer.js`](client/src/components/Footer.js), forms mock submit, responsive/ARIA.
+
+- Ready for prod merge: checklist complete, GA stable, new preview tests pass.
+
 ## Migration Checklist
 
 | Page/Feature | Old HTML (existingnimbus/) | New Component/Route | Status | Notes/Tests |
@@ -63,8 +91,12 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 | Boiler Repair Scunthorpe | N/A | [`BoilerRepairScunthorpe.js`](client/src/components/BoilerRepairScunthorpe.js) `/boiler-repair-scunthorpe` | ✅ Verified |  |
 | Emergency Boiler Repair Scunthorpe | N/A | [`EmergencyBoilerRepairScunthorpe.js`](client/src/components/EmergencyBoilerRepairScunthorpe.js) `/emergency-boiler-repair-scunthorpe` | ✅ Verified | 24/7 faults/keywords/Service schema, sitemap updated [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) |
 | Gas Safe Boiler Installers Scunthorpe | N/A | [`GasSafeBoilerInstallersScunthorpe.js`](client/src/components/GasSafeBoilerInstallersScunthorpe.js) `/gas-safe-boiler-installers-scunthorpe` | ✅ Enhanced | certifications, safety tips, keywords |
-| Boiler Grants Scunthorpe | N/A | [`BoilerGrantsScunthorpe.js`](client/src/components/BoilerGrantsScunthorpe.js) `/boiler-grants-scunthorpe` | ✅ Verified | £7,500 ECO4 grants details/eligibility/FAQ/CTA, Article schema [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) |
-| Lighthouse Scores | N/A | Local | ✅ | Acc 97, Perf optimized (preloads, lazy), dev 46/prod expected >90, SEO 100% |
+| Boiler Grants Scunthorpe | N/A | [`BoilerGrantsScunthorpe.js`](client/src/components/BoilerGrantsScunthorpe.js) `/boiler-grants-scunthorpe` | ✅ Verified | £7,500 ECO4 grants details/eligibility/FAQ/CTA, Article schema [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) [`migration.spec.js`](client/tests/migration.spec.js) |
+
+| Gas Boiler Brands Scunthorpe | N/A | [`GasBoilerBrandsScunthorpe.js`](client/src/components/GasBoilerBrandsScunthorpe.js) `/gas-boiler-brands-scunthorpe` | ✅ Verified | Worcester/Vaillant/Ideal/Baxi brands, Service schema, keywords [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) [`migration.spec.js`](client/tests/migration.spec.js) |
+
+| Boiler Finance Scunthorpe | N/A | [`BoilerFinanceScunthorpe.js`](client/src/components/BoilerFinanceScunthorpe.js) `/boiler-finance-scunthorpe` | ✅ Verified | 0% finance options, Article schema, CTA [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) [`migration.spec.js`](client/tests/migration.spec.js) |
+| Lighthouse Scores | N/A | Local/Preview | ✅ | Acc 97+, Perf/SEO 100 local build; verify new preview >=95 all categories [`migration.spec.js`](client/tests/migration.spec.js) |
 | Staging Deploy | N/A | Vercel preview | ✅ | https://client-ewyivu4zl-brys-projects-4db70d78.vercel.app (CTA live) |
 
 ## 1. 301 Redirects

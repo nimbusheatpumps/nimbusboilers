@@ -3,7 +3,8 @@ import { test, expect } from '@playwright/test';
 test.describe('Phone Number Update Verification', () => {
   const baseUrls = [
     { name: 'Dev', url: 'http://localhost:3000' },
-    { name: 'Build', url: 'http://localhost:3001' }
+    { name: 'Build', url: 'http://localhost:3001' },
+    { name: 'Preview', url: 'https://client-9ytetttow-brys-projects-4db70d78.vercel.app' }
   ];
 
   const testPages = [

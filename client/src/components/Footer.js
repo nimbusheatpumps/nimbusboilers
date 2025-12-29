@@ -580,6 +580,9 @@ const Footer = () => {
               </div>
             </div>
           </section>
+          <div className="text-xs text-gray-500 text-center md:text-left mt-2 max-w-4xl mx-auto">
+            Calls recorded for training and quality purposes.
+          </div>
           {/* Social Links */}
           <section className="text-center mb-8">
             <div className="max-w-md mx-auto flex justify-center space-x-6 md:space-x-8">

@@ -24,8 +24,8 @@ import GasBoilerReplacementScunthorpe from './components/GasBoilerReplacementScu
 import GasBoilerServicingScunthorpe from './components/GasBoilerServicingScunthorpe';
 import GasBoilerBrandsScunthorpe from './components/GasBoilerBrandsScunthorpe';
 import BoilerFinanceScunthorpe from './components/BoilerFinanceScunthorpe';
+import CombiBoilerInstallationScunthorpe from './components/CombiBoilerInstallationScunthorpe';
 import Breadcrumb from './components/Breadcrumb';
-
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   return token ? children : <Navigate to="/login" />;
@@ -48,8 +48,8 @@ function AppContent() {
       ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
     }
   }, [location]);
+const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-replacement-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/areas-covered' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/boiler-finance-scunthorpe' || location.pathname === '/combi-boiler-installation-scunthorpe';
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-replacement-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/areas-covered' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/boiler-finance-scunthorpe';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
