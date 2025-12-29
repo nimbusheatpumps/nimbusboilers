@@ -3,18 +3,19 @@ const fs = require('fs');
 const path = require('path');
 
 const inputDir = path.join(__dirname, '../client/public');
-const images = ['logo192.png', 'logo512.png'];
+const images = ['logo192.png', 'logo512.png', 'images/nimbus-logo.png', 'images/worcester-greenstar.png', 'images/baxi-logo.png', 'images/ideal-logo.png', 'images/vaillant-logo.png', 'images/worcester-logo.png', 'images/gas-safe-logo.png', 'images/hero-install.jpg', 'images/hero-home.jpg'];
 
 async function compressImages() {
   for (const img of images) {
     const inputPath = path.join(inputDir, img);
-    const outputPath = path.join(inputDir, img.replace('.png', '-compressed.png'));
+    const name = path.basename(img, path.extname(img));
+    const outputPath = path.join(inputDir, path.dirname(img) || '.', name + '.webp');
 
     try {
       await sharp(inputPath)
-        .png({ quality: 80 })
+        .webp({ quality: 80 })
         .toFile(outputPath);
-      console.log(`Compressed ${img} to ${outputPath}`);
+      console.log(`Created WebP ${path.basename(outputPath)} from ${img}`);
     } catch (error) {
       console.error(`Error compressing ${img}:`, error);
     }

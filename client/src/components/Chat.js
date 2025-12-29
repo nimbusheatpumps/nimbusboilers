@@ -28,7 +28,7 @@ const Chat = () => {
   return (
     <div className="fixed bottom-4 right-4 w-80 h-96 bg-white border border-gray-300 rounded-lg shadow-lg flex flex-col">
       <div className="bg-blue-500 text-white p-2 rounded-t-lg">
-        <h3 className="text-lg font-semibold">Live Chat</h3>
+        <h3 className="text-lg font-semibold text-white !important">Live Chat</h3>
       </div>
       <div className="flex-1 p-2 overflow-y-auto">
         {messages.map((msg, index) => (
@@ -46,7 +46,7 @@ const Chat = () => {
             className="flex-1 p-2 border border-gray-300 rounded-l"
             placeholder="Type a message..."
           />
-          <button type="submit" className="bg-blue-500 text-white p-2 rounded-r">
+          <button type="submit" className="bg-blue-500 text-white !text-white p-2 rounded-r hover:text-white">
             Send
           </button>
         </div>

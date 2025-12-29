@@ -632,15 +632,16 @@ const FAQ = () => {
             {faqData.map((faq, index) => (
               <div key={index} className="faq-item" style={{marginBottom: '20px', border: '2px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', overflow: 'hidden'}}>
                 <button
-                  type="button"
-                  className="faq-question"
-                  aria-expanded={openItems[index]}
-                  aria-controls={`faq-answer-${index}`}
-                  onClick={() => toggleItem(index)}
-                  style={{background: '#ffffff', padding: '15px 20px', cursor: 'pointer', position: 'relative', fontWeight: '600', color: '#1a1a1a', transition: 'background 0.3s ease, color 0.3s ease, border-color 0.3s ease', textAlign: 'left', width: '100%', display: 'block', border: 'none', fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit'}}
-                >
+                                  type="button"
+                                  role="button"
+                                  className="faq-question"
+                                  aria-expanded={openItems[index]}
+                                  aria-controls={`faq-answer-${index}`}
+                                  onClick={() => toggleItem(index)}
+                                  style={{background: '#ffffff', padding: '15px 20px', cursor: 'pointer', position: 'relative', fontWeight: '600', color: '#1a1a1a', transition: 'background 0.3s ease, color 0.3s ease, border-color 0.3s ease', textAlign: 'left', width: '100%', display: 'block', border: 'none', fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit'}}
+                                >
                   {faq.question}
-                  <span style={{position: 'absolute', right: '20px', fontSize: '20px', transition: 'transform 0.3s ease'}}>{openItems[index] ? '-' : '+'}</span>
+                  <span aria-hidden="true" style={{position: 'absolute', right: '20px', fontSize: '20px', transition: 'transform 0.3s ease'}}>{openItems[index] ? '-' : '+'}</span>
                 </button>
                 {openItems[index] && (
                   <div

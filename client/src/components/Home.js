@@ -571,9 +571,12 @@ const Home = () => {
         <div className="nimbus-nav-container">
           <div className="nimbus-nav-inner">
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
-              <img fetchPriority="high" decoding="async" loading="eager" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
-                   alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
-                   className="nimbus-logo" />
+              <picture>
+                <source srcset="/images/nimbus-logo.webp" type="image/webp" />
+                <img fetchPriority="high" decoding="async" loading="eager" src="/images/nimbus-logo.png"
+                     alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
+                     className="nimbus-logo" />
+              </picture>
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
                     onClick={toggleMenu}
@@ -832,7 +835,10 @@ const Home = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="Air source heat pump installation on a modern UK home in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
+              <picture>
+                <source srcset="/images/hero-home.webp" type="image/webp" />
+                <img fetchpriority="high" decoding="async" src="/images/hero-home.jpg" alt="Air source heat pump installation on a modern UK home in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="eager" />
+              </picture>
             </div>
           </div>
         </section>

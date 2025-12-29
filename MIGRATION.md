@@ -25,7 +25,11 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Optimizations: Critical CSS preload in [`index.html`](client/public/index.html), Offer schema in CTA (£0-£7500 grant).
 - Grants page: [`BoilerGrantsScunthorpe.js`](client/src/components/BoilerGrantsScunthorpe.js) existing.
 - Next: Push emergency/optimizations to staging, monitor GA 24h for Scunthorpe boiler traffic.
-
+- Canonical: Fixed conflict using dynamic `window.location.href` in [`Header.js`](client/src/components/Header.js), unique per page, tested/Lighthouse SEO 100.
+- New SEO page: [`GasBoilerBreakdownScunthorpe.js`](client/src/components/GasBoilerBreakdownScunthorpe.js), route `/gas-boiler-breakdown-scunthorpe`, faults/24h/keywords/schema.
+- Footer: Added Gas Safe logo/link/reg #197837 in [`Footer.js`](client/src/components/Footer.js).
+- Lighthouse summary: SEO 100, Acc 97, Perf ~45 (fixes logged).
+- Staging deployed: https://client-bzrye2kdq-brys-projects-4db70d78.vercel.app. GA monitor pending 24h for Scunthorpe/North Lincs keywords.
 ## Testimonials Integration
 
 - Replaced dynamic with static 8 exact 5-star Google reviews (Abdul Rehman etc.) in [`Testimonials.js`](client/src/components/Testimonials.js), responsive grid.

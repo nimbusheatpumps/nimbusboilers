@@ -545,8 +545,46 @@ const Footer = () => {
           })}
         </script>
       </Helmet>
-      <footer>
-        <p>&copy; 2023 Nimbus Boilers & Heat Pumps</p>
+      <footer className="bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          {/* Gas Safe Trust Section */}
+          <section className="text-center mb-12">
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-10 shadow-2xl border border-green-500/20">
+              <div className="flex flex-col lg:flex-row items-center gap-8 justify-center">
+                <div className="flex items-center gap-6">
+                  <img
+                    src="https://www.gassaferegister.co.uk/wp-content/themes/gas-safe/assets/images/logo.svg"
+                    alt="Official Gas Safe Register Logo"
+                    className="h-20 w-auto flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-2">
+                      Gas Safe Registered Engineer
+                    </h3>
+                    <p className="text-xl font-bold text-green-400 tracking-wide">#197837</p>
+                  </div>
+                </div>
+                <a
+                  href="https://www.gassaferegister.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap flex items-center gap-2"
+                  aria-label="Verify Here - Verify our Gas Safe registration on the official website"
+                >
+                  Verify Here
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+          {/* Copyright */}
+          <div className="border-t border-gray-700 pt-8 text-center">
+            <p className="text-sm text-gray-300 text-white !important">&copy; 2025 Nimbus Boilers & Heat Pumps Ltd. All rights reserved | <a href="/privacy" className="hover:text-green-400 transition-colors text-white !important">Privacy</a> | <a href="/terms" className="hover:text-green-400 transition-colors text-white !important">Terms</a></p>
+          </div>
+        </div>
       </footer>
     </>
   );

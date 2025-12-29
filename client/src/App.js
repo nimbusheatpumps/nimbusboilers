@@ -13,6 +13,7 @@ import GasBoilerServiceScunthorpe from './components/GasBoilerServiceScunthorpe'
 import GasBoilerInstallationScunthorpe from './components/GasBoilerInstallationScunthorpe';
 import GasBoilerServiceNorthLincolnshire from './components/GasBoilerServiceNorthLincolnshire';
 import BoilerRepairScunthorpe from './components/BoilerRepairScunthorpe';
+import GasBoilerBreakdownScunthorpe from './components/GasBoilerBreakdownScunthorpe';
 import Login from './components/Login';
 import Admin from './components/Admin';
 import Contact from './components/Contact';
@@ -43,7 +44,7 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/areas-covered';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
@@ -73,6 +74,7 @@ return (
           <Route path="/gas-boiler-installation-scunthorpe" element={<GasBoilerInstallationScunthorpe />} />
           <Route path="/gas-boiler-service-north-lincolnshire" element={<GasBoilerServiceNorthLincolnshire />} />
           <Route path="/gas-boiler-repair-scunthorpe" element={<BoilerRepairScunthorpe />} />
+          <Route path="/gas-boiler-breakdown-scunthorpe" element={<GasBoilerBreakdownScunthorpe />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/boiler-maintenance-tips" element={<BoilerMaintenanceTips />} />
