@@ -562,15 +562,15 @@ const Footer = () => {
                     <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-2">
                       Gas Safe Registered Engineer
                     </h3>
-                    <p className="text-xl font-bold text-green-400 tracking-wide">#197837</p>
+                    <p className="text-xl font-bold text-green-400 tracking-wide">#966812</p>
                   </div>
                 </div>
                 <a
-                  href="https://www.gassaferegister.co.uk/"
+                  href="https://www.gassaferegister.co.uk/search-register/?search=966812"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap flex items-center gap-2"
-                  aria-label="Verify Here - Verify our Gas Safe registration on the official website"
+                  aria-label="Verify Here - Verify our Gas Safe registration #966812 on the official website"
                 >
                   Verify Here
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

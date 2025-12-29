@@ -441,9 +441,9 @@ const GasSafeBoilerInstallersScunthorpe = () => {
               <img decoding="async" src="https://via.placeholder.com/200x120/00a676/ffffff?text=Gas+Safe" alt="Gas Safe Registered" style={{height: '100px', borderRadius: '8px'}} loading="lazy" />
               <img decoding="async" src="https://via.placeholder.com/200x120/00a676/ffffff?text=Oftec" alt="Oftec Approved" style={{height: '100px', borderRadius: '8px'}} loading="lazy" />
             </div>
-            <p className="section-text">Fully <strong>Gas Safe registered</strong> (#197837) for all gas boiler work. <strong>Oftec approved</strong> for oil services. Verify our credentials at GasSafeRegister.co.uk.</p>
+            <p className="section-text">Fully <strong>Gas Safe registered</strong> (#966812) for all gas boiler work. <strong>Oftec approved</strong> for oil services. Verify our credentials at GasSafeRegister.co.uk.</p>
             <ul className="section-list">
-              <li>Gas Safe Registration #197837 (verify at GasSafeRegister.co.uk)</li>
+              <li>Gas Safe Registration #966812 (verify at GasSafeRegister.co.uk)</li>
               <li>Oftec Competent Person Scheme</li>
               <li>Public Liability Insured</li>
               <li>Building Regulations Compliant</li>
