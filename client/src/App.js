@@ -20,6 +20,8 @@ import Contact from './components/Contact';
 import BoilerMaintenanceTips from './components/BoilerMaintenanceTips';
 import GasSafeBoilerInstallersScunthorpe from './components/GasSafeBoilerInstallersScunthorpe';
 import BoilerGrantsScunthorpe from './components/BoilerGrantsScunthorpe';
+import GasBoilerReplacementScunthorpe from './components/GasBoilerReplacementScunthorpe';
+import Breadcrumb from './components/Breadcrumb';
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -44,7 +46,7 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/areas-covered';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-replacement-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
@@ -63,6 +65,7 @@ return (
       </a>
       <main id="main-content" role="main" tabIndex="-1">
         {!isSeoPage && <Header />}
+        <Breadcrumb />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quote" element={<QuoteForm />} />
