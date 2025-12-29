@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet';
-import QuoteForm from './QuoteForm';
-import Testimonials from './Testimonials';
+const QuoteForm = lazy(() => import('./QuoteForm'));
+const Testimonials = lazy(() => import('./Testimonials'));
+import CallToAction from './CallToAction';
 
 const Home = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -571,9 +572,9 @@ const Home = () => {
         <div className="nimbus-nav-container">
           <div className="nimbus-nav-inner">
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
+              <img decoding="async" fetchpriority="high" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
                    alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
-                   className="nimbus-logo" loading="lazy" />
+                   className="nimbus-logo" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
                     onClick={toggleMenu}
@@ -836,6 +837,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <CallToAction />
         {/* Gas Boiler Efficiency Section */}
         <section className="gas-boiler-efficient-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
@@ -1046,6 +1048,7 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="testimonials-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <CallToAction />
             <Testimonials />
           </div>
         </section>
