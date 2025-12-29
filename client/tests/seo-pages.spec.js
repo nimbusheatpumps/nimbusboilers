@@ -70,7 +70,9 @@ test.describe('SEO Pages Verification', () => {
       await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', expect.stringContaining('Scunthorpe'));
       await expect(page.locator('meta[name="keywords"]')).toHaveAttribute('content', expect.stringContaining('scunthorpe'));
       await expect(page.locator('link[rel="canonical"]')).toBeVisible();
-      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`https://nimbusboilers\\.co\\.uk${pageInfo.path}`));
+      const canonicalHref = await page.locator('link[rel="canonical"]').getAttribute('href');
+      const currentUrl = page.url();
+      expect(canonicalHref).toBe(currentUrl);
 
       // Images have alt
       const images = await page.$$('img');

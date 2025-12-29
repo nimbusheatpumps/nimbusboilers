@@ -18,6 +18,7 @@ import Admin from './components/Admin';
 import Contact from './components/Contact';
 import BoilerMaintenanceTips from './components/BoilerMaintenanceTips';
 import GasSafeBoilerInstallersScunthorpe from './components/GasSafeBoilerInstallersScunthorpe';
+import BoilerGrantsScunthorpe from './components/BoilerGrantsScunthorpe';
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -42,9 +43,9 @@ function AppContent() {
     }
   }, [location]);
 
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/areas-covered';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/areas-covered';
 
-  const canonicalUrl = `https://nimbusboilers.co.uk${location.pathname}`;
+  const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
   <>
 
@@ -76,6 +77,7 @@ return (
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/boiler-maintenance-tips" element={<BoilerMaintenanceTips />} />
           <Route path="/gas-safe-boiler-installers-scunthorpe" element={<GasSafeBoilerInstallersScunthorpe />} />
+          <Route path="/boiler-grants-scunthorpe" element={<BoilerGrantsScunthorpe />} />
         </Routes>
         {!isSeoPage && <Footer />}
       </main>

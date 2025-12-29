@@ -571,9 +571,9 @@ const Home = () => {
         <div className="nimbus-nav-container">
           <div className="nimbus-nav-inner">
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
+              <img fetchPriority="high" decoding="async" loading="eager" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
                    alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
-                   className="nimbus-logo" loading="lazy" />
+                   className="nimbus-logo" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
                     onClick={toggleMenu}
