@@ -1,8 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
-import Testimonials from './Testimonials';
+const Testimonials = lazy(() => import('./Testimonials'));
 const QuoteForm = lazy(() => import('./QuoteForm'));
-
 const Home = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [dropdownActive, setDropdownActive] = useState(null);
@@ -36,7 +35,7 @@ const Home = () => {
             "name": "Nimbus Heat Pumps Ltd",
             "alternateName": "Nimbus Heat Pumps",
             "url": "https://nimbusheatpumps.co.uk/",
-            "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
+            "logo": "/images/nimbus-logo.webp",
             "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
             "telephone": "01724 622069",
@@ -573,7 +572,7 @@ const Home = () => {
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
               <picture>
                 <source srcset="/images/nimbus-logo.webp" type="image/webp" />
-                <img fetchPriority="high" decoding="async" loading="eager" src="/images/nimbus-logo.png"
+                <img loading="lazy" decoding="async" src="/images/nimbus-logo.png"
                      alt="Nimbus Boilers & Heat Pumps - Gas Boiler and Air Source Heat Pump Installation in Scunthorpe and North Lincolnshire"
                      className="nimbus-logo" />
               </picture>
@@ -1049,7 +1048,9 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="testimonials-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <Testimonials />
+            <Suspense fallback={<div className="loading-spinner">Loading testimonials...</div>}>
+              <Testimonials />
+            </Suspense>
           </div>
         </section>
         {/* FAQs Section */}

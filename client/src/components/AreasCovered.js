@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { LoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 
 const AreasCovered = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
+
+  const [mapVisible, setMapVisible] = useState(false);
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (mapRef.current) {
+      observer.observe(mapRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const markers = [
     { id: 1, position: { lat: 53.5723, lng: -0.6355 }, title: 'Scunthorpe', info: 'Gas boiler services North Lincolnshire, Heat pump installations Scunthorpe' },
@@ -44,7 +65,7 @@ const AreasCovered = () => {
             "name": "Nimbus Heat Pumps Ltd",
             "alternateName": "Nimbus Heat Pumps",
             "url": "https://nimbusheatpumps.co.uk/",
-            "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
+            "logo": "/images/nimbus-logo.webp",
             "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
             "telephone": "01724 622069",
@@ -701,33 +722,39 @@ const AreasCovered = () => {
             <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Our Service Area Map</h2>
             <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>See our coverage across North Lincolnshire, Lincolnshire and South Yorkshire - we're here to serve you!</p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <div className="map-container" style={{ maxWidth: '100%', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0, 166, 118, 0.15)', border: '2px solid #A8D5BA' }}>
-                <LoadScript googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}>
-                  <GoogleMap
-                    mapContainerStyle={{ height: '450px', width: '100%' }}
-                    center={{ lat: 53.5723, lng: -0.6355 }}
-                    zoom={10}
-                  >
-                    {markers.map(marker => (
-                      <Marker
-                        key={marker.id}
-                        position={marker.position}
-                        onClick={() => setSelectedMarker(marker)}
-                      />
-                    ))}
-                    {selectedMarker && (
-                      <InfoWindow
-                        position={selectedMarker.position}
-                        onCloseClick={() => setSelectedMarker(null)}
-                      >
-                        <div>
-                          <h3>{selectedMarker.title}</h3>
-                          <p>{selectedMarker.info}</p>
-                        </div>
-                      </InfoWindow>
-                    )}
-                  </GoogleMap>
-                </LoadScript>
+              <div ref={mapRef} className="map-container" style={{ maxWidth: '100%', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0, 166, 118, 0.15)', border: '2px solid #A8D5BA' }}>
+                {mapVisible ? (
+                  <LoadScript googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}>
+                    <GoogleMap
+                      mapContainerStyle={{ height: '450px', width: '100%' }}
+                      center={{ lat: 53.5723, lng: -0.6355 }}
+                      zoom={10}
+                    >
+                      {markers.map(marker => (
+                        <Marker
+                          key={marker.id}
+                          position={marker.position}
+                          onClick={() => setSelectedMarker(marker)}
+                        />
+                      ))}
+                      {selectedMarker && (
+                        <InfoWindow
+                          position={selectedMarker.position}
+                          onCloseClick={() => setSelectedMarker(null)}
+                        >
+                          <div>
+                            <h3>{selectedMarker.title}</h3>
+                            <p>{selectedMarker.info}</p>
+                          </div>
+                        </InfoWindow>
+                      )}
+                    </GoogleMap>
+                  </LoadScript>
+                ) : (
+                  <div style={{ height: '450px', width: '100%', backgroundColor: '#f8f9fa', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6c757d', fontSize: '18px', fontWeight: '500' }}>
+                    Scroll to load interactive map
+                  </div>
+                )}
               </div>
             </div>
           </div>
