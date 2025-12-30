@@ -23,7 +23,9 @@ import BoilerGrantsScunthorpe from './components/BoilerGrantsScunthorpe';
 import GasBoilerServicingScunthorpe from './components/GasBoilerServicingScunthorpe';
 import GasBoilerBrandsScunthorpe from './components/GasBoilerBrandsScunthorpe';
 import SystemBoilerInstallationScunthorpe from './components/SystemBoilerInstallationScunthorpe';
+import RegularBoilerInstallationScunthorpe from './components/RegularBoilerInstallationScunthorpe';
 import Breadcrumb from './components/Breadcrumb';
+
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   return token ? children : <Navigate to="/login" />;
@@ -46,13 +48,11 @@ function AppContent() {
       ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
     }
   }, [location]);
-const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/areas-covered';
-
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/regular-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
   <>
-
     <Helmet>
       <link rel="canonical" href={canonicalUrl} />
     </Helmet>
@@ -86,6 +86,8 @@ return (
           <Route path="/boiler-grants-scunthorpe" element={<BoilerGrantsScunthorpe />} />
           <Route path="/gas-boiler-servicing-scunthorpe" element={<GasBoilerServicingScunthorpe />} />
           <Route path="/gas-boiler-brands-scunthorpe" element={<GasBoilerBrandsScunthorpe />} />
+          <Route path="/system-boiler-installation-scunthorpe" element={<SystemBoilerInstallationScunthorpe />} />
+          <Route path="/regular-boiler-installation-scunthorpe" element={<RegularBoilerInstallationScunthorpe />} />
         </Routes>
         {!isSeoPage && <Footer />}
       </main>
