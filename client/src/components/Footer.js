@@ -580,7 +580,7 @@ const Footer = () => {
               </div>
             </div>
           </section>
-          <div className="text-xs text-gray-500 text-center md:text-left mt-2 max-w-4xl mx-auto">
+          <div className="text-xs text-gray-200 text-center md:text-left mt-2 max-w-4xl mx-auto">
             Calls recorded for training and quality purposes.
           </div>
           {/* Social Links */}
@@ -590,7 +590,7 @@ const Footer = () => {
                 href="https://x.com/NimbusHeatPumps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-gray-300 hover:text-green-400 hover:scale-105 transition-all duration-300 font-medium"
+                className="group flex items-center gap-2 text-gray-100 hover:text-green-400 hover:scale-105 transition-all duration-300 font-medium"
                 aria-label="Follow @NimbusHeatPumps on X"
               >
                 <svg
@@ -610,7 +610,7 @@ const Footer = () => {
           </section>
           {/* Copyright */}
           <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-sm text-gray-300 text-white !important">&copy; 2025 Nimbus Boilers & Heat Pumps Ltd. All rights reserved | <a href="/privacy" className="hover:text-green-400 transition-colors text-white !important">Privacy</a> | <a href="/terms" className="hover:text-green-400 transition-colors text-white !important">Terms</a></p>
+            <p className="text-sm !text-white">&copy; 2025 Nimbus Boilers & Heat Pumps Ltd. All rights reserved | <a href="/privacy" className="hover:text-green-400 transition-colors !text-white">Privacy</a> | <a href="/terms" className="hover:text-green-400 transition-colors !text-white">Terms</a></p>
           </div>
         </div>
       </footer>

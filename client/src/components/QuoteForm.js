@@ -158,7 +158,7 @@ const QuoteForm = () => {
             "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
             "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
-            "telephone": "+44 7487 546550",
+            "telephone": "01724 622069",
             "email": "info@nimbusheatpumps.co.uk",
             "address": {
               "@type": "PostalAddress",

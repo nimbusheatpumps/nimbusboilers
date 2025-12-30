@@ -71,8 +71,8 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>Boiler Repair FAQs North Lincolnshire | Nimbus Boilers & Heat Pumps</title>
-        <meta name="description" content="boiler repair FAQs North Lincolnshire" />
+        <title>Air Source Heat Pump FAQs North Lincolnshire | Nimbus Boilers & Heat Pumps</title>
+        <meta name="description" content="air source heat pump FAQs North Lincolnshire" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

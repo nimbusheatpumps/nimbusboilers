@@ -6,16 +6,16 @@ const AreasCovered = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
 
   const markers = [
-    { id: 1, position: { lat: 53.5723, lng: -0.6355 }, title: 'Scunthorpe', info: 'Heat pump installations Scunthorpe, Gas boiler services North Lincolnshire' },
-    { id: 2, position: { lat: 53.552, lng: -0.485 }, title: 'Brigg', info: 'Air source heat pumps Brigg, Boiler repairs Barton-upon-Humber' },
+    { id: 1, position: { lat: 53.5723, lng: -0.6355 }, title: 'Scunthorpe', info: 'Gas boiler services North Lincolnshire, Heat pump installations Scunthorpe' },
+    { id: 2, position: { lat: 53.552, lng: -0.485 }, title: 'Brigg', info: 'Boiler repairs Barton-upon-Humber, Air source heat pumps Brigg' },
     { id: 3, position: { lat: 53.401, lng: -0.774 }, title: 'Gainsborough', info: 'Heating services Gainsborough, Energy efficient upgrades Doncaster' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Areas Covered: Heat Pumps & Boilers in Scunthorpe</title>
-        <meta name="description" content="Nimbus provides heat pump & gas boiler installations across DN/LN postcodes in Scunthorpe, Doncaster & Lincoln. £7,500 Boiler Upgrade Scheme grants available." />
+        <title>Areas Covered: Gas Boilers & Heat Pumps in Scunthorpe</title>
+        <meta name="description" content="Nimbus provides gas boiler & heat pump installations across DN/LN postcodes in Scunthorpe, Doncaster & Lincoln. £7,500 Boiler Upgrade Scheme grants available." />
         <meta name="keywords" content="areas covered Scunthorpe, boiler installation areas North Lincolnshire, heat pump service Doncaster, Lincolnshire postcodes covered DN LN, gas boiler Scunthorpe areas" />
         <meta name="author" content="Nimbus Heat Pumps Ltd" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

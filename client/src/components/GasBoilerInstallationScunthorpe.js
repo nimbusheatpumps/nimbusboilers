@@ -420,7 +420,7 @@ const GasBoilerInstallationScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="gas boiler installation Scunthorpe by expert Nimbus installers" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
+              <img src="/images/hero-boiler-room.webp" alt="gas boiler installation Scunthorpe expert" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>

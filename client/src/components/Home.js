@@ -39,7 +39,7 @@ const Home = () => {
             "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
             "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
-            "telephone": "+44 7487 546550",
+            "telephone": "01724 622069",
             "email": "info@nimbusheatpumps.co.uk",
             "address": {
               "@type": "PostalAddress",
@@ -589,7 +589,7 @@ const Home = () => {
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
-                <a href="https://nimbusheatpumps.co.uk/faq/" className="nimbus-link">Air Source Heat Pumps FAQ</a>
+                <a href="https://nimbusheatpumps.co.uk/faq/" className="nimbus-link">FAQ</a>
               </li>
               <li className="nimbus-menu-item">
                 <a href="https://nimbusheatpumps.co.uk/areas-we-cover/" className="nimbus-link">Areas We Cover</a>
@@ -600,7 +600,7 @@ const Home = () => {
               </li>
               <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(0)}>
-                  Heat Pump & Boiler Manufacturers <span>▼</span>
+                  Gas Boiler & Heat Pump Manufacturers <span>▼</span>
                 </a>
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
@@ -835,10 +835,7 @@ const Home = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <picture>
-                <source srcset="/images/hero-home.webp" type="image/webp" />
-                <img fetchpriority="high" decoding="async" src="/images/hero-home.jpg" alt="Air source heat pump installation on a modern UK home in Scunthorpe by Nimbus Boilers & Heat Pumps" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="eager" />
-              </picture>
+              <img src="/images/hero-team-service.webp" alt="Nimbus Boilers expert team servicing boilers Scunthorpe" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 # Nimbus Boilers Migration Guide
 
-This guide provides detailed, actionable steps to migrate the existing static HTML site in [`existingnimbus/`](existingnimbus/) to the new React app deployed on Vercel. The goal is to preserve SEO rankings for keywords like "boiler installation Scunthorpe" with zero loss. Latest staging preview: https://client-f3d9ebua3-brys-projects-4db70d78.vercel.app (staging-reviews-seo-2025-12-28 branch).
+This guide provides detailed, actionable steps to migrate the existing static HTML site in [`existingnimbus/`](existingnimbus/) to the new React app deployed on Vercel. The goal is to preserve SEO rankings for keywords like "boiler installation Scunthorpe" with zero loss. Latest staging preview: https://client-8t2r3hsom-brys-projects-4db70d78.vercel.app (2025-12-30 all-fixes).
 
 **Warnings:**
 - Test all redirects on staging before production.

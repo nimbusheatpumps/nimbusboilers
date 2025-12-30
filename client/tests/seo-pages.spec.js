@@ -8,43 +8,50 @@ test.describe('SEO Pages Verification', () => {
       path: '/gas-boiler-installation-scunthorpe',
       titleRegex: /Gas Boiler Installation Scunthorpe/i,
       h1Text: 'Gas Boiler Installation Scunthorpe | Expert Local Installers',
-      keywords: ['gas boiler installation scunthorpe', 'gas safe', 'boiler service scunthorpe']
+      keywords: ['gas boiler installation scunthorpe', 'gas safe', 'boiler service scunthorpe'],
+      pageKeyword: 'gas boiler installation Scunthorpe'
     },
     {
       path: '/gas-boiler-service-scunthorpe',
       titleRegex: /Gas Boiler Service Scunthorpe/i,
       h1Text: 'Gas Boiler Service Scunthorpe',
-      keywords: ['gas boiler service scunthorpe', 'gas safe', 'annual boiler servicing']
+      keywords: ['gas boiler service scunthorpe', 'gas safe', 'annual boiler servicing'],
+      pageKeyword: 'gas boiler service Scunthorpe'
     },
     {
       path: '/gas-boiler-service-north-lincolnshire',
       titleRegex: /Gas Boiler Service North Lincolnshire/i,
       h1Text: 'Gas Boiler Service North Lincolnshire | Annual Servicing Experts',
-      keywords: ['gas boiler service north lincolnshire', 'boiler service scunthorpe', 'gas safe']
+      keywords: ['gas boiler service north lincolnshire', 'boiler service scunthorpe', 'gas safe'],
+      pageKeyword: 'gas boiler service Scunthorpe'
     },
     {
       path: '/gas-boiler-repair-scunthorpe',
       titleRegex: /Boiler Repair Scunthorpe/i,
       h1Text: 'Gas Boiler Repair Scunthorpe | 24/7 Emergency Repairs',
-      keywords: ['boiler repair scunthorpe', 'gas boiler service scunthorpe', 'gas safe']
+      keywords: ['boiler repair scunthorpe', 'gas boiler service scunthorpe', 'gas safe'],
+      pageKeyword: 'gas boiler repair North Lincolnshire'
     },
     {
       path: '/gas-safe-boiler-installers-scunthorpe',
       titleRegex: /Gas Safe Boiler Installers Scunthorpe/i,
       h1Text: 'Gas Safe Boiler Installers Scunthorpe | Professional Gas Boiler Installation',
-      keywords: ['gas safe boiler installers scunthorpe', 'gas boiler installation scunthorpe', 'certified gas safe']
+      keywords: ['gas safe boiler installers scunthorpe', 'gas boiler installation scunthorpe', 'certified gas safe'],
+      pageKeyword: 'gas boiler installation Scunthorpe'
     },
     {
       path: '/gas-boiler-servicing-scunthorpe',
       titleRegex: /Gas Boiler Servicing Scunthorpe/i,
       h1Text: 'Gas Boiler Servicing Scunthorpe',
-      keywords: ['gas boiler servicing scunthorpe', 'boiler service north lincolnshire', 'annual boiler service scunthorpe']
+      keywords: ['gas boiler servicing scunthorpe', 'boiler service north lincolnshire', 'annual boiler service scunthorpe'],
+      pageKeyword: 'gas boiler service Scunthorpe'
     },
     {
       path: '/gas-boiler-brands-scunthorpe',
       titleRegex: /Gas Boiler Brands Scunthorpe/i,
       h1Text: 'Gas Boiler Brands Scunthorpe',
-      keywords: ['gas boiler brands scunthorpe', 'worcester bosch scunthorpe', 'vaillant boilers north lincolnshire']
+      keywords: ['gas boiler brands scunthorpe', 'worcester bosch scunthorpe', 'vaillant boilers north lincolnshire'],
+      pageKeyword: 'gas boiler service Scunthorpe'
     },
     {
       path: '/boiler-finance-scunthorpe',

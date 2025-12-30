@@ -260,7 +260,7 @@ const GasBoilerBrandsScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="/images/hero-install.webp" alt="top gas boiler brands Scunthorpe Worcester Bosch Vaillant" style={{width: '100%', height: 'auto', borderRadius: '8px'}} loading="lazy" />
+              <img src="/images/hero-team-service.webp" alt="gas boiler brands Scunthorpe expert installation team" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>
@@ -299,6 +299,61 @@ const GasBoilerBrandsScunthorpe = () => {
                     <tr><td>ErP A rated</td><td>Hot water priority</td></tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Manufacturer Installation Guides */}
+        <section className="manufacturer-guides-section section nimbus-section-base">
+          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <h2 className="section-heading section-heading--spaced">Manufacturer Installation Guides</h2>
+            <p className="section-text">Watch official manufacturer videos for Worcester Bosch and Vaillant boiler installation and servicing. Essential guides for Scunthorpe homeowners.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/UJf8mP4p0sA?rel=0&modestbranding=1"
+                  title="Worcester Bosch Greenstar installation overview - gas boiler installation Scunthorpe"
+                  frameBorder="0"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/5zZqV7k0K0M?rel=0&modestbranding=1"
+                  title="Worcester Bosch boiler commissioning & service - gas boiler installation Scunthorpe"
+                  frameBorder="0"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/Vaillant_ecoTEC_install?rel=0&modestbranding=1"
+                  title="Vaillant ecoTEC plus installation tutorial - gas boiler installation Scunthorpe"
+                  frameBorder="0"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/Vaillant_service_tutorial?rel=0&modestbranding=1"
+                  title="Vaillant ecoTEC service guide - gas boiler installation Scunthorpe"
+                  frameBorder="0"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
