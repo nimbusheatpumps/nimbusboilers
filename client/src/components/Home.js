@@ -1,7 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
-const QuoteForm = lazy(() => import('./QuoteForm'));
 import Testimonials from './Testimonials';
+const QuoteForm = lazy(() => import('./QuoteForm'));
 
 const Home = () => {
   const [menuActive, setMenuActive] = useState(false);
