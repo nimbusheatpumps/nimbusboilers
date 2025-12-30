@@ -785,10 +785,10 @@ const Home = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="nimbus-cta nimbus-cta-primary">Gas Boiler Quote</a>
+              <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95">Gas Boiler Quote</a>
               <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Heat Pump Quote</a>
               <a href="mailto:info@nimbusheatpumps.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="tel:01724622069" className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95">Call Now</a>
             </div>
           </div>
         </div>

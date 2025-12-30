@@ -695,9 +695,9 @@ const QuoteForm = () => {
             <h2 className="section-subheading">Instant Gas Boiler Quote | Gas Safe Registered Installers | Finance Available | Boiler Repairs & Servicing in Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h2>
             <p className="section-text section-text--intro section-text--compact">Specialising in gas boiler installations, repairs and services in Scunthorpe, Grimsby, Doncaster, Lincoln and every town and village in between, including Brigg, Gainsborough and Kirton in Lindsey. We offer combi boiler replacements, emergency repairs and eco-friendly heating solutions. Request your quote today.</p>
             <div className="section-cta-group">
-              <a className="cta-button cta-button--nowrap" href="#bqf-fullpaste">Get an Instant Gas Boiler Quote in Scunthorpe, Grimsby, Doncaster, Lincoln</a>
-              <a className="cta-button cta-button--nowrap" href="#bqf-fullpaste">Start Your Instant Boiler Quote</a>
-              <a className="cta-button" href="tel:01724622069">Call 01724 622069</a>
+              <a className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95 whitespace-nowrap" href="#bqf-fullpaste">Get an Instant Gas Boiler Quote in Scunthorpe, Grimsby, Doncaster, Lincoln</a>
+              <a className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95 whitespace-nowrap" href="#bqf-fullpaste">Start Your Instant Boiler Quote</a>
+              <a className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95" href="tel:01724622069">Call 01724 622069</a>
             </div>
           </div>
           {/* Right column: Hero Image */}
@@ -719,7 +719,7 @@ const QuoteForm = () => {
         <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
           <h2 className="section-heading section-heading--spaced">Boiler Installation in Scunthorpe - Quick Links</h2>
           <ul className="section-list section-list--flush" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', maxWidth: '1000px' }}>
-            <li><a className="cta-button" href="#bqf-fullpaste">Instant Boiler Quote</a></li>
+            <li><a className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95" href="#bqf-fullpaste">Instant Boiler Quote</a></li>
             <li><a className="cta-button" href="#instant-quote-how">How the Quote Works</a></li>
             <li><a className="cta-button" href="#boiler-installation-scunthorpe">Install & Replacement</a></li>
             <li><a className="cta-button" href="#boiler-cost">Boiler Installation Cost</a></li>
@@ -1273,7 +1273,7 @@ const QuoteForm = () => {
 
       {/* Sticky Mobile CTA */}
       <div className="sticky-cta" role="region" aria-label="Quick actions">
-        <a className="sticky-cta__btn" href="#bqf-fullpaste" aria-label="Start instant boiler quote">Get Instant Quote</a>
+        <a className="sticky-cta__btn" href="#bqf-fullpaste" aria-label="Get Instant Quote">Get Instant Quote</a>
         <a className="sticky-cta__btn sticky-cta__btn--call" href="tel:01724622069" aria-label="Call Nimbus Boilers on 01724 622069">Call 01724 622069</a>
       </div>
 

@@ -580,7 +580,7 @@ const Footer = () => {
               </div>
             </div>
           </section>
-          <div className="text-xs text-gray-200 text-center md:text-left mt-2 max-w-4xl mx-auto">
+          <div className="text-xs text-gray-100 text-center md:text-left mt-2 max-w-4xl mx-auto">
             Calls recorded for training and quality purposes.
           </div>
           {/* Social Links */}
@@ -590,7 +590,7 @@ const Footer = () => {
                 href="https://x.com/NimbusHeatPumps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-gray-100 hover:text-green-400 hover:scale-105 transition-all duration-300 font-medium"
+                className="group flex items-center gap-2 text-gray-100 hover:text-green-300 hover:scale-105 transition-all duration-300 font-medium"
                 aria-label="Follow @NimbusHeatPumps on X"
               >
                 <svg
