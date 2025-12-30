@@ -551,7 +551,7 @@ const Header = () => {
           <ul style={{display: 'flex', listStyle: 'none', gap: '20px'}}>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/quote">Quote</Link></li>
-            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/faq" aria-label="Internal FAQ page">FAQ</Link></li>
             <li><Link to="/areas">Areas Covered</Link></li>
             <li><Link to="/combi-boiler-installation-scunthorpe">Combi Boiler Installation</Link></li>
           </ul>

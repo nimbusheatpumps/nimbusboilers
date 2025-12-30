@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Chat from './Chat';
 
 const Footer = () => {
+  const loadedRef = useRef(false);
+
+  const handleScroll = useCallback(() => {
+    if (loadedRef.current || window.scrollY <= window.innerHeight / 2) return;
+    loadedRef.current = true;
+    const tidioScript = document.createElement('script');
+    tidioScript.src = '//code.tidio.co/YOUR_PUBLIC_KEY.js'; /* Replace YOUR_PUBLIC_KEY with your Tidio account public key from https://www.tidio.com/ after free signup. */
+    tidioScript.async = true;
+    document.body.appendChild(tidioScript);
+    window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
   return (
     <>
       <Chat />
@@ -545,6 +562,7 @@ const Footer = () => {
           })}
         </script>
       </Helmet>
+      <style dangerouslySetInnerHTML={{__html: 'footer div.text-xs { color: #ffffff !important; } footer a.group span { color: #ffffff !important; } footer a.group:hover span { color: #4ade80 !important; }'}} />
       <footer className="bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
           {/* Gas Safe Trust Section */}
@@ -580,7 +598,7 @@ const Footer = () => {
               </div>
             </div>
           </section>
-          <div className="text-xs text-gray-100 text-center md:text-left mt-2 max-w-4xl mx-auto">
+          <div className="text-xs !text-white text-center md:text-left mt-2 max-w-4xl mx-auto" style={{color: '#ffffff'}}>
             Calls recorded for training and quality purposes.
           </div>
           {/* Social Links */}
@@ -590,7 +608,7 @@ const Footer = () => {
                 href="https://x.com/NimbusHeatPumps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-gray-100 hover:text-green-300 hover:scale-105 transition-all duration-300 font-medium"
+                className="group flex items-center gap-2 !text-white hover:text-green-400 hover:scale-105 transition-all duration-300 font-medium" style={{color: 'white'}}
                 aria-label="Follow @NimbusHeatPumps on X"
               >
                 <svg
@@ -604,7 +622,7 @@ const Footer = () => {
                 >
                   <path d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span>@NimbusHeatPumps</span>
+                <span style={{color: '#ffffff'}}>@NimbusHeatPumps</span>
               </a>
             </div>
           </section>

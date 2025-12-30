@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
-import QuoteForm from './QuoteForm';
+const QuoteForm = lazy(() => import('./QuoteForm'));
 import Testimonials from './Testimonials';
 
 const Home = () => {
@@ -589,7 +589,7 @@ const Home = () => {
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
-                <a href="https://nimbusheatpumps.co.uk/faq/" className="nimbus-link">FAQ</a>
+                <a href="https://nimbusheatpumps.co.uk/faq/" className="nimbus-link" aria-label="FAQ on nimbusheatpumps.co.uk">FAQ</a>
               </li>
               <li className="nimbus-menu-item">
                 <a href="https://nimbusheatpumps.co.uk/areas-we-cover/" className="nimbus-link">Areas We Cover</a>
@@ -1058,27 +1058,27 @@ const Home = () => {
             <h2 className="section-heading section-heading--spaced">Frequently Asked Questions</h2>
             <div className="faq-accordion">
               <div className={`faq-item ${faqActive === 0 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(0)} role="button" tabIndex="0" aria-expanded={faqActive === 0} aria-controls="faq-answer-0">How much can I save with a new gas boiler?</h3>
+                <button type="button" id="faq-question-0" className="faq-question" onClick={() => toggleFaq(0)} aria-expanded={faqActive === 0} aria-controls="faq-answer-0">How much can I save with a new gas boiler?</button>
                 <div className="faq-answer" id="faq-answer-0" role="region" aria-labelledby="faq-question-0" aria-hidden={faqActive !== 0}>Upgrading to a modern gas boiler can save up to &pound;500 annually on heating bills compared to older models (savings vary depending on property and usage).</div>
               </div>
               <div className={`faq-item ${faqActive === 1 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(1)} role="button" tabIndex="0" aria-expanded={faqActive === 1} aria-controls="faq-answer-1">What is an air source heat pump?</h3>
+                <button type="button" id="faq-question-1" className="faq-question" onClick={() => toggleFaq(1)} aria-expanded={faqActive === 1} aria-controls="faq-answer-1">What is an air source heat pump?</button>
                 <div className="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden={faqActive !== 1}>An air source heat pump is an energy-efficient system that extracts heat from the outside air to warm your home and provide hot water, even in cold weather.</div>
               </div>
               <div className={`faq-item ${faqActive === 2 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(2)} role="button" tabIndex="0" aria-expanded={faqActive === 2} aria-controls="faq-answer-2">How much can I save with the Boiler Upgrade Scheme?</h3>
+                <button type="button" id="faq-question-2" className="faq-question" onClick={() => toggleFaq(2)} aria-expanded={faqActive === 2} aria-controls="faq-answer-2">How much can I save with the Boiler Upgrade Scheme?</button>
                 <div className="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden={faqActive !== 2}>Eligible households can receive &pound;7,500 towards the cost of installing an air source heat pump, significantly reducing upfront expenses.</div>
               </div>
               <div className={`faq-item ${faqActive === 3 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(3)} role="button" tabIndex="0" aria-expanded={faqActive === 3} aria-controls="faq-answer-3">Is my home suitable for a heat pump?</h3>
+                <button type="button" id="faq-question-3" className="faq-question" onClick={() => toggleFaq(3)} aria-expanded={faqActive === 3} aria-controls="faq-answer-3">Is my home suitable for a heat pump?</button>
                 <div className="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden={faqActive !== 3}>Most properties are suitable. Our engineers conduct a free assessment to confirm and design the best system for your needs.</div>
               </div>
               <div className={`faq-item ${faqActive === 4 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(4)} role="button" tabIndex="0" aria-expanded={faqActive === 4} aria-controls="faq-answer-4">What maintenance do heat pumps require?</h3>
+                <button type="button" id="faq-question-4" className="faq-question" onClick={() => toggleFaq(4)} aria-expanded={faqActive === 4} aria-controls="faq-answer-4">What maintenance do heat pumps require?</button>
                 <div className="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden={faqActive !== 4}>Annual servicing is recommended to ensure optimal performance. We offer comprehensive maintenance plans.</div>
               </div>
               <div className={`faq-item ${faqActive === 5 ? 'active' : ''}`}>
-                <h3 className="faq-question" onClick={() => toggleFaq(5)} role="button" tabIndex="0" aria-expanded={faqActive === 5} aria-controls="faq-answer-5">How long does installation take?</h3>
+                <button type="button" id="faq-question-5" className="faq-question" onClick={() => toggleFaq(5)} aria-expanded={faqActive === 5} aria-controls="faq-answer-5">How long does installation take?</button>
                 <div className="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden={faqActive !== 5}>Typically 1-3 days, depending on your property. We minimise disruption with our professional team.</div>
               </div>
             </div>

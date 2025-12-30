@@ -22,6 +22,7 @@ import GasSafeBoilerInstallersScunthorpe from './components/GasSafeBoilerInstall
 import BoilerGrantsScunthorpe from './components/BoilerGrantsScunthorpe';
 import GasBoilerServicingScunthorpe from './components/GasBoilerServicingScunthorpe';
 import GasBoilerBrandsScunthorpe from './components/GasBoilerBrandsScunthorpe';
+import SystemBoilerInstallationScunthorpe from './components/SystemBoilerInstallationScunthorpe';
 import Breadcrumb from './components/Breadcrumb';
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -45,7 +46,7 @@ function AppContent() {
       ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
     }
   }, [location]);
-const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/areas-covered';
+const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/areas-covered';
 
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;

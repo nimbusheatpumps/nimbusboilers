@@ -1274,7 +1274,7 @@ const QuoteForm = () => {
       {/* Sticky Mobile CTA */}
       <div className="sticky-cta" role="region" aria-label="Quick actions">
         <a className="sticky-cta__btn" href="#bqf-fullpaste" aria-label="Get Instant Quote">Get Instant Quote</a>
-        <a className="sticky-cta__btn sticky-cta__btn--call" href="tel:01724622069" aria-label="Call Nimbus Boilers on 01724 622069">Call 01724 622069</a>
+        <a className="sticky-cta__btn sticky-cta__btn--call" href="tel:01724622069" aria-label="Call 01724 622069">Call 01724 622069</a>
       </div>
 
       {/* Styles */}
