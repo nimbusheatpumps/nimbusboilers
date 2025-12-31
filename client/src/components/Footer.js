@@ -571,7 +571,7 @@ const Footer = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8 justify-center">
                 <div className="flex items-center gap-6">
                   <img
-                    src="https://www.gassaferegister.co.uk/wp-content/themes/gas-safe/assets/images/logo.svg"
+                    src="/gas-safe-logo.svg"
                     alt="Official Gas Safe Register Logo"
                     className="h-20 w-auto flex-shrink-0"
                     loading="lazy"

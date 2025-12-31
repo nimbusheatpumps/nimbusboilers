@@ -4,298 +4,194 @@ import { Helmet } from 'react-helmet';
 const Blog = () => {
   const posts = [
     {
-      title: "Top Boiler Repair Tips for Scunthorpe Homes",
-      date: "December 25, 2024",
-      excerpt: "Boilers are the heart of your home's heating system, especially in colder areas like Scunthorpe and North Lincolnshire. Regular maintenance and knowing how to spot potential issues can save you time, money, and ensure your home stays warm and safe. Here are our top boiler repair tips specifically for Scunthorpe homeowners.",
-      content: `
-        <h2>1. Regular Boiler Servicing</h2>
-        <p>The most important tip is to have your boiler serviced annually by a Gas Safe registered engineer. In Scunthorpe's harsh winters, this prevents breakdowns and ensures efficient operation. Our team at Nimbus Boilers & Heat Pumps recommends servicing before the heating season begins.</p>
-        <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2169699497-scaled.jpg" alt="Gas Safe registered boiler servicing in Scunthorpe" style={{width: '100%', height: 'auto', display: 'block', margin: '20px 0', borderRadius: '8px'}} loading="lazy" />
+      id: 1,
+      title: "Signs You Need a New Boiler in Scunthorpe",
+      date: "December 31, 2025",
+      excerpt: "Is your boiler making strange noises, leaking water, or struggling with pressure? These are clear signs you need a new boiler installation in Scunthorpe. Learn how to spot the warning signs and what to do next.",
+      body: `
+<p class="text-xl text-gray-700 leading-relaxed mb-10">Living in Scunthorpe means enduring the biting cold of North Lincolnshire winters, where a dependable boiler is the cornerstone of home comfort and safety. However, even the most reliable systems have a finite lifespan. Recognizing the early warning signs that your boiler needs replacement can save you from emergency breakdowns, skyrocketing energy bills, and potential safety risks. In this comprehensive guide, we'll explore the key indicators that signal it's time for professional <strong class="text-blue-600">gas boiler installation Scunthorpe</strong> services.</p>
 
-        <h2>2. Check for Strange Noises</h2>
-        <p>If your boiler starts making unusual sounds like banging, whistling, or gurgling, it could indicate air in the system or limescale buildup. Scunthorpe's hard water can accelerate limescale formation, so regular flushing is essential.</p>
+<img src="/images/hero-boiler-room.webp" alt="Boiler room in Scunthorpe home showing wear and tear signs" class="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-2xl mb-16 mx-auto" loading="lazy" />
 
-        <h2>3. Monitor Water Pressure</h2>
-        <p>Low water pressure is a common issue in Scunthorpe homes. Check your boiler's pressure gauge regularly - it should be between 1 and 1.5 bar. If it's lower, repressurize the system or call for professional help.</p>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">1. Strange and Unusual Noises</h2>
 
-        <h2>4. Bleed Radiators Regularly</h2>
-        <p>Air trapped in radiators can cause cold spots and put extra strain on your boiler. Bleed your radiators every few months, especially after periods of inactivity. This simple maintenance task can prevent costly repairs.</p>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">If your boiler starts sounding like a percussion ensemble with banging, whistling, or gurgling noises, it's trying to tell you something. The 'kettling' sound, resembling a boiling kettle, is particularly common in Scunthorpe due to hard water causing limescale buildup in the heat exchanger. While a routine <strong class="text-blue-600">gas boiler service Scunthorpe</strong> can mitigate minor issues, persistent noises often indicate deeper problems that warrant replacement.</p>
 
-        <h2>5. Watch for Pilot Light Issues</h2>
-        <p>If your boiler has a pilot light that keeps going out, it could be due to a faulty thermocouple or gas valve. Never attempt to relight it yourself if you're not Gas Safe registered - contact our experts in Scunthorpe immediately.</p>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">These sounds result from air locks, sludge accumulation, or failing components. Ignoring them can lead to complete system failure during the coldest nights.</p>
 
-        <h2>6. Clean and Maintain Flues</h2>
-        <p>Blocked or damaged flues can lead to dangerous carbon monoxide buildup. Have your flue inspected and cleaned annually, particularly important in Scunthorpe's windy conditions that can affect flue performance.</p>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">2. Leaks and Water Damage</h2>
 
-        <h2>7. Upgrade to Smart Controls</h2>
-        <p>Consider installing smart thermostats and controls. These can optimize your boiler's efficiency, potentially saving you up to £500 annually on heating bills. We offer Hive smart thermostat installations with every boiler replacement.</p>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">Water leaking from your boiler, whether a slow drip or steady flow, is a critical alarm. Common sources include corroded seals, cracked heat exchangers, or faulty pressure relief valves. In older systems, these components degrade over time, especially in Scunthorpe's humid climate. A quick <strong class="text-blue-600">gas boiler repair North Lincolnshire</strong> might patch it temporarily, but leaks usually herald the end of the boiler's reliable service.</p>
 
-        <h2>8. Know When to Call Professionals</h2>
-        <p>While some maintenance can be done DIY, complex repairs should always be left to qualified engineers. Signs you need professional help include:</p>
-        <ul>
-          <li>Boiler not heating water or radiators</li>
-          <li>Strange smells from the boiler</li>
-          <li>Water leaks around the boiler</li>
-          <li>Boiler frequently switching off</li>
-        </ul>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">Not only does leaking waste water and energy, but it can cause extensive damage to your home and pose slip hazards.</p>
 
-        <h2>Why Choose Nimbus Boilers & Heat Pumps in Scunthorpe?</h2>
-        <p>As Gas Safe registered installers operating under the MCS umbrella scheme, we provide comprehensive boiler services across Scunthorpe, Grimsby, Doncaster, Lincoln, and all DN and LN postcodes. Our experienced engineers understand the unique challenges of North Lincolnshire homes and can help you qualify for the £7,500 Boiler Upgrade Scheme grant.</p>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">3. Pressure Gauge Problems</h2>
 
-        <div className="blog-cta">
-          <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="cta-button">Book Your Boiler Service in Scunthorpe</a>
-          <a href="#contact-form" className="cta-button">Get a Free Boiler Quote</a>
-        </div>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">The pressure gauge is your boiler's vital sign monitor. Ideal reading is 1-1.5 bar when cold, rising slightly when heating. Frequent drops below 1 bar or wild fluctuations indicate leaks, faulty valves, or pump issues. Safety mechanisms will shut down the boiler to prevent damage, leaving your home freezing. Regular monitoring during your annual <strong class="text-blue-600">gas boiler service Scunthorpe</strong> is essential, but ongoing problems mean replacement time.</p>
+
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">4. Age: Over 10 Years Old</h2>
+
+<p class="text-lg text-gray-700 leading-relaxed mb-8">Statistics show most boilers last 10-15 years. If yours exceeds 10 years, efficiency plummets – losing about 10% per year. Spare parts become scarce and expensive as manufacturers discontinue support for older models. Investing in modern <strong class="text-blue-600">gas boiler installation Scunthorpe</strong> brings A-rated efficiency (90%+), smart controls, and 10-year warranties.</p>
+
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">5. Poor Efficiency and Rising Bills</h2>
+
+<p class="text-lg text-gray-700 leading-relaxed mb-8">Noticed your gas bills creeping up despite consistent usage? Your aging boiler is the culprit, leaking heat and wasting fuel. Symptoms include slow hot water, cold radiator spots, or the boiler struggling to maintain temperature. New condensing boilers recover heat from exhaust gases, slashing bills by 20-30%.</p>
+
+<div class="grid md:grid-cols-2 gap-8 mb-16 p-8 bg-yellow-50 rounded-3xl border-4 border-yellow-200">
+
+<div>
+
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Other Warning Signs</h3>
+
+<ul class="text-lg text-gray-700 space-y-3 list-disc pl-6">
+
+<li>Frequent breakdowns and repairs costing more than a new boiler</li>
+
+<li>Discoloured or rusty water from hot taps</li>
+
+<li>Pilot light repeatedly extinguishing (on older boilers)</li>
+
+<li>Boiler short-cycling – turning on/off rapidly</li>
+
+<li>Foul odours or sooty marks around the boiler</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<img src="/images/hero-boiler-room.webp" alt="Old boiler needing replacement" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" />
+
+</div>
+
+</div>
+
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-green-200 pb-6 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl">Why Choose Nimbus for Your New Boiler?</h2>
+
+<p class="text-lg text-gray-700 leading-relaxed mb-8">At Nimbus Boilers & Heat Pumps, we're Scunthorpe's trusted Gas Safe registered engineers specializing in <strong class="text-blue-600">gas boiler installation Scunthorpe</strong>. Serving all DN postcodes, we offer:</p>
+
+<ul class="text-lg text-gray-700 space-y-3 mb-12 pl-6 list-disc max-w-3xl mx-auto">
+
+<li>Free home surveys and no-obligation quotes</li>
+
+<li>Access to <strong>£7,500 Boiler Upgrade Scheme grants</strong> for eligible homes</li>
+
+<li><strong class="text-blue-600">Gas boiler repair North Lincolnshire</strong> for fixable issues</li>
+
+<li>Comprehensive <strong class="text-blue-600">gas boiler service Scunthorpe</strong> packages</li>
+
+<li>Premium brands: Worcester Bosch, Vaillant, Ideal, Baxi</li>
+
+<li>Finance options and 0% interest plans</li>
+
+<li>10-year manufacturer warranties</li>
+
+</ul>
+
+<div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-12 rounded-3xl shadow-2xl text-center mb-16 transform hover:scale-[1.02] transition-all duration-500">
+
+<h3 class="text-4xl font-bold mb-6 drop-shadow-lg">Don't Wait for Winter Disaster!</h3>
+
+<p class="text-xl mb-8 opacity-95">Get your free boiler assessment today and stay warm worry-free.</p>
+
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+<a href="/quote" class="bg-white text-blue-600 font-bold py-4 px-10 rounded-2xl text-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl w-full sm:w-auto text-center">Free Quote Now</a>
+
+<a href="/gas-boiler-service-scunthorpe" class="bg-emerald-500 hover:bg-emerald-600 font-bold py-4 px-10 rounded-2xl text-xl transition-all duration-300 shadow-xl hover:shadow-2xl w-full sm:w-auto text-center">Book Service</a>
+
+</div>
+
+</div>
+
+<p class="text-sm text-gray-500 text-center italic mt-12">Serving Scunthorpe, North Lincolnshire & surrounding areas | Gas Safe Registered #123456</p>
       `,
       images: [
-        { src: "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg", alt: "Boiler repair and maintenance in Scunthorpe homes" }
-      ]
-    },
-    {
-      title: "Gas Boiler Service Scunthorpe Guide",
-      date: "December 26, 2024",
-      excerpt: "Ensure your gas boiler in Scunthorpe is running efficiently with our comprehensive service guide. Learn about annual servicing, common issues, and why choosing Gas Safe registered engineers is crucial for your home's safety and performance.",
-      content: `
-        <h2>What is Gas Boiler Servicing?</h2>
-        <p>Gas boiler servicing in Scunthorpe involves a thorough inspection and maintenance of your heating system by qualified Gas Safe registered engineers. This essential maintenance ensures your boiler operates safely and efficiently, preventing breakdowns during North Lincolnshire's cold winters.</p>
-        <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126282-scaled.jpg" alt="Gas boiler servicing in Scunthorpe" style={{width: '100%', height: 'auto', display: 'block', margin: '20px 0', borderRadius: '8px'}} loading="lazy" />
-
-        <h2>Why Annual Servicing Matters</h2>
-        <p>Regular gas boiler service Scunthorpe residents should prioritize helps identify potential issues before they become major problems. It improves energy efficiency, reduces heating bills, and ensures compliance with safety standards. Our Nimbus Boilers & Heat Pumps team recommends servicing every 12 months.</p>
-
-        <h2>What Happens During a Boiler Service?</h2>
-        <p>During a professional gas boiler service in Scunthorpe, our engineers will:</p>
-        <ul>
-          <li>Check for gas leaks and carbon monoxide</li>
-          <li>Clean and inspect burners and heat exchangers</li>
-          <li>Test boiler pressure and water temperature</li>
-          <li>Examine flue and ventilation systems</li>
-          <li>Verify thermostat and control settings</li>
-        </ul>
-
-        <h2>Signs Your Boiler Needs Servicing</h2>
-        <p>Don't wait for a breakdown. Watch for these signs that indicate your Scunthorpe gas boiler needs professional attention:</p>
-        <ul>
-          <li>Increased energy bills</li>
-          <li>Unusual noises or smells</li>
-          <li>Pilot light frequently going out</li>
-          <li>Cold spots in radiators</li>
-          <li>Boiler not responding to thermostat</li>
-        </ul>
-
-        <h2>Choose Gas Safe Registered Engineers</h2>
-        <p>Always choose Gas Safe registered boiler engineers for servicing in Scunthorpe. This government-backed scheme ensures engineers are qualified and insured. At Nimbus Boilers & Heat Pumps, all our technicians are fully Gas Safe registered and experienced in North Lincolnshire properties.</p>
-
-        <div className="blog-cta">
-          <a href="https://nimbusheatpumps.co.uk/gas-boiler-service-scunthorpe/" className="cta-button">Book Gas Boiler Service in Scunthorpe</a>
-          <a href="#contact-form" className="cta-button">Get a Free Quote</a>
-        </div>
-      `,
-      images: [
-        { src: "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126282-scaled.jpg", alt: "Gas boiler servicing in Scunthorpe" }
-      ]
-    },
-    {
-      title: "Boiler Installation North Lincolnshire Tips",
-      date: "December 27, 2024",
-      excerpt: "Planning a new boiler installation in North Lincolnshire? Our expert tips cover everything from choosing the right boiler to installation process and post-installation care for optimal performance and efficiency.",
-      content: `
-        <h2>Choosing the Right Boiler for Your North Lincolnshire Home</h2>
-        <p>When selecting a boiler for installation in North Lincolnshire, consider your home's size, heating needs, and energy efficiency requirements. Gas boilers remain popular, but heat pumps and hybrid systems offer excellent alternatives. Our experts at Nimbus Boilers & Heat Pumps can help you choose the perfect system.</p>
-        <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126283-scaled.jpg" alt="Boiler installation in North Lincolnshire" style={{width: '100%', height: 'auto', display: 'block', margin: '20px 0', borderRadius: '8px'}} loading="lazy" />
-
-        <h2>Boiler Installation Process</h2>
-        <p>Professional boiler installation North Lincolnshire requires careful planning. Our Gas Safe registered engineers follow these steps:</p>
-        <ul>
-          <li>Site survey and system design</li>
-          <li>Removal of old boiler (if applicable)</li>
-          <li>Installation of new boiler and flue</li>
-          <li>Connection to gas, water, and electrical supplies</li>
-          <li>System testing and commissioning</li>
-        </ul>
-
-        <h2>Preparation Tips for Boiler Installation</h2>
-        <p>Before your boiler installation in North Lincolnshire:</p>
-        <ul>
-          <li>Clear access to installation area</li>
-          <li>Ensure gas and electrical supplies are available</li>
-          <li>Plan for potential disruption (1-2 days)</li>
-          <li>Arrange alternative heating if needed</li>
-        </ul>
-
-        <h2>Post-Installation Care</h2>
-        <p>After boiler installation North Lincolnshire homeowners should:</p>
-        <ul>
-          <li>Have the system serviced annually</li>
-          <li>Bleed radiators regularly</li>
-          <li>Monitor energy usage and bills</li>
-          <li>Keep manufacturer's documentation</li>
-        </ul>
-
-        <h2>Boiler Upgrade Scheme Benefits</h2>
-        <p>Take advantage of the £7,500 Boiler Upgrade Scheme grant available for North Lincolnshire residents. This government incentive makes upgrading to efficient heating systems more affordable. Contact Nimbus Boilers & Heat Pumps to see if you qualify.</p>
-
-        <div className="blog-cta">
-          <a href="https://nimbusheatpumps.co.uk/boiler-installation-north-lincolnshire/" className="cta-button">Get Boiler Installation Quote</a>
-          <a href="#contact-form" className="cta-button">Learn About Boiler Upgrade Scheme</a>
-        </div>
-      `,
-      images: [
-        { src: "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126283-scaled.jpg", alt: "Boiler installation in North Lincolnshire" }
-      ]
-    },
-    {
-      title: "Heat Pump Maintenance Scunthorpe",
-      date: "December 28, 2024",
-      excerpt: "Keep your heat pump system in Scunthorpe operating at peak efficiency with regular maintenance. Discover essential maintenance tasks, seasonal checks, and professional servicing options for optimal performance.",
-      content: `
-        <h2>Why Heat Pump Maintenance Matters in Scunthorpe</h2>
-        <p>Heat pumps provide efficient heating and hot water, but regular maintenance is crucial for Scunthorpe's variable climate. Proper care ensures optimal performance, extends system life, and maintains energy efficiency. Our Nimbus Boilers & Heat Pumps maintenance services keep your system running smoothly.</p>
-        <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126284-scaled.jpg" alt="Heat pump maintenance in Scunthorpe" style={{width: '100%', height: 'auto', display: 'block', margin: '20px 0', borderRadius: '8px'}} loading="lazy" />
-
-        <h2>Seasonal Maintenance Checklist</h2>
-        <p>Perform these heat pump maintenance Scunthorpe tasks seasonally:</p>
-        <h3>Spring:</h3>
-        <ul>
-          <li>Clean outdoor unit coils</li>
-          <li>Check refrigerant levels</li>
-          <li>Inspect electrical connections</li>
-        </ul>
-        <h3>Autumn:</h3>
-        <ul>
-          <li>Clear debris from outdoor unit</li>
-          <li>Test thermostat settings</li>
-          <li>Check drainage systems</li>
-        </ul>
-
-        <h2>DIY Heat Pump Care</h2>
-        <p>Scunthorpe homeowners can perform basic maintenance:</p>
-        <ul>
-          <li>Keep outdoor unit clear of snow and debris</li>
-          <li>Change air filters every 1-3 months</li>
-          <li>Check for unusual noises or vibrations</li>
-          <li>Ensure proper airflow around the unit</li>
-        </ul>
-
-        <h2>Professional Servicing</h2>
-        <p>Annual professional heat pump maintenance Scunthorpe includes:</p>
-        <ul>
-          <li>Comprehensive system inspection</li>
-          <li>Performance testing and efficiency checks</li>
-          <li>Cleaning of coils and components</li>
-          <li>Calibration of controls and sensors</li>
-          <li>Documentation of system condition</li>
-        </ul>
-
-        <h2>Common Heat Pump Issues</h2>
-        <p>Watch for these signs that indicate maintenance is needed:</p>
-        <ul>
-          <li>Reduced heating or cooling capacity</li>
-          <li>Higher than normal energy bills</li>
-          <li>Ice buildup on outdoor unit</li>
-          <li>Strange noises during operation</li>
-          <li>Frequent cycling on and off</li>
-        </ul>
-
-        <h2>Choose Experienced Technicians</h2>
-        <p>For heat pump maintenance in Scunthorpe, trust MCS accredited installers like Nimbus Boilers & Heat Pumps. Our technicians are trained in the latest heat pump technologies and understand North Lincolnshire's specific requirements.</p>
-
-        <div className="blog-cta">
-          <a href="https://nimbusheatpumps.co.uk/heat-pump-maintenance-scunthorpe/" className="cta-button">Book Heat Pump Maintenance</a>
-          <a href="#contact-form" className="cta-button">Get Expert Advice</a>
-        </div>
-      `,
-      images: [
-        { src: "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126284-scaled.jpg", alt: "Heat pump maintenance in Scunthorpe" }
+        { src: "/images/hero-boiler-room.webp", alt: "Scunthorpe boiler room indicating replacement needed" }
       ]
     }
   ];
 
+  const featuredPost = posts[0];
+
   return (
     <>
       <Helmet>
-        <title>Top Boiler Repair Tips for Scunthorpe Homes | Nimbus Boilers & Heat Pumps</title>
-        <meta name="description" content="Discover essential boiler repair tips tailored for homes in Scunthorpe. Learn how to maintain your boiler, spot common issues, and ensure safe, efficient heating with expert advice from Nimbus Boilers & Heat Pumps." />
-        <meta name="keywords" content="boiler repair tips Scunthorpe, boiler maintenance North Lincolnshire, gas boiler troubleshooting Scunthorpe, heating system repair tips" />
+        <title>{featuredPost.title} | Nimbus Boilers & Heat Pumps</title>
+        <meta name="description" content="Discover the top signs your boiler needs replacement in Scunthorpe: noises, leaks, pressure issues, age over 10 years, inefficiency. Expert gas boiler installation Scunthorpe by Gas Safe engineers. Free quotes & grants available." />
+        <meta name="keywords" content="signs new boiler Scunthorpe, gas boiler installation Scunthorpe, gas boiler repair North Lincolnshire, gas boiler service Scunthorpe, boiler replacement Scunthorpe, boiler pressure problems" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://nimbusheatpumps.co.uk/blog" />
+        <link rel="canonical" href="https://nimbusboilers.co.uk/blog" />
       </Helmet>
-      <main>
-        {posts.map((post, index) => (
-          <section key={index} className="blog-post-section section nimbus-section-base">
-            <div style={{maxWidth: '800px', margin: '0 auto'}}>
-              <h1 className="blog-title">{post.title}</h1>
-              <p className="blog-meta">Published on {post.date} | By Nimbus Boilers & Heat Pumps</p>
-              {post.images.map((img, imgIndex) => (
-                <img key={imgIndex} decoding="async" src={img.src} alt={img.alt} style={{width: '100%', height: 'auto', display: 'block', margin: '20px 0', borderRadius: '8px'}} loading="lazy" />
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
+          {/* Header */}
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 text-center mb-4 bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent drop-shadow-lg">Nimbus Blog</h1>
+          <p className="text-xl text-gray-600 text-center mb-20 max-w-2xl mx-auto">Expert heating advice for Scunthorpe & North Lincolnshire homeowners</p>
+
+          {/* Recent Posts List */}
+          <section className="mb-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Recent Posts</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post.id} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
+                  <div className="relative overflow-hidden">
+                    {post.images[0] && (
+                      <img 
+                        src={post.images[0].src} 
+                        alt={post.images[0].alt} 
+                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" 
+                        loading="lazy" 
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="p-8">
+                    <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">{post.date}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">{post.title}</h3>
+                    <p className="text-gray-600 leading-relaxed line-clamp-4 mb-6">{post.excerpt}</p>
+                    <a href="#featured-post" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                      Read Full Post 
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                  </div>
+                </article>
               ))}
-              <p className="blog-intro">{post.excerpt}</p>
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </section>
-        ))}
+
+          {/* Full Post */}
+          {featuredPost && (
+            <section id="featured-post" className="scroll-mt-20">
+              {/* Hero */}
+              <div className="relative mb-20 overflow-hidden rounded-4xl shadow-2xl">
+                {featuredPost.images[0] && (
+                  <img 
+                    src={featuredPost.images[0].src} 
+                    alt={featuredPost.images[0].alt} 
+                    className="w-full h-[60vh] md:h-[70vh] object-cover" 
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8 md:p-16 lg:p-24">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 drop-shadow-2xl animate-fade-in-up">{featuredPost.title}</h1>
+                  <p className="text-xl md:text-2xl lg:text-3xl mb-4 opacity-95 max-w-4xl mx-auto drop-shadow-lg">{featuredPost.excerpt}</p>
+                  <p className="text-lg opacity-90">Published on {featuredPost.date} | By Nimbus Boilers & Heat Pumps</p>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="max-w-4xl mx-auto">
+                <div 
+                  className="post-content prose prose-lg max-w-none [>h2]:scroll-mt-20"
+                  dangerouslySetInnerHTML={{ __html: featuredPost.body }} 
+                />
+              </div>
+            </section>
+          )}
+        </div>
       </main>
-      <style jsx>{`
-        .blog-post-section {
-          padding: 100px 32px;
-          text-align: left;
-        }
-        .blog-title {
-          font-size: 32px;
-          font-weight: 700;
-          margin-bottom: 10px;
-          color: #1a1a1a;
-        }
-        .blog-meta {
-          font-size: 14px;
-          color: #666;
-          margin-bottom: 30px;
-        }
-        .blog-intro {
-          font-size: 18px;
-          line-height: 1.7;
-          margin-bottom: 30px;
-        }
-        .blog-post-section h2 {
-          font-size: 24px;
-          font-weight: 600;
-          margin: 40px 0 20px 0;
-          color: #1a1a1a;
-        }
-        .blog-post-section p {
-          font-size: 16px;
-          line-height: 1.7;
-          margin-bottom: 20px;
-          color: #555;
-        }
-        .blog-post-section ul {
-          margin: 20px 0;
-          padding-left: 20px;
-        }
-        .blog-post-section li {
-          margin-bottom: 10px;
-          color: #555;
-        }
-        .blog-cta {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          margin-top: 40px;
-          flex-wrap: wrap;
-        }
-        @media (max-width: 768px) {
-          .blog-post-section {
-            padding: 40px 20px;
-          }
-          .blog-title {
-            font-size: 28px;
-          }
-          .blog-cta {
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-      `}</style>
     </>
   );
 };

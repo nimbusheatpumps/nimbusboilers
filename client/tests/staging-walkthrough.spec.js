@@ -15,7 +15,7 @@ async function launchChromeAndRunLh(url, opts, config = null) {
 }
 
 test.describe('Staging Full Customer Journey Walkthrough', () => {
-  const stagingUrl = 'https://client-qm2qjfzre-brys-projects-4db70d78.vercel.app';
+  const stagingUrl = 'https://client-2kqknrnbi-brys-projects-4db70d78.vercel.app';
 
   const setupPage = async (page) => {
     page.on('console', (msg) => {
@@ -131,6 +131,106 @@ test.describe('Staging Full Customer Journey Walkthrough', () => {
 
     // Footer responsive
     await expect(page.locator('footer')).toBeVisible();
+
+    await context.close();
+  });
+
+  test('Desktop: New Install - home -> /gas-boiler-installation-scunthorpe -> quote spinner', async ({ page }) => {
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    await expect(page.locator('h1.section-heading--hero')).toBeVisible();
+    const installLink = page.locator('a[href="/gas-boiler-installation-scunthorpe"]');
+    await expect(installLink).toBeVisible({ timeout: 5000 });
+    await installLink.click();
+    await expect(page).toHaveURL(/gas-boiler-installation-scunthorpe$/);
+    await expect(page.locator('h1')).toContainText('Gas Boiler Installation Scunthorpe');
+    const quoteCta = page.locator('a[href="/quote"], button:has-text("Get Quote"), a:has-text("quote")i');
+    await expect(quoteCta).toBeVisible();
+    await quoteCta.first().click();
+    await page.waitForLoadState('networkidle');
+    await page.locator('input[name="home_type"][value="own_home"]').click();
+    const nextBtn = page.locator('button[type="button"]:has-text("Next")');
+    await expect(nextBtn).toBeEnabled();
+    await nextBtn.click();
+    await page.waitForSelector('#pay-button', { timeout: 10000 });
+    const payBtn = page.locator('#pay-button');
+    await expect(payBtn).toBeVisible();
+    const spinner = page.locator('.spinner, [class*="spinner"], [class*="loading"], button[aria-busy="true"]');
+    await payBtn.click();
+    await expect(spinner).toBeVisible({ timeout: 3000 });
+  });
+
+  test('Desktop: Repair - home -> /boiler-repair-scunthorpe -> chat', async ({ page }) => {
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    const repairLink = page.locator('a[href="/boiler-repair-scunthorpe"]');
+    await expect(repairLink).toBeVisible();
+    await repairLink.click();
+    await expect(page.locator('h1')).toContainText('Boiler Repair Scunthorpe');
+    await expect(page.locator('h3:has-text("Live Chat")')).toBeVisible({ timeout: 10000 });
+    const chatInput = page.locator('input[placeholder="Type a message..."]');
+    await chatInput.fill('Repair test message');
+    await page.locator('button:has-text("Send")').click();
+    await expect(page.locator('text=Repair test')).toBeVisible({ timeout: 3000 });
+  });
+
+  test('Desktop: Service - home -> /gas-boiler-service-scunthorpe -> contact form', async ({ page }) => {
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    const serviceLink = page.locator('a[href="/gas-boiler-service-scunthorpe"]');
+    await expect(serviceLink).toBeVisible();
+    await serviceLink.click();
+    await expect(page.locator('h1')).toContainText('Gas Boiler Service Scunthorpe');
+    const contactCta = page.locator('a[href="/contact"], button:has-text("Contact Us"), text=/Contact/i');
+    await expect(contactCta).toBeVisible();
+    await contactCta.first().click();
+    await expect(page.locator('h1:has-text("Customer Feedback")')).toBeVisible();
+    await page.locator('#name').fill('Test User');
+    await page.locator('#email').fill('test@example.com');
+    await page.locator('#rating').selectOption('5');
+    await page.locator('#review').fill('Service journey test');
+    await page.locator('button[type="submit"]').click();
+    await expect(page.locator('[class*="bg-green"], [class*="bg-red"], text=/Feedback/, text=/Error/')).toBeVisible({ timeout: 5000 });
+  });
+
+  test('Mobile: 3 Journeys verify flows/speed', async ({ browser }) => {
+    const context = await browser.newContext({
+      viewport: { width: 390, height: 844 },
+      userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14_0 Mobile/15E148 Safari/604.1'
+    });
+    const page = await context.newPage();
+    await setupPage(page);
+
+    // 1. New install
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    await page.locator('a[href="/gas-boiler-installation-scunthorpe"]').first().click();
+    await expect(page.locator('h1')).toContainText('Gas Boiler Installation Scunthorpe');
+    await page.locator('a[href="/quote"], button:has-text("Get Quote")').first().click();
+    await page.waitForURL(/quote$/);
+    await page.locator('input[name="home_type"]').first().click();
+    await page.locator('button:has-text("Next")').click();
+    await page.waitForSelector('#pay-button');
+    await page.locator('#pay-button').click();
+    await page.waitForTimeout(2000);
+
+    // 2. Repair
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    await page.locator('a[href="/boiler-repair-scunthorpe"]').first().click();
+    await expect(page.locator('h1')).toContainText('Boiler Repair Scunthorpe');
+    const chatInputM = page.locator('input[placeholder="Type a message..."]');
+    await chatInputM.scrollIntoViewIfNeeded();
+    await chatInputM.fill('Mobile repair test');
+    await page.locator('button:has-text("Send")').click();
+    await expect(page.locator('text=Mobile repair')).toBeVisible({ timeout: 3000 });
+
+    // 3. Service
+    await page.goto(`${stagingUrl}`, { waitUntil: 'networkidle' });
+    await page.locator('a[href="/gas-boiler-service-scunthorpe"]').first().click();
+    await expect(page.locator('h1')).toContainText('Gas Boiler Service Scunthorpe');
+    await page.locator('a[href="/contact"], button:has-text("Contact")').first().click();
+    await page.locator('#name').fill('Mobile Test');
+    await page.locator('#email').fill('mobile@test.com');
+    await page.locator('#rating').selectOption('5');
+    await page.locator('#review').fill('Mobile service');
+    await page.locator('button[type="submit"]').click();
+    await expect(page.locator('[class*="bg-green"], [class*="bg-red"]')).toBeVisible({ timeout: 3000 });
 
     await context.close();
   });
