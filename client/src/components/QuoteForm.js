@@ -10,6 +10,7 @@ const QuoteForm = () => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [price, setPrice] = useState(2000);
 
@@ -104,11 +105,14 @@ const QuoteForm = () => {
     e.preventDefault();
     if (validateStep(currentStep)) {
       setLoading(true);
+      setIsSubmitting(true);
       if (window.location.hostname === 'client-three-rho-12.vercel.app') {
         setCompleted(true);
         toast.success('Quote submitted successfully! We will contact you soon.');
         ReactGA.event({ category: 'Form', action: 'Submit', label: 'Quote Form' });
         setLoading(false);
+        setIsSubmitting(false);
+        setIsSubmitting(false);
         return;
       }
       try {

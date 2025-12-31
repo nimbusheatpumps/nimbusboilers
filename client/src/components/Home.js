@@ -832,6 +832,14 @@ const Home = () => {
                 <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" className="cta-button cta-button--nowrap">Get an Instant Gas Boiler Quote in Scunthorpe, Grimsby, Doncaster, Lincoln</a>
                 <a href="#contact-form" className="cta-button cta-button--nowrap">Get a Free Air Source Heat Pump Quote in Scunthorpe</a>
               </div>
+              <div className="mt-6 mx-auto max-w-md">
+                <a href="/gas-safe-boiler-installers-scunthorpe/"
+                   className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-400/80 rounded-2xl px-6 py-3 text-sm font-bold text-green-900 shadow-lg hover:shadow-xl hover:shadow-green-200/50 hover:scale-[1.02] hover:bg-green-100 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-200/50 sm:px-8 sm:py-4 w-full"
+                   aria-label="10 Year Warranty - Gas Safe Registered Boiler Installers in Scunthorpe">
+                  <img src="/gas-safe-logo.svg" alt="Gas Safe Registered Logo" className="w-7 h-7 flex-shrink-0 sm:w-9 sm:h-9" loading="lazy" decoding="async" />
+                  <span className="text-center leading-tight">10 Year Warranty<span className="sm:hidden"><br /></span><br className="hidden sm:inline" />on All Installations<br />— Gas Safe Registered</span>
+                </a>
+              </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
               <img src="/images/hero-team-service.webp" alt="Nimbus Boilers expert team servicing boilers Scunthorpe" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />

@@ -1,6 +1,6 @@
 # Staging Deploy Log - 2025-12-30
 
-**Client Staging URL:** https://client-8t2r3hsom-brys-projects-4db70d78.vercel.app
+**Client Staging URL:** https://client-qm2qjfzre-brys-projects-4db70d78.vercel.app
 
 **Deploy Command:** `cd client && npx vercel`
 
