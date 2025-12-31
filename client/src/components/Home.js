@@ -1074,6 +1074,18 @@ const Home = () => {
             </Suspense>
           </div>
         </section>
+        {/* Why Choose Nimbus Boilers */}
+        <section className="why-choose-nimbus-boilers section nimbus-section-base">
+          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <h2 className="section-heading">Why Choose Nimbus Boilers?</h2>
+            <ul className="section-list">
+              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Instant online quotes for gas boiler services in Scunthorpe</li>
+              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Boiler grant referrals and eligibility guidance</li>
+              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Same-day emergency response across North Lincolnshire</li>
+              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Gas Safe certified installations with comprehensive warranties</li>
+            </ul>
+          </div>
+        </section>
         {/* FAQs Section */}
         <section className="faqs-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>

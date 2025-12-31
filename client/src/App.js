@@ -166,6 +166,11 @@ return (
               <LazyBoilerPriceGuideScunthorpe />
             </Suspense>
           } />
+          <Route path="/gas-boiler-maintenance-tips-scunthorpe" element={
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+              <LazyGasBoilerMaintenanceTipsScunthorpe />
+            </Suspense>
+          } />
         </Routes>
         {!isSeoPage && <Footer />}
       </main>
