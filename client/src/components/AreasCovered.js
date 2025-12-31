@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import CallToAction from './CallToAction';
+import QuoteForm from './QuoteForm';
 import { LoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 
 const AreasCovered = () => {
@@ -32,12 +34,16 @@ const AreasCovered = () => {
     { id: 3, position: { lat: 53.401, lng: -0.774 }, title: 'Gainsborough', info: 'Heating services Gainsborough, Energy efficient upgrades Doncaster' }
   ];
 
+  const towns = ["Scunthorpe", "Grimsby", "Doncaster", "Brigg", "Barton-upon-Humber", "Winterton", "Broughton", "Messingham", "Ashby", "Burringham", "Crowle", "Epworth", "Gunness", "Kirton in Lindsey", "North Anston", "Northorpe", "Owston Ferry", "Santon", "Scotter", "Scotton", "Scawby", "Sturton le Steeple", "Westwoodside", "Whitton"];
+  const services = ["Boiler Installation", "Boiler Repair", "Boiler Service", "Boiler Replacement", "Emergency Boiler Repair", "Boiler Servicing"];
+  const keywordPhrases = ["gas boiler installation", "combi boiler repair", "gas boiler service", "gas boiler replacement", "emergency combi boiler repair", "annual boiler servicing"];
+
   return (
     <>
       <Helmet>
-        <title>Areas Covered: Gas Boilers & Heat Pumps in Scunthorpe</title>
-        <meta name="description" content="Nimbus provides gas boiler & heat pump installations across DN/LN postcodes in Scunthorpe, Doncaster & Lincoln. £7,500 Boiler Upgrade Scheme grants available." />
-        <meta name="keywords" content="areas covered Scunthorpe, boiler installation areas North Lincolnshire, heat pump service Doncaster, Lincolnshire postcodes covered DN LN, gas boiler Scunthorpe areas" />
+        <title>Areas We Cover | Boiler Installation & Repair Across North Lincolnshire</title>
+        <meta name="description" content="Nimbus Boilers serves Scunthorpe, Grimsby, Doncaster & surrounding North Lincolnshire areas with Gas Safe boiler installation, repair, service and replacement. Keywords: boiler installation Grimsby, boiler repair Doncaster, gas boiler service Scunthorpe." />
+        <meta name="keywords" content="boiler installation Grimsby, boiler repair Doncaster, gas boiler service Scunthorpe, boiler replacement Brigg, combi boiler Barton-upon-Humber, emergency boiler repair Epworth, boiler servicing Kirton Lindsey" />
         <meta name="author" content="Nimbus Heat Pumps Ltd" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <link rel="canonical" href="https://nimbusheatpumps.co.uk/areas-we-cover/" />
@@ -616,84 +622,46 @@ const AreasCovered = () => {
       <main>
         {/* Hero Section */}
         <section style={{ padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
-          <h1 style={{ fontSize: '32px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Areas We Cover - Air Source Heat Pumps & Gas Boiler Installations</h1>
-          <h2 style={{ fontSize: '22px', fontWeight: 400, marginBottom: '15px', color: '#666', textAlign: 'center' }}>North Lincolnshire & Lincolnshire Heating Services</h2>
-          <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '25px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>Nimbus Heat Pumps Ltd provides comprehensive heating solutions across the DN and LN postcodes, serving Scunthorpe, Doncaster, Lincoln, Grimsby and surrounding areas. Our Gas Safe registered engineers specialise in air source heat pump installations and gas boiler services throughout North Lincolnshire and Lincolnshire.</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 text-center mx-auto max-w-4xl leading-tight px-4">Areas We Cover - Boiler Services in North Lincolnshire & Beyond</h1>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-16 md:mb-20 leading-relaxed px-4 text-center">
+            Nimbus Boilers delivers expert Gas Safe boiler services across 25+ towns in North Lincolnshire and beyond.
+            From <strong className="text-emerald-700">gas boiler installation Grimsby</strong> to <strong className="text-emerald-700">combi boiler repair Doncaster</strong>,
+            we provide installation, repair, servicing and emergency response with fixed pricing and warranties.
+          </p>
         </section>
 
         {/* Why Choose Nimbus Section */}
         <section className="why-choose-section" style={{ padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Why Choose Nimbus for Heat Pump and Boiler Services in Your Area?</h2>
-            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>We strive for the highest levels of customer satisfaction across North Lincolnshire, delivering expert installations qualified for the £7,500 Boiler Upgrade Scheme. Our team provides fast, reliable service with warranties on all work.</p>
+            <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Why Choose Nimbus for Boiler Services in Your Area?</h2>
+            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>We strive for the highest levels of customer satisfaction across North Lincolnshire, delivering expert boiler installations and repairs by Gas Safe engineers. Fast response, fixed pricing, warranties on all work.</p>
           </div>
         </section>
 
         {/* Areas We Cover Section */}
         <section className="areas-we-cover-section" style={{ padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Areas We Cover: Air Source Heat Pumps and Gas Boiler Installations Across DN and LN Postcodes</h2>
-            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>Nimbus Heat Pumps Ltd covers all areas within the DN and LN postcodes, with a base in Scunthorpe, North Lincolnshire. We specialize in air source heat pump installations and gas boiler services, offering services across these postcodes with a focus on energy-efficient and sustainable heating solutions.</p>
-            <div className="area-cards-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', justifyItems: 'center', marginBottom: '30px', width: '100%', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
-              <div className="area-card" style={{ background: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', border: '2px solid #A8D5BA', marginBottom: '20px' }}>
-                <div className="area-card-header" style={{ marginBottom: '20px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#00a676', marginBottom: '10px' }}>Scunthorpe & North Lincolnshire</h3>
-                  <p style={{ fontSize: '16px', color: '#666', fontWeight: 500 }}>DN15-17, DN20 Postcodes</p>
-                </div>
-                <div className="area-card-content">
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Location Highlights</h4>
-                  <p style={{ fontSize: '15px', color: '#666', marginBottom: '15px' }}>Heat pump installers Scunthorpe, air source heat pumps Brigg, gas boiler services Barton-upon-Humber.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Key Services</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555', marginBottom: '15px' }}>Vaillant heat pump installations, Samsung air source heat pumps, Baxi gas boiler repairs and upgrades, smart thermostat installations. Reduce energy bills by up to 70% with our sustainable heating solutions in cold Lincolnshire winters.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Why Choose Us Here?</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555' }}>Local Scunthorpe base for fast response; full grant application support for £7,500 Boiler Upgrade Scheme. Work under MCS umbrella scheme with Gas Safe registration. 10+ years serving North Lincolnshire heating needs.</p>
-                </div>
-              </div>
-
-              <div className="area-card" style={{ background: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', border: '2px solid #A8D5BA', marginBottom: '20px' }}>
-                <div className="area-card-header" style={{ marginBottom: '20px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#00a676', marginBottom: '10px' }}>Doncaster & South Yorkshire</h3>
-                  <p style={{ fontSize: '16px', color: '#666', fontWeight: 500 }}>DN1-12, DN22 Postcodes</p>
-                </div>
-                <div className="area-card-content">
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Location Highlights</h4>
-                  <p style={{ fontSize: '15px', color: '#666', marginBottom: '15px' }}>Boiler replacement Doncaster, air source heat pumps Doncaster areas.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Key Services</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555', marginBottom: '15px' }}>Worcester Bosch boiler services, Mitsubishi Electric heat pumps, Vaillant heating systems, energy-efficient upgrades tailored to Doncaster homes and commercial properties.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Why Choose Us Here?</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555' }}>Energy-efficient solutions with tailored installations for Doncaster's diverse housing stock. Work under MCS umbrella scheme with full grant application support. Trusted by homeowners across South Yorkshire.</p>
-                </div>
-              </div>
-
-              <div className="area-card" style={{ background: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', border: '2px solid #A8D5BA', marginBottom: '20px' }}>
-                <div className="area-card-header" style={{ marginBottom: '20px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#00a676', marginBottom: '10px' }}>Grimsby & NE Lincolnshire</h3>
-                  <p style={{ fontSize: '16px', color: '#666', fontWeight: 500 }}>DN31-41 Postcodes</p>
-                </div>
-                <div className="area-card-content">
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Location Highlights</h4>
-                  <p style={{ fontSize: '15px', color: '#666', marginBottom: '15px' }}>Heat pump services Grimsby, boiler repairs Cleethorpes.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Key Services</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555', marginBottom: '15px' }}>Viessmann heat pump setups, Intergas boiler installations, Samsung air source systems adapted for coastal areas. Expert gas safety certificates and maintenance services.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Why Choose Us Here?</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555' }}>Coastal-adapted systems for Grimsby and surrounding areas. Free quotes with no obligation and expert guidance through the Boiler Upgrade Scheme process. Serving North East Lincolnshire for over a decade.</p>
-                </div>
-              </div>
-
-              <div className="area-card" style={{ background: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', border: '2px solid #A8D5BA', marginBottom: '20px' }}>
-                <div className="area-card-header" style={{ marginBottom: '20px', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#00a676', marginBottom: '10px' }}>Lincoln & Lincolnshire</h3>
-                  <p style={{ fontSize: '16px', color: '#666', fontWeight: 500 }}>LN1-13 Postcodes</p>
-                </div>
-                <div className="area-card-content">
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Location Highlights</h4>
-                  <p style={{ fontSize: '15px', color: '#666', marginBottom: '15px' }}>Heating services Market Rasen, boiler upgrades Louth.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Key Services</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555', marginBottom: '15px' }}>Ideal heat pumps and boilers, Baxi gas systems, Viessmann renewable heating solutions for rural and urban areas. Underfloor heating and smart controls in expert installations.</p>
-                  <h4 style={{ fontSize: '18px', fontWeight: 600, color: '#333', marginBottom: '10px' }}>Why Choose Us Here?</h4>
-                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#555' }}>Rural expertise in Lincolnshire areas like Market Rasen and Horncastle. Comprehensive service from consultation to installation with ongoing support. Fully insured and accredited with industry standards.</p>
-                </div>
-              </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center mx-auto max-w-4xl px-4">Boiler Services in 25+ Local Towns & Villages</h2>
+            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>Nimbus Boilers covers all North Lincolnshire DN postcodes from our Scunthorpe base. Gas Safe boiler installation, repair, service and replacement for Scunthorpe, Grimsby, Doncaster and surrounding towns.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+              {towns.map((town, index) => {
+                const serviceIndex = index % services.length;
+                const service = services[serviceIndex];
+                return (
+                  <div key={`${service}-${town}`} className="bg-white p-6 md:p-8 rounded-xl shadow-lg border-2 border-emerald-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                      {service} in {town}
+                    </h2>
+                    <p className="text-lg text-gray-700 mb-3 leading-relaxed">
+                      Professional <span className="font-semibold text-emerald-700">gas boiler {service.toLowerCase().replace(/boiler /, '').replace(' in', '')} {town.toLowerCase()}.</span><br />
+                      Reliable combi boiler services by Gas Safe engineers in North Lincolnshire.
+                    </p>
+                    <p className="text-base text-gray-600">
+                      Expert boiler {service.toLowerCase().split(' ')[1]} {town}. Free quotes, warranties included.
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -723,7 +691,7 @@ const AreasCovered = () => {
             <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>See our coverage across North Lincolnshire, Lincolnshire and South Yorkshire - we're here to serve you!</p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <div ref={mapRef} className="map-container" style={{ maxWidth: '100%', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0, 166, 118, 0.15)', border: '2px solid #A8D5BA' }}>
-                {mapVisible ? (
+                {mapVisible && process.env.GOOGLE_MAPS_API_KEY ? (
                   <LoadScript googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}>
                     <GoogleMap
                       mapContainerStyle={{ height: '450px', width: '100%' }}
@@ -764,7 +732,7 @@ const AreasCovered = () => {
         <section className="faq-section" style={{ padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Frequently Asked Questions About Heat Pumps and Boiler Services</h2>
-            <div className="faq-cards-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', justifyItems: 'center', marginBottom: '30px', width: '100%', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="faq-cards-grid grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mb-8">
               <div style={{ padding: '20px', background: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)', border: '2px solid #00a676', textAlign: 'center' }}>
                 <h3 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '15px', color: '#333' }}>Can I get the Boiler Upgrade Scheme in Doncaster?</h3>
                 <p style={{ fontSize: '16px', lineHeight: '1.6', color: '#555', margin: 0 }}>Yes! All areas within our Doncaster coverage (DN1-12, DN22) qualify for the £7,500 Boiler Upgrade Scheme. We handle the full application process for you.</p>
@@ -790,20 +758,20 @@ const AreasCovered = () => {
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Get Your Free Quote Today</h2>
             <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>Don't wait to upgrade your home's heating system. Contact our experts today for a no-obligation quote on air source heat pumps, gas boiler installations or service work in your area.</p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-              <a href="/#contact-form" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'nowrap', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', marginLeft: '0' }}>Schedule Free Scunthorpe Consultation Now</a>
-              <a href="https://nimbusheatpumps.co.uk/gas-boiler-installation-scunthorpe/" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'nowrap', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', marginLeft: '0' }}>Get £7,500 Grant Quote Today</a>
-              <a href="tel:+447487546550" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'nowrap', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', marginLeft: '0' }}>Call Scunthorpe Today: 07487 546550</a>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 px-4">
+              <a href="/#contact-form" className="bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-emerald-500">Get Free Quote</a>
+              <a href="tel:01724622069" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Call 01724 622069 Now</a>
             </div>
           </div>
         </section>
+        <CallToAction />
 
         {/* Footer */}
         <footer className="company-details-section" style={{ padding: '60px 32px', textAlign: 'center', borderRadius: '8px', marginTop: '40px', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <img src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Heat Pumps Ltd Logo - Energy Efficient Heating in Scunthorpe and North Lincolnshire" style={{ maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto' }} loading="lazy" />
             <p style={{ fontSize: '18px', fontWeight: 600, color: '#007a57', marginBottom: '30px' }}>Your Trusted Partner for Energy Efficient Heating Solutions in Scunthorpe and North Lincolnshire</p>
-            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center' }}>Nimbus Heat Pumps Ltd<br />Company Number: 16497314<br />Trading Address: 3 Crossbeck Road, Scunthorpe, DN16 3HR<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: +44 7487 546550</p>
+            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center' }}>Nimbus Heat Pumps Ltd<br />Company Number: 16497314<br />Trading Address: 3 Crossbeck Road, Scunthorpe, DN16 3HR<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: +44 1724 622069</p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '30px' }}>
               <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)' }}>Privacy Policy</a>
               <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" target="_blank" rel="noopener noreferrer" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)' }}>Terms & Conditions</a>

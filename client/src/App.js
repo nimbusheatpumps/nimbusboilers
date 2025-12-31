@@ -26,6 +26,7 @@ const LazyGasBoilerServicingScunthorpe = lazy(() => import('./components/GasBoil
 const LazyGasBoilerBrandsScunthorpe = lazy(() => import('./components/GasBoilerBrandsScunthorpe'));
 const LazySystemBoilerInstallationScunthorpe = lazy(() => import('./components/SystemBoilerInstallationScunthorpe'));
 const LazyRegularBoilerInstallationScunthorpe = lazy(() => import('./components/RegularBoilerInstallationScunthorpe'));
+const LazyBoilerPriceGuideScunthorpe = lazy(() => import('./components/BoilerPriceGuideScunthorpe'));
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   return token ? children : <Navigate to="/login" />;
@@ -48,7 +49,7 @@ function AppContent() {
       ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
     }
   }, [location]);
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/regular-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/areas-covered';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/regular-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/boiler-price-guide-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
@@ -158,6 +159,11 @@ return (
           <Route path="/regular-boiler-installation-scunthorpe" element={
             <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
               <LazyRegularBoilerInstallationScunthorpe />
+            </Suspense>
+          } />
+          <Route path="/boiler-price-guide-scunthorpe" element={
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+              <LazyBoilerPriceGuideScunthorpe />
             </Suspense>
           } />
         </Routes>

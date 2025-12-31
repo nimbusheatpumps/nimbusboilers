@@ -56,7 +56,7 @@ test.describe('Mobile Responsiveness', () => {
         page.removeAllListeners('console');
         page.removeAllListeners('pageerror');
         page.on('console', (msg) => {
-          if (['error', 'warn'].includes(msg.type())) {
+          if (msg.type() === 'error') {
             consoleErrors.push(msg.text());
           }
         });

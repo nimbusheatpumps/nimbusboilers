@@ -394,7 +394,7 @@ const BoilerMaintenanceTips = () => {
         <div className="banner-wrapper">
           <h2 className="banner-label">Every boiler service includes:</h2>
           <div className="banner-scroller" aria-live="polite">
-            <div className="banner-track">
+            <div className="banner-track grid grid-cols-1 md:grid-cols-5 gap-4 w-full">
               <div className="banner-items">
                 <span className="banner-item">Full safety inspection</span>
                 <span className="banner-item">Flue gas analysis</span>
@@ -531,7 +531,7 @@ const BoilerMaintenanceTips = () => {
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">What Our Customers Say About Our Services</h2>
             <div className="testimonials-carousel-wrapper">
-              <div className="testimonials-carousel">
+              <div className="testimonials-carousel grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                 <div className="testimonial-card">
                   <div className="testimonial-stars">★★★★★</div>
                   <p>"Brilliant bloke. Always explains everything. Tries to save us money, genuine and caring. Definitely looks after us. Would highly recommend. Top service." - Sharon Rhodes, Scunthorpe</p>

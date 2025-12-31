@@ -120,6 +120,10 @@ test.describe('SEO Pages Verification', () => {
       await expect(faqQuestions.first()).toHaveAttribute('role', 'button');
       await expect(faqQuestions.first()).toHaveAttribute('tabindex', '0');
 
+      // CTA banner
+      await expect(page.getByText('Book Your Free Survey')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('a[href="tel:01724622069"]')).toBeVisible();
+    
       // No console errors
       page.on('console', msg => {
         if (msg.type() === 'error') {
