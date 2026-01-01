@@ -170,13 +170,14 @@ const BoilerPriceGuideScunthorpe = () => {
             <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers - Home">
               <img decoding="async" src="/images/nimbus-logo.webp"
                     alt="Nimbus Boilers - Boiler Price Guide Scunthorpe"
-                    className="nimbus-logo" loading="lazy" />
+                    className="nimbus-logo" loading="lazy" width="412" height="275" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
                     aria-expanded={menuActive}
-                    aria-controls="nimbusMenu">
+                    aria-controls="nimbusMenu"
+                    style={{ minWidth: '48px', minHeight: '48px' }}>
               <span></span>
               <span></span>
               <span></span>
@@ -228,10 +229,10 @@ const BoilerPriceGuideScunthorpe = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Free Survey</a>
-              <a href="mailto:info@nimbusboilers.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call 01724 622069</a>
+              <a href="/quote" className="nimbus-cta nimbus-cta-primary" style={{ minWidth: '48px', minHeight: '48px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Boiler Quote</a>
+              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary" style={{ minWidth: '48px', minHeight: '48px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Free Survey</a>
+              <a href="mailto:info@nimbusboilers.co.uk" className="nimbus-cta nimbus-cta-primary" style={{ minWidth: '48px', minHeight: '48px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Email Us</a>
+              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary" style={{ minWidth: '48px', minHeight: '48px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Call 01724 622069</a>
             </div>
           </div>
         </div>
@@ -267,7 +268,7 @@ const BoilerPriceGuideScunthorpe = () => {
         <section className="hero-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
             <div style={{flex: '1 1 400px', textAlign: 'center'}}>
-              <h1 className="section-heading section-heading--hero">Boiler Price Guide Scunthorpe | Gas Boiler Costs North Lincolnshire</h1>
+              <h1 className="section-heading section-heading--hero">Gas Boiler Price Guide Scunthorpe</h1>
               <h2 className="section-subheading">Combi, System & Regular Boiler Prices | Gas Safe Quotes Scunthorpe | Free Survey North Lincolnshire</h2>
               <p className="section-text section-text--intro section-text--compact">Comprehensive <strong>boiler price guide Scunthorpe</strong>. See combi boiler prices Scunthorpe, system boiler cost North Lincolnshire, regular boiler installation prices. Boiler prices after grant. Free Gas Safe quotes and surveys. Call 01724 622069.</p>
               <div className="section-cta-group">
@@ -276,111 +277,44 @@ const BoilerPriceGuideScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img src="/images/hero-boiler-room.webp" alt="boiler price guide Scunthorpe - transparent pricing" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
+              <img src="/images/hero-boiler-room.webp" alt="boiler price guide Scunthorpe - transparent pricing" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" width="400" height="300" />
             </div>
           </div>
         </section>
         <section className="pricing-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Transparent Boiler Pricing Bands Scunthorpe</h2>
-            <h3 className="text-3xl font-bold text-center my-12 text-gray-900">Combi Boilers</h3>
-            <div className="overflow-x-auto shadow-md my-8 rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200 bg-white">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Brand</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Range</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Notes</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Baxi</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,200-£3,200</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Reliable, affordable combi</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ideal</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,000-£3,000</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Great value</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Vaillant</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,500-£3,500</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Premium efficiency</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Worcester</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,300-£3,300</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">High performance</td>
-                  </tr>
-                </tbody>
-              </table>
+            <h2 className="section-heading section-heading--spaced">Affordable Gas Boiler Installation Scunthorpe Prices, Gas Boiler Repair North Lincolnshire, Gas Boiler Service Scunthorpe</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 p-4">
+              <img src="/images/hero-boiler-room.webp" alt="Combi boiler type for gas boiler installation Scunthorpe" className="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow" loading="lazy" width="400" height="192" />
+              <img src="/images/hero-boiler-room.webp" alt="System boiler type for gas boiler service Scunthorpe" className="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow" loading="lazy" width="400" height="192" />
+              <img src="/images/hero-boiler-room.webp" alt="Regular boiler type for gas boiler repair North Lincolnshire" className="w-full h-48 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow" loading="lazy" width="400" height="192" />
             </div>
-            <h3 className="text-3xl font-bold text-center my-12 text-gray-900">System Boilers</h3>
-            <div className="overflow-x-auto shadow-md my-8 rounded-lg">
+            
+            <div className="overflow-x-auto shadow-2xl my-12 rounded-2xl border border-gray-200">
               <table className="min-w-full divide-y divide-gray-200 bg-white">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                <thead className="bg-gradient-to-r from-emerald-50 to-green-50">
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Brand</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Range</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Notes</th>
+                    <th scope="col" className="px-8 py-5 text-left text-sm font-bold text-gray-900 uppercase tracking-wider">Boiler Type</th>
+                    <th scope="col" className="px-8 py-5 text-left text-sm font-bold text-gray-900 uppercase tracking-wider">Price Range (incl. installation)</th>
+                    <th scope="col" className="px-8 py-5 text-left text-sm font-bold text-gray-900 uppercase tracking-wider">Best For</th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Baxi</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,400-£3,400</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Strong flow</td>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-emerald-50 transition-colors">
+                    <th scope="row" className="px-8 py-6 font-bold text-xl text-gray-900 whitespace-nowrap">Combi</th>
+                    <td className="px-8 py-6 text-xl font-bold text-emerald-700">£2,000-£3,500</td>
+                    <td className="px-8 py-6 text-lg text-gray-700">Small-medium homes, 1-2 bathrooms, no cylinder</td>
                   </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ideal</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,200-£3,200</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Multi-bathroom</td>
+                  <tr className="hover:bg-emerald-50 transition-colors">
+                    <th scope="row" className="px-8 py-6 font-bold text-xl text-gray-900 whitespace-nowrap">System</th>
+                    <td className="px-8 py-6 text-xl font-bold text-emerald-700">£2,500-£4,000</td>
+                    <td className="px-8 py-6 text-lg text-gray-700">Medium homes with cylinder, 2+ bathrooms</td>
                   </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Vaillant</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,700-£3,700</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Advanced system</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Worcester</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,500-£3,500</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Reliable</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h3 className="text-3xl font-bold text-center my-12 text-gray-900">Regular Boilers</h3>
-            <div className="overflow-x-auto shadow-md my-8 rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200 bg-white">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Brand</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Range</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Notes</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Baxi</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,600-£3,600</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Traditional systems</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ideal</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,400-£3,400</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Gravity fed</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Vaillant</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,900-£3,900</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Loft tank</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Worcester</th>
-                    <td className="px-6 py-4 text-sm text-gray-900">£2,700-£3,700</td>
-                    <td className="px-6 py-4 text-sm text-gray-900">Proven reliability</td>
+                  <tr className="hover:bg-emerald-50 transition-colors">
+                    <th scope="row" className="px-8 py-6 font-bold text-xl text-gray-900 whitespace-nowrap">Regular</th>
+                    <td className="px-8 py-6 text-xl font-bold text-emerald-700">£2,200-£4,200</td>
+                    <td className="px-8 py-6 text-lg text-gray-700">Larger homes, gravity-fed, loft tank</td>
                   </tr>
                 </tbody>
               </table>
@@ -429,7 +363,7 @@ const BoilerPriceGuideScunthorpe = () => {
         <section className="factors-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">Factors Affecting Boiler Prices</h2>
-            <img decoding="async" src="https://via.placeholder.com/800x400/00a676/fafafa?text=Boiler+Pricing+Factors+Scunthorpe" alt="factors affecting boiler prices Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img decoding="async" src="/images/hero-boiler-room.webp" alt="factors affecting boiler prices Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" width="600" height="400" />
             <ul className="section-list">
               <li><strong>Home size & bedrooms:</strong> Larger homes need higher kW output.</li>
               <li><strong>Bathrooms:</strong> Multiple bathrooms require system/regular or high-flow combi.</li>
@@ -464,7 +398,9 @@ const BoilerPriceGuideScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
+                  <button className="faq-question w-full text-left min-h-[48px] p-4" onClick={() => toggleFaq(index)} aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>
+                    <h3 className="m-0 text-inherit font-inherit">{faq.question}</h3>
+                  </button>
                   <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
                 </div>
               ))}
@@ -511,22 +447,22 @@ const BoilerPriceGuideScunthorpe = () => {
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
                 <a href="https://www.baxi.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/baxi-logo.webp" alt="Baxi boilers - competitive prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                  <img decoding="async" src="/images/baxi-logo.webp" alt="Baxi boilers - competitive prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" width="150" height="100" />
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
                 <a href="https://idealheating.com/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/ideal-logo.webp" alt="Ideal boilers - value prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                  <img decoding="async" src="/images/ideal-logo.webp" alt="Ideal boilers - value prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" width="150" height="100" />
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
                 <a href="https://www.vaillant.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/vaillant-logo.webp" alt="Vaillant boilers - premium prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                  <img decoding="async" src="/images/vaillant-logo.webp" alt="Vaillant boilers - premium prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" width="150" height="100" />
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
                 <a href="https://www.worcester-bosch.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/worcester-logo.webp" alt="Worcester Bosch boilers - reliable prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                  <img decoding="async" src="/images/worcester-logo.webp" alt="Worcester Bosch boilers - reliable prices Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" width="150" height="100" />
                 </a>
               </div>
             </div>
@@ -543,7 +479,7 @@ const BoilerPriceGuideScunthorpe = () => {
         </section>
         <footer className="company-details-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img decoding="async" src="/images/nimbus-logo.webp" alt="Nimbus Boilers Logo - Boiler Price Guide Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
+            <img decoding="async" src="/images/nimbus-logo.webp" alt="Nimbus Boilers Logo - Boiler Price Guide Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" width="200" height="133" />
             <h2 className="footer-heading">Transparent Boiler Pricing in Scunthorpe & North Lincolnshire</h2>
             <p className="section-text">Nimbus Boilers | Gas Safe Certified | Free Surveys | 01724 622069 | info@nimbusboilers.co.uk</p>
             <div className="section-cta-group section-cta-group--spaced">
@@ -569,7 +505,7 @@ const BoilerPriceGuideScunthorpe = () => {
           --glass-white: rgba(255, 255, 255, 0.85);
           --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
           --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.06);
-          --shadow-large: 0 8px 32px rgba(0, 0, 0, 0.08);
+          --shadow-large: 0 8px 32px rgba(0, 166, 118, 0.1);
           --radius-sm: 10px;
           --radius-md: 14px;
           --radius-lg: 18px;

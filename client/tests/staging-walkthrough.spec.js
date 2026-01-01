@@ -15,7 +15,7 @@ async function launchChromeAndRunLh(url, opts, config = null) {
 }
 
 test.describe('Staging Full Customer Journey Walkthrough', () => {
-  const stagingUrl = 'https://client-itly3tchv-brys-projects-4db70d78.vercel.app';
+  const stagingUrl = 'https://client-qm2qjfzre-brys-projects-4db70d78.vercel.app';
 
   const setupPage = async (page) => {
     page.on('console', (msg) => {
@@ -240,16 +240,38 @@ test.describe('Staging Full Customer Journey Walkthrough', () => {
     await context.close();
   });
 
-  test('Lighthouse Performance & Accessibility on staging home', async () => {
+  test('Lighthouse Performance, Accessibility & SEO on staging home', async () => {
     const opts = {
-      onlyCategories: ['performance', 'accessibility'],
+      onlyCategories: ['performance', 'accessibility', 'seo'],
       chromeFlags: ['--no-sandbox', '--disable-dev-shm-usage']
     };
     const lhr = await launchChromeAndRunLh(stagingUrl, opts);
     const perfScore = Math.round(lhr.categories.performance.score * 100);
     const accScore = Math.round(lhr.categories.accessibility.score * 100);
-    console.log(`Lighthouse Perf: ${perfScore}/100, Acc: ${accScore}/100 on ${stagingUrl}`);
-    expect(lhr.categories.performance.score).toBeGreaterThanOrEqual(0.85);
-    expect(lhr.categories.accessibility.score).toBeGreaterThanOrEqual(0.95);
+    const seoScore = Math.round(lhr.categories.seo.score * 100);
+    console.log(`Lighthouse Perf: ${perfScore}/100, SEO: ${seoScore}/100, Acc: ${accScore}/100 on ${stagingUrl}`);
+    expect(lhr.categories.performance.score).toBeGreaterThan(0.90);
+    expect(lhr.categories.accessibility.score).toBe(1);
+    expect(lhr.categories.seo.score).toBe(1);
+  });
+
+  test('Gas Safe #966812 in footer on home and SEO page', async ({ page }) => {
+    await page.goto(stagingUrl);
+    await expect(page.locator('footer >> text="#966812"')).toBeVisible();
+    await page.goto(`${stagingUrl}/gas-boiler-installation-scunthorpe`);
+    await expect(page.locator('footer >> text="#966812"')).toBeVisible();
+    await expect(page.locator('footer a[href*="search=966812"]')).toBeVisible();
+    await expect(page.locator('footer img[alt*="Gas Safe"]')).toBeVisible();
+  });
+
+  test('Boiler Price Guide page loads with tables/disclaimer/keywords', async ({ page }) => {
+    await page.goto(`${stagingUrl}/boiler-price-guide-scunthorpe`);
+    await expect(page.locator('h1')).toContainText('Boiler Price Guide Scunthorpe');
+    await expect(page.locator('table')).toHaveCount(4);
+    await expect(page.getByText('Indicative prices exclude VAT & grants')).toBeVisible();
+    const bodyText = await page.textContent('body');
+    expect(bodyText.toLowerCase()).toContain('boiler price guide scunthorpe');
+    expect(bodyText.toLowerCase()).toContain('combi boiler prices scunthorpe');
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', expect.stringContaining('Scunthorpe'));
   });
 });

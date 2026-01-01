@@ -162,6 +162,31 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
             }))
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Gas Boiler Maintenance Tips Scunthorpe",
+            "datePublished": "2026-01-01",
+            "author": {
+              "@type": "Organization",
+              "name": "Nimbus Boilers"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Nimbus Boilers",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "/images/nimbus-logo.webp"
+              }
+            },
+            "image": "/images/hero-team-service.webp",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://nimbusboilers.co.uk/gas-boiler-maintenance-tips-scunthorpe"
+            }
+          })}
+        </script>
       </Helmet>
       <nav className="nimbus-nav" aria-label="Main navigation">
         <div className="nimbus-nav-container">
@@ -267,7 +292,7 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
             <div style={{flex: '1 1 400px', textAlign: 'center'}}>
               <h1 className="section-heading section-heading--hero">Gas Boiler Maintenance Tips Scunthorpe</h1>
               <h2 className="section-subheading">DIY Home Checks & When to Book Gas Boiler Service North Lincolnshire | Annual Servicing by Gas Safe Engineers</h2>
-              <p className="section-text section-text--intro section-text--compact">Practical <strong>gas boiler maintenance tips Scunthorpe</strong> for homeowners. Learn safe DIY tasks, warning signs and why <strong>annual boiler service</strong> is essential. Professional <strong>gas boiler service Scunthorpe</strong> from Nimbus Gas Safe engineers. Call 01724 622069.</p>
+              <p className="section-text section-text--intro section-text--compact">Practical <strong>gas boiler maintenance tips Scunthorpe</strong> for homeowners. Essential for <strong>gas boiler service Scunthorpe</strong>, <strong>gas boiler repair North Lincolnshire</strong>, and <strong>gas boiler installation Scunthorpe</strong>. Learn safe DIY tasks, warning signs and why <strong>annual boiler service</strong> is essential. Professional service from Nimbus Gas Safe engineers. Call 01724 622069.</p>
               <div className="section-cta-group">
                 <a href="#contact-form" className="cta-button cta-button--nowrap">Book Gas Boiler Service</a>
                 <a href="/quote" className="cta-button cta-button--nowrap">Get Free Quote</a>
@@ -280,8 +305,8 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
         </section>
         <section className="why-maintenance-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Why Regular Boiler Maintenance Matters in Scunthorpe Homes</h2>
-            <img decoding="async" src="/images/hero-boiler-room.webp" alt="why regular gas boiler maintenance Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <h2 className="section-heading section-heading--spaced">Why Regular Maintenance Matters</h2>
+            <img decoding="async" src="/images/hero-boiler-room.webp" alt="gas boiler maintenance Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <ul className="section-list">
               <li><strong>Safety:</strong> Detects carbon monoxide risks, gas leaks and faulty components.</li>
               <li><strong>Efficiency:</strong> Up to 10% fuel savings through cleaning and adjustments.</li>
@@ -294,38 +319,37 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
             </div>
           </div>
         </section>
+        <section className="annual-service-section section nimbus-section-base">
+          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <h2 className="section-heading section-heading--spaced">Annual Gas Safe Service (966812)</h2>
+            <p className="section-text">Our comprehensive annual service ensures your boiler remains safe and efficient. Nimbus Boilers engineers are fully qualified Gas Safe professionals (Registration: 966812).</p>
+            <ul className="section-list">
+              <li>Visual inspection of burner, heat exchanger, and flue system</li>
+              <li>Flue gas analysis for combustion safety</li>
+              <li>Cleaning of combustion chamber and components</li>
+              <li>Testing safety devices (flame failure, overheat stats)</li>
+              <li>System pressure vessel test and adjustments</li>
+              <li>Full efficiency report and Gas Safe safety certification</li>
+            </ul>
+            <div className="section-cta-group">
+              <a href="tel:01724622069" className="cta-button cta-button--nowrap">Book Your Annual Service</a>
+            </div>
+          </div>
+        </section>
         <section className="diy-tips-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">5 Essential DIY Gas Boiler Maintenance Tips for Scunthorpe</h2>
-            <div className="tips-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', justifyContent: 'center'}}>
-              <div className="tip-card">
-                <h3 className="card-heading">1. Check Boiler Pressure</h3>
-                <div style={{fontSize: '28px', fontWeight: 'bold', color: '#00a676', margin: '20px 0'}}>1-1.5 bar</div>
-                <p className="card-text">Cold system should read 1-1.5 bar. Top up using filling loop if low. Never exceed 2 bar.</p>
-              </div>
-              <div className="tip-card">
-                <h3 className="card-heading">2. Bleed Radiators</h3>
-                <p className="card-text">Monthly during heating season. Use radiator key to release air until water flows. Improves circulation.</p>
-              </div>
-              <div className="tip-card">
-                <h3 className="card-heading">3. Clean Filters</h3>
-                <p className="card-text">Quarterly vacuum air intake filters. Replace as per manufacturer schedule.</p>
-              </div>
-              <div className="tip-card">
-                <h3 className="card-heading">4. Thermostat Optimisation</h3>
-                <p className="card-text">Set room stat to 20°C. Fit/use TRVs on radiators. Zone control saves energy.</p>
-              </div>
-              <div className="tip-card">
-                <h3 className="card-heading">5. Monitor Noises</h3>
-                <p className="card-text">Kettling (limescale), banging (sludge). Indicates need for powerflush/service.</p>
-              </div>
-            </div>
+            <h2 className="section-heading section-heading--spaced">DIY Tips: Check Boiler Pressure, Bleed Radiators, Clean Filters</h2>
+            <ul className="section-list">
+              <li><strong>Check Boiler Pressure:</strong> Ensure 1-1.5 bar when cold. Top up via filling loop if low (never exceed 2 bar).</li>
+              <li><strong>Bleed Radiators:</strong> Monthly in heating season using radiator key until water flows steadily.</li>
+              <li><strong>Clean Filters:</strong> Vacuum air intake filters quarterly; replace per manufacturer guidelines.</li>
+            </ul>
             <p style={{textAlign: 'center', marginTop: '30px', fontSize: '18px', fontWeight: 'bold'}}><strong>⚠️ DIY only for basic checks. Gas work MUST be by Gas Safe engineer.</strong></p>
           </div>
         </section>
         <section className="warning-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Warning Signs: Call Gas Safe Professionals Immediately</h2>
+            <h2 className="section-heading section-heading--spaced">When to Call Professionals</h2>
             <ul className="section-list">
               <li><strong>Leaks:</strong> Water or gas drips</li>
               <li><strong>Smells:</strong> Rotten egg gas or unusual odours</li>
@@ -336,6 +360,21 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
             </ul>
             <div className="section-cta-group">
               <a href="tel:01724622069" className="cta-button cta-button--nowrap">Emergency Call 01724 622069</a>
+            </div>
+          </div>
+        </section>
+        <section className="eco4-grants-section section nimbus-section-base">
+          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+            <h2 className="section-heading section-heading--spaced">ECO4 Grants for Servicing?</h2>
+            <p className="section-text">The ECO4 scheme primarily funds boiler replacements and upgrades, but may cover servicing for eligible low-income households with poor energy efficiency. Contact us for a free eligibility check.</p>
+            <ul className="section-list">
+              <li>Low income or benefits recipients</li>
+              <li>Properties with EPC rating D-G</li>
+              <li>Off-gas homes (oil/LPG)</li>
+              <li>Free survey to confirm eligibility</li>
+            </ul>
+            <div className="section-cta-group">
+              <a href="#contact-form" className="cta-button cta-button--nowrap">Check ECO4 Eligibility</a>
             </div>
           </div>
         </section>
@@ -458,7 +497,7 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
         <section className="free-quote-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading">Get Your Personalised Gas Boiler Service Quote Scunthorpe</h2>
-            <p className="section-text section-text--intro">Book annual service or repairs for your Scunthorpe boiler. Free no-obligation quote.</p>
+            <p className="section-text section-text--intro">Book annual service or repairs for your Scunthorpe boiler. Free no-obligation quote. <strong>Gas Safe disclaimer:</strong> All gas work must be carried out by a Gas Safe registered engineer. Nimbus Boilers is Gas Safe registered (966812).</p>
             <div id="contact-form">
               <QuoteForm />
             </div>
@@ -478,8 +517,8 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
           </div>
         </footer>
       </main>
-      <style>{`
-        :root {
+      <style>{
+        `:root {
           --primary-green: #00a676;
           --dark-green: #007a57;
           --light-green: #e8f5f0;
@@ -744,7 +783,8 @@ const GasBoilerMaintenanceTipsScunthorpe = () => {
             display: block;
           }
         }
-      `}</style>
+      `
+      }</style>
     </>
   );
 };

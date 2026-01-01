@@ -1,5 +1,11 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
+import {
+  ClockIcon,
+  CurrencyDollarIcon,
+  TruckIcon,
+  ShieldCheckIcon
+} from '@heroicons/react/24/outline';
 const Testimonials = lazy(() => import('./Testimonials'));
 const QuoteForm = lazy(() => import('./QuoteForm'));
 const Home = () => {
@@ -1074,16 +1080,32 @@ const Home = () => {
             </Suspense>
           </div>
         </section>
-        {/* Why Choose Nimbus Boilers */}
+        {/* Why Choose Nimbus Boilers in Scunthorpe */}
         <section className="why-choose-nimbus-boilers section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Why Choose Nimbus Boilers?</h2>
-            <ul className="section-list">
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Instant online quotes for gas boiler services in Scunthorpe</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Boiler grant referrals and eligibility guidance</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Same-day emergency response across North Lincolnshire</li>
-              <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display: 'inline-block', verticalAlign: 'middle', marginRight: '10px'}}><circle cx="12" cy="12" r="12" fill="#00a676"/><path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>Gas Safe certified installations with comprehensive warranties</li>
-            </ul>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="section-heading mb-12">Why Choose Nimbus Boilers in Scunthorpe?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+                <ClockIcon className="w-16 h-16 text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Instant Online Quote in Seconds</h3>
+                <p className="text-gray-700 leading-relaxed">Get instant online quotes for gas boiler installation in Scunthorpe.</p>
+              </div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+                <CurrencyDollarIcon className="w-16 h-16 text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Free ECO4 Grant Referral</h3>
+                <p className="text-gray-700 leading-relaxed">Free ECO4 grant referral (active until 31 March 2026, Gas Safe 966812).</p>
+              </div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+                <TruckIcon className="w-16 h-16 text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Same-Day Response</h3>
+                <p className="text-gray-700 leading-relaxed">Same-day response for boiler emergencies in Scunthorpe.</p>
+              </div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+                <ShieldCheckIcon className="w-16 h-16 text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Up to 12-Year Warranties</h3>
+                <p className="text-gray-700 leading-relaxed">Up to 12-year warranties on premium boilers (e.g. Worcester Bosch).</p>
+              </div>
+            </div>
           </div>
         </section>
         {/* FAQs Section */}

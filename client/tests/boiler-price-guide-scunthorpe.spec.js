@@ -11,7 +11,7 @@ test.describe('Boiler Price Guide Scunthorpe Page', () => {
     await expect(page.locator('h1').first()).toBeVisible();
 
     // H1
-    await expect(page.locator('h1').first()).toContainText('Boiler Price Guide Scunthorpe | Gas Boiler Costs North Lincolnshire');
+    await expect(page.locator('h1').first()).toContainText('Gas Boiler Price Guide Scunthorpe');
 
     // Keywords
     const bodyText = await page.textContent('body');
@@ -33,6 +33,9 @@ test.describe('Boiler Price Guide Scunthorpe Page', () => {
     await expect(page.locator('link[rel="canonical"]')).toBeVisible();
     await expect(page).toHaveTitle(/Boiler Price Guide Scunthorpe/i);
 
+    // H2 keywords
+    await expect(page.locator('h2').first()).toContainText('gas boiler installation Scunthorpe');
+
     // Schema
     const htmlContent = await page.content();
     expect(htmlContent).toContain('"@type": "LocalBusiness"');
@@ -41,13 +44,14 @@ test.describe('Boiler Price Guide Scunthorpe Page', () => {
     expect(htmlContent).toContain('"@type": "FAQPage"');
 
     // Tables exist and content
-    await expect(page.locator('table')).toHaveCount(4);
-    await expect(page.getByText('Baxi')).toBeVisible();
-    await expect(page.getByText('£2,200-£3,200')).toBeVisible();
-    await expect(page.getByText('£800-£1,500')).toBeVisible();
+    await expect(page.locator('table')).toHaveCount(1);
+    await expect(page.locator('tbody tr')).toHaveCount(3);
+    await expect(page.getByText('£2,000-£3,500')).toBeVisible();
+    await expect(page.getByText('£2,500-£4,000')).toBeVisible();
+    await expect(page.getByText('£2,200-£4,200')).toBeVisible();
 
     // Grant disclaimer
-    await expect(page.getByText('Indicative prices exclude VAT & grants')).toBeVisible();
+    await expect(page.getByText('Eligible for ECO4 grants?')).toBeVisible();
 
     // Images alt
     const images = page.locator('img');

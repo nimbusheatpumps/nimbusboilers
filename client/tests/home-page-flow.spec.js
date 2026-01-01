@@ -8,7 +8,7 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
       }
     });
 
-    await page.goto('/');
+    await page.goto('http://localhost:3000/');
 
     // Hero section
     await expect(page.locator('.hero-section').first()).toBeVisible({ timeout: 15000 });
@@ -25,6 +25,16 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
     // Testimonials section - verify 8 reviews display
     await expect(page.locator('.testimonials-section')).toBeVisible();
     await expect(page.locator('[role=\"article\"]')).toHaveCount(2);
+
+    // Why Choose Nimbus Boilers section
+    await expect(page.locator('.why-choose-nimbus-boilers')).toBeVisible();
+    await expect(page.locator('.why-choose-nimbus-boilers h2.section-heading')).toContainText('Why Choose Nimbus Boilers in Scunthorpe?');
+    await expect(page.locator('.why-choose-nimbus-boilers .grid')).toBeVisible();
+    await expect(page.locator('.why-choose-nimbus-boilers .grid > div')).toHaveCount(4);
+    await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Instant Online Quote');
+    await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Free ECO4');
+    await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Same-Day Response');
+    await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('12-Year');
 
     // Footer
     await expect(page.locator('.company-details-section').first()).toBeVisible();
@@ -48,7 +58,7 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
       }
     });
 
-    await mpage.goto('/');
+    await mpage.goto('http://localhost:3000/');
 
     // Hero section
     await expect(mpage.locator('.hero-section').first()).toBeVisible({ timeout: 15000 });
@@ -65,6 +75,16 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
     // Testimonials section - verify 8 reviews display
     await expect(mpage.locator('.testimonials-section')).toBeVisible();
     await expect(mpage.locator('[role=\"article\"]')).toHaveCount(2);
+
+    // Why Choose Nimbus Boilers section
+    await expect(mpage.locator('.why-choose-nimbus-boilers')).toBeVisible();
+    await expect(mpage.locator('.why-choose-nimbus-boilers h2.section-heading')).toContainText('Why Choose Nimbus Boilers in Scunthorpe?');
+    await expect(mpage.locator('.why-choose-nimbus-boilers .grid')).toBeVisible();
+    await expect(mpage.locator('.why-choose-nimbus-boilers .grid > div')).toHaveCount(4);
+    await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Instant Online Quote');
+    await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Free ECO4');
+    await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Same-Day Response');
+    await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('12-Year');
 
     // Footer
     await expect(mpage.locator('.company-details-section').first()).toBeVisible();

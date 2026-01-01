@@ -50,7 +50,7 @@ function AppContent() {
       ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
     }
   }, [location]);
-  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/regular-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/boiler-price-guide-scunthorpe' || location.pathname === '/areas-covered';
+  const isSeoPage = location.pathname === '/gas-boiler-service-scunthorpe' || location.pathname === '/gas-boiler-installation-scunthorpe' || location.pathname === '/gas-boiler-service-north-lincolnshire' || location.pathname === '/gas-boiler-repair-scunthorpe' || location.pathname === '/gas-boiler-breakdown-scunthorpe' || location.pathname === '/system-boiler-installation-scunthorpe' || location.pathname === '/regular-boiler-installation-scunthorpe' || location.pathname === '/boiler-maintenance-tips' || location.pathname === '/gas-safe-boiler-installers-scunthorpe' || location.pathname === '/boiler-grants-scunthorpe' || location.pathname === '/gas-boiler-servicing-scunthorpe' || location.pathname === '/gas-boiler-brands-scunthorpe' || location.pathname === '/boiler-price-guide-scunthorpe' || location.pathname === '/gas-boiler-maintenance-tips-scunthorpe' || location.pathname === '/areas-covered';
 
   const canonicalUrl = window.location.origin + window.location.pathname + window.location.search;
 return (
@@ -76,99 +76,99 @@ return (
             </Suspense>
           } />
           <Route path="/quote" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <QuoteForm />
             </Suspense>
           } />
           <Route path="/faq" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyFAQ />
             </Suspense>
           } />
           <Route path="/areas" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyAreasCovered />
             </Suspense>
           } />
           <Route path="/blog" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyBlog />
             </Suspense>
           } />
           <Route path="/contact" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyContact />
             </Suspense>
           } />
           <Route path="/gas-boiler-service-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerServiceScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-installation-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerInstallationScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-service-north-lincolnshire" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerServiceNorthLincolnshire />
             </Suspense>
           } />
           <Route path="/gas-boiler-repair-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyBoilerRepairScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-breakdown-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerBreakdownScunthorpe />
             </Suspense>
           } />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/boiler-maintenance-tips" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyBoilerMaintenanceTips />
             </Suspense>
           } />
           <Route path="/gas-safe-boiler-installers-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasSafeBoilerInstallersScunthorpe />
             </Suspense>
           } />
           <Route path="/boiler-grants-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyBoilerGrantsScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-servicing-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerServicingScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-brands-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerBrandsScunthorpe />
             </Suspense>
           } />
           <Route path="/system-boiler-installation-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazySystemBoilerInstallationScunthorpe />
             </Suspense>
           } />
           <Route path="/regular-boiler-installation-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyRegularBoilerInstallationScunthorpe />
             </Suspense>
           } />
           <Route path="/boiler-price-guide-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyBoilerPriceGuideScunthorpe />
             </Suspense>
           } />
           <Route path="/gas-boiler-maintenance-tips-scunthorpe" element={
-            <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Suspense fallback={<div className="p-8 text-center">Loading...</div>} >
               <LazyGasBoilerMaintenanceTipsScunthorpe />
             </Suspense>
           } />
