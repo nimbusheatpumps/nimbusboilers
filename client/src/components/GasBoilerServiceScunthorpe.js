@@ -412,10 +412,6 @@ const GasBoilerServiceScunthorpe = () => {
             </div>
           </div>
         </section>
-        {/* Footer same */}
-        <footer className="company-details-section section nimbus-section-base">
-          {/* Copy from model */}
-        </footer>
       </main>
       {/* Styles - copy entire <style jsx> from model lines 631-1910 */}
       <style>{`

@@ -477,19 +477,6 @@ const BoilerPriceGuideScunthorpe = () => {
             </div>
           </div>
         </section>
-        <footer className="company-details-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img decoding="async" src="/images/nimbus-logo.webp" alt="Nimbus Boilers Logo - Boiler Price Guide Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" width="200" height="133" />
-            <h2 className="footer-heading">Transparent Boiler Pricing in Scunthorpe & North Lincolnshire</h2>
-            <p className="section-text">Nimbus Boilers | Gas Safe Certified | Free Surveys | 01724 622069 | info@nimbusboilers.co.uk</p>
-            <div className="section-cta-group section-cta-group--spaced">
-              <a href="/privacy" className="cta-button">Privacy Policy</a>
-              <a href="/terms" className="cta-button">Terms & Conditions</a>
-              <a href="/cookies" className="cta-button">Cookies Policy</a>
-            </div>
-            <p className="section-text section-text--small">&copy; Nimbus Boilers. All rights reserved.</p>
-          </div>
-        </footer>
       </main>
       <style>{`
         :root {

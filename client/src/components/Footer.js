@@ -563,7 +563,7 @@ const Footer = () => {
         </script>
       </Helmet>
       <style dangerouslySetInnerHTML={{__html: 'footer div.text-xs { color: #ffffff !important; } footer a.group span { color: #ffffff !important; } footer a.group:hover span { color: #4ade80 !important; }'}} />
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-gray-900 text-white company-details-section">
         <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
           {/* Gas Safe Trust Section */}
           <section className="text-center mb-12">

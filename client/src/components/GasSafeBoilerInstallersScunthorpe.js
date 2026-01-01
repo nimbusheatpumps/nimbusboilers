@@ -588,19 +588,6 @@ const GasSafeBoilerInstallersScunthorpe = () => {
             </div>
           </div>
         </section>
-        <footer className="company-details-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Boilers & Heat Pumps Logo - Gas Safe Boiler Installers Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
-            <h2 className="footer-heading">Certified Gas Safe Boiler Installers Serving Scunthorpe</h2>
-            <p className="section-text">Nimbus Heat Pumps Ltd (trading as Nimbus Boilers & Heat Pumps)<br />Company Number: 16497314<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: 01724 622069</p>
-            <div className="section-cta-group section-cta-group--spaced">
-              <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="cta-button">Privacy Policy</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="cta-button">Terms & Conditions</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/cookies-policy/" target="_blank" rel="noopener noreferrer" className="cta-button">Cookies Policy</a>
-            </div>
-            <p className="section-text section-text--small">&copy; Nimbus Heat Pumps Ltd. All rights reserved.</p>
-          </div>
-        </footer>
       </main>
       <style jsx>{`
         :root {

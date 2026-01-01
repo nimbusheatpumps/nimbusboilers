@@ -146,11 +146,11 @@ const QuoteForm = () => {
         <meta name="keywords" content="instant boiler quote Scunthorpe, gas boiler installation, combi boiler replacement, system boiler, regular boiler, Gas Safe registered" />
         <meta property="og:title" content="Instant Boiler Quote Scunthorpe | Gas Safe Registered Installers" />
         <meta property="og:description" content="Get an instant online boiler quote in Scunthorpe. Gas Safe registered installers for combi, system & regular boilers." />
-        <meta property="og:image" content="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/10/WorcesterGreenstar8000Life_white.png" />
+        <meta property="og:image" content="/images/worcester-greenstar.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Instant Boiler Quote Scunthorpe | Gas Safe Registered Installers" />
         <meta name="twitter:description" content="Get an instant online boiler quote in Scunthorpe. Gas Safe registered installers for combi, system & regular boilers." />
-        <meta name="twitter:image" content="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/10/WorcesterGreenstar8000Life_white.png" />
+        <meta name="twitter:image" content="/images/worcester-greenstar.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -695,8 +695,8 @@ const QuoteForm = () => {
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px' }}>
           {/* Left column: Explanatory Text */}
           <div style={{ flex: '1 1 400px', textAlign: 'center' }}>
-            <h1 className="section-heading section-heading--hero">Gas Boiler Installation, Replacement & Service in Scunthorpe, Grimsby, Doncaster, Lincoln & Surrounding Towns</h1>
-            <h2 className="section-subheading">Instant Gas Boiler Quote | Gas Safe Registered Installers | Finance Available | Boiler Repairs & Servicing in Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h2>
+            <h2 className="section-heading section-heading--hero">Gas Boiler Installation, Replacement & Service in Scunthorpe, Grimsby, Doncaster, Lincoln & Surrounding Towns</h2>
+            <h3 className="section-subheading">Instant Gas Boiler Quote | Gas Safe Registered Installers | Finance Available | Boiler Repairs & Servicing in Scunthorpe, Grimsby, Doncaster, Lincoln & North Lincolnshire</h3>
             <p className="section-text section-text--intro section-text--compact">Specialising in gas boiler installations, repairs and services in Scunthorpe, Grimsby, Doncaster, Lincoln and every town and village in between, including Brigg, Gainsborough and Kirton in Lindsey. We offer combi boiler replacements, emergency repairs and eco-friendly heating solutions. Request your quote today.</p>
             <div className="section-cta-group">
               <a className="bg-primary-500 text-white px-8 py-4 rounded-lg shadow-lg font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 focus-visible:scale-105 focus-visible:shadow-2xl focus-visible:ring-4 ring-primary-300/50 focus-visible:outline-none active:scale-95 whitespace-nowrap" href="#bqf-fullpaste">Get an Instant Gas Boiler Quote in Scunthorpe, Grimsby, Doncaster, Lincoln</a>
@@ -711,7 +711,7 @@ const QuoteForm = () => {
               decoding="async"
               loading="eager"
               fetchpriority="high"
-              src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/10/WorcesterGreenstar8000Life_white.png"
+              src="/images/worcester-greenstar.webp"
               style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px', background: '#fafafa' }}
             />
           </div>
@@ -1034,7 +1034,7 @@ const QuoteForm = () => {
             <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Controls: smart thermostats and <strong>TRVs</strong> for better efficiency.</li>
           </ul>
           <div className="section-cta-group">
-            <a className="cta-button" href="#bqf-fullpaste">See Your Boiler Price Online</a>
+            <a className="cta-button" href="/boiler-price-guide-scunthorpe">See Your Boiler Price Online</a>
             <a className="cta-button" href="#combi-vs-system">Compare Boiler Options</a>
           </div>
         </div>
@@ -1168,7 +1168,7 @@ const QuoteForm = () => {
             <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Gas supply route changes or upsizing to 22mm where required.</li>
             <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Electrical spur, controls wiring or thermostat upgrades.</li>
             <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Relocation of the boiler or cylinder; additional pipework.</li>
-            <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Asbestos or hazardous materials are not handled; we'll advise next steps if discovered.</li>
+            <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Asbestos or hazardous materials are not handled; we’ll advise next steps if discovered.</li>
           </ul>
         </div>
       </section>
@@ -1210,22 +1210,22 @@ const QuoteForm = () => {
           <div className="badge-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
             <div className="logo-card" style={{ padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://www.baxi.co.uk/" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }} target="_blank">
-                <img alt="Baxi boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/08/baxi-logo.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
+                <img alt="Baxi boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="/images/baxi-logo.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
               </a>
             </div>
             <div className="logo-card" style={{ padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://idealheating.com/" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }} target="_blank">
-                <img alt="Ideal boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Ideal_Logo-removebg-preview-1.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
+                <img alt="Ideal boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="/images/ideal-logo.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
               </a>
             </div>
             <div className="logo-card" style={{ padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://www.vaillant.co.uk/" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }} target="_blank">
-                <img alt="Vaillant boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/a38b5edd-0773-40c1-a329-ed07a9522c26.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
+                <img alt="Vaillant boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="/images/vaillant-logo.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
               </a>
             </div>
             <div className="logo-card" style={{ padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <a href="https://www.worcester-bosch.co.uk/" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }} target="_blank">
-                <img alt="Worcester Bosch boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/worcester-removebg-preview-1.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
+                <img alt="Worcester Bosch boilers logo - Nimbus Boilers & Heat Pumps in Scunthorpe" decoding="async" loading="lazy" src="/images/worcester-logo.png" style={{ maxWidth: '150px', maxHeight: '100px', display: 'block' }} />
               </a>
             </div>
           </div>
@@ -1236,7 +1236,7 @@ const QuoteForm = () => {
       <section className="gas-safe-section section nimbus-section-base">
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <h2 className="section-heading section-heading--spaced">Why Use a Gas Safe Registered Boiler Installer in Scunthorpe?</h2>
-          <img alt="Gas Safe Registered Logo - Nimbus Heat Pumps Ltd" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/08/Gas-Safe-Logo-2.png" style={{ maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 30px auto' }} />
+          <img alt="Gas Safe Registered Logo - Nimbus Heat Pumps Ltd" decoding="async" loading="lazy" src="/images/gas-safe-logo.png" style={{ maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 30px auto' }} />
           <p className="section-text section-text--intro">Choosing a Gas Safe registered engineer ensures all gas work is carried out safely and to the highest standards. Our certified team at Nimbus Boilers & Heat Pumps guarantees compliant <strong>boiler installation</strong>, replacement and servicing in Scunthorpe and North Lincolnshire.</p>
           <ul className="section-list section-list--flush">
             <li><span style={{ verticalAlign: 'middle', marginRight: '10px' }}>✅</span>Legal requirement for all gas work in the UK</li>
@@ -1253,27 +1253,12 @@ const QuoteForm = () => {
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <h2 className="section-heading">Request Your Free Gas Boiler Quote in Scunthorpe and North Lincolnshire</h2>
           <p className="section-text section-text--intro">Obtain a no-obligation quote for gas boiler installation, replacement, repair and servicing in Scunthorpe and North Lincolnshire. Our engineers will assess your property and recommend efficient boiler options tailored to your home and budget.</p>
-          <p className="section-text section-text--small">We respect your data — see our <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. Secure payment available to book your installation once you’re happy.</p>
+          <p className="section-text section-text--small">We respect your data — see our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. Secure payment available to book your installation once you’re happy.</p>
           <div id="contact-form">
             {/* Contact form would go here */}
           </div>
         </div>
       </section>
-
-      {/* Company Details Section */}
-      <footer className="company-details-section section nimbus-section-base">
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <img alt="Nimbus Boilers & Heat Pumps Logo - Energy Efficient Heating in Scunthorpe and North Lincolnshire" decoding="async" loading="lazy" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" style={{ maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto' }} />
-          <h2 className="footer-heading">Your Trusted Partner for Energy Efficient Heating Solutions in Scunthorpe and North Lincolnshire</h2>
-          <p className="section-text">Nimbus Heat Pumps Ltd (trading as Nimbus Boilers & Heat Pumps)<br />Company Number: 16497314<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: 01724 622069</p>
-          <div className="section-cta-group section-cta-group--spaced">
-            <a className="cta-button" href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
-            <a className="cta-button" href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" rel="noopener noreferrer" target="_blank">Terms & Conditions</a>
-            <a className="cta-button" href="https://nimbusheatpumps.co.uk/policies/cookies-policy/" rel="noopener noreferrer" target="_blank">Cookies Policy</a>
-          </div>
-          <p className="section-text section-text--small">© Nimbus Heat Pumps Ltd. All rights reserved.</p>
-        </div>
-      </footer>
 
       {/* Sticky Mobile CTA */}
       <div className="sticky-cta" role="region" aria-label="Quick actions">

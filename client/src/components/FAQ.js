@@ -720,21 +720,6 @@ const FAQ = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="company-details-section section nimbus-section-base" style={{padding: '100px 32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)', borderRadius: '8px', margin: '40px 0', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA'}}>
-        <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-          <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Boilers & Heat Pumps Logo - Energy Efficient Heating in Scunthorpe and North Lincolnshire" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
-          <p style={{fontSize: '18px', fontWeight: '600', color: '#007a57', marginBottom: '30px'}}>Your Trusted Partner for Energy Efficient Heating Solutions in Scunthorpe and North Lincolnshire</p>
-          <p style={{fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center'}}>Nimbus Heat Pumps Ltd (trading as Nimbus Boilers & Heat Pumps)<br />Company Number: 16497314<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: +44 7487 546550</p>
-          <div style={{display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '30px'}}>
-            <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: '600', fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', inset: '0 0 0 0 #00a676'}}>Privacy Policy</a>
-            <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" target="_blank" rel="noopener noreferrer" style={{padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: '600', fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', inset: '0 0 0 0 #00a676'}}>Terms & Conditions</a>
-            <a href="https://nimbusheatpumps.co.uk/policies/cookies-policy/" target="_blank" rel="noopener noreferrer" style={{padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: '600', fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)', inset: '0 0 0 0 #00a676'}}>Cookies Policy</a>
-          </div>
-          <p style={{fontSize: '14px', color: '#777', textAlign: 'center'}}>© Nimbus Heat Pumps Ltd. All rights reserved.</p>
-        </div>
-      </footer>
     </>
   );
 };

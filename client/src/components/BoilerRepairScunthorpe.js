@@ -612,20 +612,6 @@ const BoilerRepairScunthorpe = () => {
             </div>
           </div>
         </section>
-        {/* Company Details Section */}
-        <footer className="company-details-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Boilers & Heat Pumps Logo - Boiler Repair Services in Scunthorpe" style={{maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto'}} loading="lazy" />
-            <h2 className="footer-heading">Your Trusted Partner for Boiler Repair and Installation in Scunthorpe</h2>
-            <p className="section-text">Nimbus Heat Pumps Ltd (trading as Nimbus Boilers & Heat Pumps)<br />Company Number: 16497314<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: 01724 622069</p>
-            <div className="section-cta-group section-cta-group--spaced">
-              <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="cta-button">Privacy Policy</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="cta-button">Terms & Conditions</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/cookies-policy/" target="_blank" rel="noopener noreferrer" className="cta-button">Cookies Policy</a>
-            </div>
-            <p className="section-text section-text--small">&copy; Nimbus Heat Pumps Ltd. All rights reserved.</p>
-          </div>
-        </footer>
       </main>
       {/* Styles */}
       <style>{`
@@ -1202,48 +1188,6 @@ const BoilerRepairScunthorpe = () => {
           .nimbus-logo-link {
             margin-right: 40px;
           }
-          .nimbus-menu {
-            gap: 8px;
-            flex: 1;
-            justify-content: center;
-          }
-          .nimbus-link {
-            padding: 12px 20px;
-            font-size: 14px;
-          }
-          .nimbus-cta {
-            padding: 12px 24px;
-            font-size: 13px;
-            min-height: 42px;
-          }
-          .nimbus-dropdown {
-            min-width: 280px;
-          }
-          .nimbus-dropdown-link {
-            padding: 10px 16px;
-            font-size: 13px;
-          }
-          .nimbus-cta-container {
-            padding: 0 24px;
-          }
-          .nimbus-cta-row {
-            gap: 16px;
-            margin-top: 8px;
-          }
-        }
-        @media (max-width: 768px) {
-          .nimbus-nav-inner {
-            padding: 0 20px;
-            min-height: 100px;
-          }
-          .nimbus-logo {
-            height: 80px !important;
-            min-height: 80px !important;
-            max-width: 250px !important;
-          }
-          .nimbus-logo-link {
-            margin-right: auto;
-          }
           .nimbus-mobile-toggle {
             display: flex;
           }
@@ -1342,7 +1286,7 @@ const BoilerRepairScunthorpe = () => {
           }
           .nimbus-dropdown-link {
             justify-content: center;
-            padding: 14px 20px;
+            padding: 10px 16px;
             border-radius: 0;
             font-size: 13px;
             white-space: normal;
@@ -1356,8 +1300,8 @@ const BoilerRepairScunthorpe = () => {
           }
           .nimbus-cta-row {
             flex-direction: column;
-            gap: 8px;
-            margin-top: 5px;
+            gap: 16px;
+            margin-top: 8px;
           }
           .nimbus-cta {
             margin-left: 0;
@@ -1435,9 +1379,6 @@ const BoilerRepairScunthorpe = () => {
         .nimbus-cta-row .nimbus-cta {
           margin-left: 0;
         }
-        .nimbus-cta-row .nimbus-cta-primary {
-          margin-left: 0;
-        }
         .nimbus-cta-container {
           max-width: 1400px;
           margin: 0 auto;
@@ -1470,6 +1411,7 @@ const BoilerRepairScunthorpe = () => {
           background: linear-gradient(135deg, transparent 0%, rgba(0, 166, 118, 0.05) 50%, rgba(0, 200, 150, 0.08) 100%);
           opacity: 0;
           transition: opacity 0.3s ease;
+          border-radius: var(--radius-sm);
         }
         .nimbus-social a:hover::before {
           opacity: 1;
@@ -1739,9 +1681,6 @@ const BoilerRepairScunthorpe = () => {
           max-width: 800px;
           text-align: center;
         }
-        .section-list--flush {
-          margin-bottom: 0;
-        }
         .section-list li {
           margin-bottom: 15px;
         }
@@ -1781,131 +1720,22 @@ const BoilerRepairScunthorpe = () => {
           min-height: 46px;
           transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
           white-space: normal;
-          position: relative;
-          overflow: hidden;
-          background: rgba(255, 255, 255, 0.9);
           color: #007a57;
+          background: rgba(255, 255, 255, 0.9);
           box-shadow: 0 2px 8px rgba(0, 166, 118, 0.1), inset 0 0 0 0 #00a676;
         }
         .cta-button--nowrap {
           white-space: nowrap;
         }
         .cta-button:hover {
+          color: var(--dark-green);
+        }
+        .cta-button:hover {
           background: #ffffff;
-          border-color: #007a57;
-          color: #007a57;
+          border-color: var(--dark-green);
+          color: var(--dark-green);
           transform: translateY(-3px) scale(1.02);
           box-shadow: 0 6px 20px rgba(0, 166, 118, 0.2), inset 0 0 0 2px #ffffff;
-        }
-        .footer-heading {
-          font-size: 18px;
-          font-weight: 600;
-          color: #007a57;
-          margin-bottom: 30px;
-          text-align: center;
-        }
-        /* Media queries */
-        @media(max-width:1024px){
-          .nimbus-section-base{
-            padding:80px 32px
-          }
-          .services-grid{
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
-          }
-        }
-        @media(max-width:768px){
-          .nimbus-section-base{
-            padding:40px 20px
-          }
-          .section-heading{
-            font-size:24px
-          }
-          .section-text{
-            font-size:15px
-          }
-          .section-list li{
-            font-size:15px
-          }
-          .cta-button{
-            width:100%;
-            max-width:300px;
-            margin:0 auto 10px;
-            font-size:13px;
-            padding:10px 20px;
-            min-height:38px
-          }
-          .services-grid{
-            grid-template-columns: 1fr
-          }
-          .testimonials-carousel{
-            animation-duration:30s;
-            gap:10px
-          }
-          .testimonial-card{
-            flex:0 0 250px
-          }
-          .faqs-section{
-            padding:40px 20px
-          }
-          .faqs-section h2{
-            font-size:24px
-          }
-          .gas-safe-section{
-            padding:40px 20px
-          }
-          .gas-safe-section h2{
-            font-size:24px
-          }
-          .gas-safe-section p{
-            font-size:15px
-          }
-          .gas-safe-section ul li{
-            font-size:15px
-          }
-          .gas-safe-section img{
-            max-width:150px
-          }
-          .free-quote-section{
-            padding:40px 20px
-          }
-          .free-quote-section h2{
-            font-size:24px
-          }
-          .free-quote-section p{
-            font-size:15px
-          }
-          .company-details-section{
-            padding:40px 20px
-          }
-          .company-details-section h2{
-            font-size:24px
-          }
-          .company-details-section p{
-            font-size:15px
-          }
-          .company-details-section img{
-            max-width:150px
-          }
-          .company-details-section .section-cta-group{
-            flex-direction:column;
-            gap:15px
-          }
-          .company-details-section a{
-            width:100%;
-            max-width:300px;
-            margin:0 auto;
-            font-size:13px;
-            padding:10px 20px;
-            min-height:38px
-          }
-        }
-        @media (max-width: 1024px) {
-          .free-quote-section {
-            padding: 80px 32px;
-          }
-        }
-        @media (max-width: 768px) {
-          .cta-button--nowrap { white-space: normal !important; }
         }
       `}</style>
     </>

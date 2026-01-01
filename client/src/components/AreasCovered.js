@@ -689,7 +689,7 @@ const AreasCovered = () => {
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '25px', color: '#333', textAlign: 'center' }}>Our Service Area Map</h2>
             <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>See our coverage across North Lincolnshire, Lincolnshire and South Yorkshire - we're here to serve you!</p>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center'}}>
               <div ref={mapRef} className="map-container" style={{ maxWidth: '100%', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0, 166, 118, 0.15)', border: '2px solid #A8D5BA' }}>
                 {mapVisible && process.env.GOOGLE_MAPS_API_KEY ? (
                   <LoadScript googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}>
@@ -765,21 +765,6 @@ const AreasCovered = () => {
           </div>
         </section>
         <CallToAction />
-
-        {/* Footer */}
-        <footer className="company-details-section" style={{ padding: '60px 32px', textAlign: 'center', borderRadius: '8px', marginTop: '40px', fontFamily: "'Inter', sans-serif", border: '2px solid #A8D5BA' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-            <img src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png" alt="Nimbus Heat Pumps Ltd Logo - Energy Efficient Heating in Scunthorpe and North Lincolnshire" style={{ maxWidth: '200px', height: 'auto', display: 'block', margin: '0 auto 20px auto' }} loading="lazy" />
-            <p style={{ fontSize: '18px', fontWeight: 600, color: '#007a57', marginBottom: '30px' }}>Your Trusted Partner for Energy Efficient Heating Solutions in Scunthorpe and North Lincolnshire</p>
-            <p style={{ fontSize: '17px', lineHeight: '1.7', color: '#555', marginBottom: '30px', textAlign: 'center' }}>Nimbus Heat Pumps Ltd<br />Company Number: 16497314<br />Trading Address: 3 Crossbeck Road, Scunthorpe, DN16 3HR<br />Registered Office: Lytchett House, 13 Freeland Park, Wareham Road, Poole, Dorset, BH16 6FA<br />Email: info@nimbusheatpumps.co.uk<br />Telephone: +44 1724 622069</p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '30px' }}>
-              <a href="https://nimbusheatpumps.co.uk/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)' }}>Privacy Policy</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/terms-and-conditions/" target="_blank" rel="noopener noreferrer" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)' }}>Terms & Conditions</a>
-              <a href="https://nimbusheatpumps.co.uk/policies/cookies-policy/" target="_blank" rel="noopener noreferrer" style={{ padding: '14px 28px', border: '2px solid #00a676', borderRadius: '14px', fontWeight: 600, fontSize: '14px', letterSpacing: '-0.01em', cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '46px', transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', whiteSpace: 'normal', position: 'relative', overflow: 'hidden', background: 'rgba(255, 255, 255, 0.9)', color: '#007a57', boxShadow: '0 2px 8px rgba(0, 166, 118, 0.1)' }}>Cookies Policy</a>
-            </div>
-            <p style={{ fontSize: '14px', color: '#777', textAlign: 'center' }}>© Nimbus Heat Pumps Ltd. All rights reserved.</p>
-          </div>
-        </footer>
       </main>
     </>
   );

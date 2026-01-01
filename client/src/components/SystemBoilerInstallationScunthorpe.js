@@ -281,15 +281,6 @@ const SystemBoilerInstallationScunthorpe = () => {
             </div>
           </div>
         </section>
-        {/* Footer */}
-        <footer className="company-details-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <img src="/images/nimbus-logo.webp" alt="Nimbus Boilers" style={{maxWidth: '200px', margin: '0 auto 20px'}} loading="lazy" />
-            <h2 className="footer-heading">Nimbus Boilers - Scunthorpe</h2>
-            <p className="section-text">info@nimbusboilers.co.uk | 01724 622069</p>
-            {/* policies links */}
-          </div>
-        </footer>
       </main>
       <style>{`
         /* Copy full styles from GasBoilerInstallationScunthorpe.js model - root vars, nav, banner, sections, responsive etc. */
