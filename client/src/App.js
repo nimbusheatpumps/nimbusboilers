@@ -27,6 +27,7 @@ const LazyGasBoilerBrandsScunthorpe = lazy(() => import('./components/GasBoilerB
 const LazySystemBoilerInstallationScunthorpe = lazy(() => import('./components/SystemBoilerInstallationScunthorpe'));
 const LazyRegularBoilerInstallationScunthorpe = lazy(() => import('./components/RegularBoilerInstallationScunthorpe'));
 const LazyBoilerPriceGuideScunthorpe = lazy(() => import('./components/BoilerPriceGuideScunthorpe'));
+const LazyGasBoilerMaintenanceTipsScunthorpe = lazy(() => import('./components/GasBoilerMaintenanceTipsScunthorpe'));
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   return token ? children : <Navigate to="/login" />;

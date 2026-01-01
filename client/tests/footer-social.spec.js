@@ -27,6 +27,11 @@ test.describe('Footer Social Links Verification', () => {
           await expect(xLink.locator('text=@NimbusHeatPumps')).toBeVisible();
           // Icon visible
           await expect(xLink.locator('svg')).toBeVisible();
+
+          // Gas Safe verification - correct number #966812 present, link correct
+          await expect(page.locator('footer >> text="#966812"')).toBeVisible();
+          await expect(page.locator('footer a[href*="search=966812"]')).toHaveAttribute('href', expect.stringContaining('search=966812'));
+          await expect(page.locator('footer img[alt*="Gas Safe"]')).toBeVisible();
         });
       }
     });

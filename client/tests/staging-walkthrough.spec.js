@@ -15,7 +15,7 @@ async function launchChromeAndRunLh(url, opts, config = null) {
 }
 
 test.describe('Staging Full Customer Journey Walkthrough', () => {
-  const stagingUrl = 'https://client-2kqknrnbi-brys-projects-4db70d78.vercel.app';
+  const stagingUrl = 'https://client-itly3tchv-brys-projects-4db70d78.vercel.app';
 
   const setupPage = async (page) => {
     page.on('console', (msg) => {
@@ -44,6 +44,11 @@ test.describe('Staging Full Customer Journey Walkthrough', () => {
     await page.locator('.testimonials-section').scrollIntoViewIfNeeded();
     await expect(page.locator('.testimonials-section')).toBeVisible();
     await expect(page.locator('[role="article"]')).toHaveCount(2);
+  
+    // Why Choose Nimbus section bullets
+    await page.locator('.why-choose-nimbus').scrollIntoViewIfNeeded({ timeout: 5000 });
+    await expect(page.locator('h2:has-text("Why Choose Nimbus?")')).toBeVisible();
+    await expect(page.locator('.why-choose-nimbus ul li')).toHaveCount(5);
 
     // Lazy images load (check some images present and loaded)
     await expect(page.locator('img')).toHaveCount.expect.toBeGreaterThan(5);

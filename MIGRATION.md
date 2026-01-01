@@ -27,7 +27,7 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Next: Push emergency/optimizations to staging, monitor GA 24h for Scunthorpe boiler traffic.
 - Canonical: Fixed conflict using dynamic `window.location.href` in [`Header.js`](client/src/components/Header.js), unique per page, tested/Lighthouse SEO 100.
 - New SEO page: [`GasBoilerBreakdownScunthorpe.js`](client/src/components/GasBoilerBreakdownScunthorpe.js), route `/gas-boiler-breakdown-scunthorpe`, faults/24h/keywords/schema.
-- Footer: Added Gas Safe logo/link/reg #197837 in [`Footer.js`](client/src/components/Footer.js).
+- Footer: Added Gas Safe logo/link/reg #966812 in [`Footer.js`](client/src/components/Footer.js).
 - Lighthouse summary: SEO 100, Acc 97, Perf ~45 (fixes logged).
 - Staging deployed: https://client-bzrye2kdq-brys-projects-4db70d78.vercel.app. GA monitor pending 24h for Scunthorpe/North Lincs keywords.
 - Performance: WebP images (logos, hero, services), preload hero/CSS, minified JS bundle. Local Lighthouse Perf >80 (build).
@@ -41,7 +41,7 @@ This guide provides detailed, actionable steps to migrate the existing static HT
 - Phone updated site-wide to "01724 622069" (old "+44 7487 546550" removed); verified by [`phone-update.spec.js`](client/tests/phone-update.spec.js).
 - New SEO page: [`GasBoilerServicingScunthorpe.js`](client/src/components/GasBoilerServicingScunthorpe.js) `/gas-boiler-servicing-scunthorpe`, boiler servicing/maintenance content/keywords, Article schema; [`seo-pages.spec.js`](client/tests/seo-pages.spec.js) passes.
 - Schema enhanced: X @NimbusHeatPumps in LocalBusiness [`Footer.js`](client/src/components/Footer.js).
-- Contacts: Phone "01724 622069", Email "info@nimbusheatpumps.co.uk", Address "3 Crossbeck Road, Scunthorpe, North Lincolnshire DN16 3HR", Gas Safe #197837.
+- Contacts: Phone "01724 622069", Email "info@nimbusheatpumps.co.uk", Address "3 Crossbeck Road, Scunthorpe, North Lincolnshire DN16 3HR", Gas Safe #966812.
 - Staging deployed: https://client-cis85wxy4-brys-projects-4db70d78.vercel.app; all tests/Lighthouse SEO 100%.
 
 ## Testimonials Integration
