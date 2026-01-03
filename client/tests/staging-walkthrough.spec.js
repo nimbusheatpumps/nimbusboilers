@@ -15,7 +15,7 @@ async function launchChromeAndRunLh(url, opts, config = null) {
 }
 
 test.describe('Staging Full Customer Journey Walkthrough', () => {
-  const stagingUrl = 'http://localhost:3000';
+  const stagingUrl = 'https://client-three-rho-12.vercel.app';
 
   const setupPage = async (page) => {
     page.on('console', (msg) => {

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const RegularBoilerInstallationScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -33,6 +39,8 @@ const RegularBoilerInstallationScunthorpe = () => {
       answer: "£3,500-£7,000 including boiler, loft feed tank, hot water cylinder, pipework, filters, and Gas Safe certification. Prices vary by size, complexity, and grants eligibility. Finance available."
     }
   ];
+
+  const textGreen = 'text-primary';
 
   return (
     <>
@@ -114,7 +122,11 @@ const RegularBoilerInstallationScunthorpe = () => {
               <img src="/images/nimbus-logo.webp" alt="Nimbus Boilers - Regular Boiler Installation Scunthorpe" className="nimbus-logo" loading="lazy" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation menu">
-              <span></span><span></span><span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-primary" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`}>
               <li className="nimbus-menu-item"><a href="/faq" className="nimbus-link">FAQ</a></li>
@@ -140,7 +152,7 @@ const RegularBoilerInstallationScunthorpe = () => {
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
               <a href="/quote" className="nimbus-cta nimbus-cta-primary">Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary" aria-label="Call Now: Contact us for a free quote">Call Now</a>
             </div>
           </div>
         </div>
@@ -182,7 +194,7 @@ const RegularBoilerInstallationScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img src="/images/hero-install.webp" alt="regular boiler installation Scunthorpe" className="w-full h-96 object-cover rounded-lg" loading="lazy" />
+              <img src="/images/hero-install.webp" alt="Professional combi boiler installation Scunthorpe North Lincolnshire" className="w-full h-96 object-cover rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>
@@ -228,7 +240,7 @@ const RegularBoilerInstallationScunthorpe = () => {
         <section className="benefits-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">Regular Boiler vs Combi Boiler Benefits</h2>
-            <img src="/images/hero-boiler-room.webp" alt="regular boiler vs combi benefits" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img src="/images/hero-boiler-room.webp" alt="Modern gas boiler installation Scunthorpe utility room" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">Regular boilers excel in homes with <strong>low mains pressure</strong> using <strong>gravity-fed stored hot water</strong> from loft tank. Perfect for traditional systems.</p>
             <ul className="section-list">
               <li>Gravity hot water - reliable low pressure mains</li>
@@ -245,7 +257,7 @@ const RegularBoilerInstallationScunthorpe = () => {
         <section className="sizing-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">Regular Boiler Sizing Guide Scunthorpe</h2>
-            <img src="/images/hero-team-service.webp" alt="regular boiler sizing Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img src="/images/hero-team-service.webp" alt="Gas Safe registered engineer performing boiler service Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">Proper sizing ensures efficiency. Based on bathrooms, radiators, demand.</p>
             <ul className="section-list">
               <li>1-2 bathrooms, 10 radiators: 27-30kW</li>
@@ -264,7 +276,16 @@ const RegularBoilerInstallationScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer">{faq.answer}</div>
                 </div>
               ))}

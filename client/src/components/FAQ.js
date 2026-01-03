@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState(new Array(14).fill(false));
@@ -82,7 +83,7 @@ const FAQ = () => {
             "alternateName": "Nimbus Heat Pumps",
             "url": "https://nimbusheatpumps.co.uk/",
             "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
-            "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7500 Boiler Upgrade Scheme grants.",
+            "description": "Gas Safe registered installers for boiler installations, air source heat pumps and heating solutions in Scunthorpe and North Lincolnshire. Claim £7,500 Boiler Upgrade Scheme grants.",
             "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
             "telephone": "+44 7487 546550",
             "email": "info@nimbusheatpumps.co.uk",
@@ -443,7 +444,7 @@ const FAQ = () => {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Gas Boiler Repair",
-                  "description": "Expert repairs for gas boilers with quick response times."
+                  "description": "Expert repairs for gas boilers with fast response times."
                 }
               },
               {
@@ -538,8 +539,24 @@ const FAQ = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Heating System Maintenance",
-                  "description": "Comprehensive maintenance for heating systems including boilers and heat pumps."
+                  "name": "Heating System Installation",
+                  "description": "Full installation of heating systems including boilers and radiators."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heating System Service",
+                  "description": "Servicing and maintenance for complete heating systems."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heating System Repair",
+                  "description": "Repairs for heating systems including boilers and components."
                 }
               },
               {
@@ -640,7 +657,13 @@ const FAQ = () => {
                   style={{background: '#ffffff', padding: '15px 20px', cursor: 'pointer', position: 'relative', fontWeight: '600', color: '#1a1a1a', transition: 'background 0.3s ease, color 0.3s ease, border-color 0.3s ease', textAlign: 'left', width: '100%', display: 'block', border: 'none', fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit'}}
                 >
                   {faq.question}
-                  <span aria-hidden="true" style={{position: 'absolute', right: '20px', fontSize: '20px', transition: 'transform 0.3s ease'}}>{openItems[index] ? '-' : '+'}</span>
+                  <span aria-hidden="true" style={{position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)', transition: 'transform 0.3s ease'}}>
+                    {openItems[index] ? (
+                      <MinusIcon className="h-5 w-5 text-slate-500" />
+                    ) : (
+                      <PlusIcon className="h-5 w-5 text-slate-500" />
+                    )}
+                  </span>
                 </button>
                 {openItems[index] && (
                   <div

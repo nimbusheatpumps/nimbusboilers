@@ -10,7 +10,7 @@ const CallToAction = () => {
         <a
           href="tel:01724622069"
           className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold text-lg md:text-xl lg:text-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-white/50 min-w-[200px] md:min-w-[220px]"
-          aria-label="Call 01724 622069 for free survey"
+          aria-label="Call Now: 01724 622069 for free survey"
         >
           Call Now
         </a>

@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const SystemBoilerInstallationScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -116,7 +122,11 @@ const SystemBoilerInstallationScunthorpe = () => {
             </a>
             {/* menu toggle, ul menu items similar, adjust links if needed */}
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation menu">
-              <span></span><span></span><span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-primary" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`}>
               {/* Menu items: Home, Services, etc. */}
@@ -127,7 +137,7 @@ const SystemBoilerInstallationScunthorpe = () => {
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
               <a href="/quote" className="nimbus-cta nimbus-cta-primary">Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary" aria-label="Call Now: Contact us for a free quote">Call Now</a>
             </div>
           </div>
         </div>
@@ -164,7 +174,7 @@ const SystemBoilerInstallationScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img src="/images/hero-install.webp" alt="system boiler installation Scunthorpe" className="w-full h-96 object-cover rounded-lg" loading="lazy" />
+              <img src="/images/hero-install.webp" alt="Professional combi boiler installation Scunthorpe North Lincolnshire" className="w-full h-96 object-cover rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>
@@ -212,7 +222,7 @@ const SystemBoilerInstallationScunthorpe = () => {
         <section className="benefits-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">System Boiler vs Combi Boiler Benefits</h2>
-            <img src="/images/hero-boiler-room.webp" alt="system boiler vs combi benefits" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img src="/images/hero-boiler-room.webp" alt="Modern gas boiler installation Scunthorpe utility room" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">System boilers excel in larger homes with <strong>stored hot water</strong> for <strong>multiple bathrooms</strong>. No loft cylinder space issue - cylinder fits airing cupboard.</p>
             <ul className="section-list">
               <li>Stored hot water - consistent pressure multiple outlets</li>
@@ -230,7 +240,7 @@ const SystemBoilerInstallationScunthorpe = () => {
         <section className="sizing-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">System Boiler Sizing Guide Scunthorpe</h2>
-            <img src="/images/hero-team-service.webp" alt="system boiler sizing Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img src="/images/hero-team-service.webp" alt="Gas Safe registered engineer performing boiler service Scunthorpe" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">Proper sizing ensures efficiency. Based on bathrooms, radiators, demand.</p>
             <ul className="section-list">
               <li>1-2 bathrooms, 10 radiators: 27-30kW</li>
@@ -250,7 +260,16 @@ const SystemBoilerInstallationScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer">{faq.answer}</div>
                 </div>
               ))}
@@ -293,7 +312,8 @@ const SystemBoilerInstallationScunthorpe = () => {
           /* full styles */
         }
         /* Assume full CSS is included here to match model */
-      `}</style>
+      `}
+</style>
     </>
   );
 };

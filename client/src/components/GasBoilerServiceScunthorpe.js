@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import QuoteForm from './QuoteForm';
 import { Link } from 'react-router-dom';
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
 
 const GasBoilerServiceScunthorpe = () => {
   const [faqActive, setFaqActive] = useState(null);
@@ -68,10 +69,10 @@ const GasBoilerServiceScunthorpe = () => {
         </section>
 
         {/* Services Section */}
-        <section className="bg-slate-50 section-padding">
+        <section className="section-padding bg-white">
           <div className="section-container">
             <h2 className="section-heading">Our Servicing Options</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
               {[
                 { title: "Annual Service", text: "Comprehensive annual servicing for gas boilers." },
                 { title: "Safety Checks", text: "Thorough safety inspections and reports." },
@@ -99,8 +100,12 @@ const GasBoilerServiceScunthorpe = () => {
                     onClick={() => toggleFaq(i)}
                   >
                     <span className="text-slate-900">{faq.question}</span>
-                    <span className={`flex items-center justify-center w-8 h-8 rounded-full bg-primary/5 text-primary transform transition-transform duration-300 ${faqActive === i ? 'rotate-45 bg-primary text-white' : ''}`}>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v12M6 12h12" /></svg>
+                    <span className={`flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-300 ${faqActive === i ? 'bg-primary text-white' : 'bg-primary/5 text-primary'}`}>
+                      {faqActive === i ? (
+                        <MinusIcon className="w-5 h-5" />
+                      ) : (
+                        <PlusIcon className="w-5 h-5" />
+                      )}
                     </span>
                   </button>
                   {faqActive === i && (

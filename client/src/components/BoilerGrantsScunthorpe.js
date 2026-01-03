@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const BoilerGrantsScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -216,9 +222,11 @@ const BoilerGrantsScunthorpe = () => {
               aria-label="Toggle navigation menu"
               aria-expanded={menuActive}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-white" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-white" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -367,8 +375,15 @@ const BoilerGrantsScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0">
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0">
                     {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
                   </h3>
                   <div className="faq-answer" style={{display: faqActive === index ? 'block' : 'none'}}>
                     {faq.answer}

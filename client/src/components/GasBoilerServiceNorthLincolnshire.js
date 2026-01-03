@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon, 
+  ChevronDownIcon 
+} from '@heroicons/react/24/outline';
 
 const GasBoilerServiceNorthLincolnshire = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -169,9 +176,11 @@ const GasBoilerServiceNorthLincolnshire = () => {
                     aria-label="Toggle navigation menu"
                     aria-expanded={menuActive}
                     aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-primary" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -186,7 +195,7 @@ const GasBoilerServiceNorthLincolnshire = () => {
               </li>
               <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(0)}>
-                  Heat Pump & Boiler Manufacturers <span>▼</span>
+                  Heat Pump & Boiler Manufacturers <ChevronDownIcon className="inline-block h-4 w-4 ml-1" />
                 </a>
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
@@ -324,7 +333,7 @@ const GasBoilerServiceNorthLincolnshire = () => {
               </li>
               <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 1 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(1)}>
-                  Policies <span>▼</span>
+                  Policies <ChevronDownIcon className="inline-block h-4 w-4 ml-1" />
                 </a>
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
@@ -371,10 +380,8 @@ const GasBoilerServiceNorthLincolnshire = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Gas Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Heat Pump Quote</a>
               <a href="mailto:info@nimbusheatpumps.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary" aria-label="Call Now: 01724 622069">Call Now</a>
             </div>
           </div>
         </div>
@@ -509,7 +516,16 @@ const GasBoilerServiceNorthLincolnshire = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
                 </div>
               ))}
@@ -1021,7 +1037,8 @@ const GasBoilerServiceNorthLincolnshire = () => {
             transition-duration: 0.01ms !important;
           }
         }
-      `}</style>
+      `}
+      </style>
     </>
   );
 };

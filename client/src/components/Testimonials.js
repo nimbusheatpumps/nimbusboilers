@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
+import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
+
 /* global google */
 const Testimonials = () => {
   const staticTestimonials = [
@@ -16,7 +19,17 @@ const Testimonials = () => {
 
 
   const renderStars = (stars) => {
-    return '★'.repeat(stars) + '☆'.repeat(5 - stars);
+    return (
+      <div className="flex gap-1">
+        {[...Array(5)].map((_, i) => (
+          i < stars ? (
+            <StarIconSolid key={i} className="w-6 h-6 text-yellow-400" />
+          ) : (
+            <StarIconOutline key={i} className="w-6 h-6 text-yellow-400" />
+          )
+        ))}
+      </div>
+    );
   };
 
   const [liveReviews, setLiveReviews] = useState([]);
@@ -134,7 +147,7 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-section testimonials-grid" aria-labelledby="testimonials-title">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-12">
         {displayedTestimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -142,8 +155,8 @@ const Testimonials = () => {
             role="article"
             aria-label={`Testimonial by ${testimonial.name}`}
           >
-            <div className="text-3xl text-yellow-400 mb-8 flex justify-center">
-              <span aria-label={`${testimonial.stars} out of 5 stars`}>{renderStars(testimonial.stars)}</span>
+            <div className="mb-8 flex justify-center">
+              <span role="img" aria-label={`${testimonial.stars} out of 5 stars`}>{renderStars(testimonial.stars)}</span>
             </div>
             <blockquote className="text-lg text-slate-600 mb-10 leading-relaxed italic flex-grow">
               "{testimonial.text}"

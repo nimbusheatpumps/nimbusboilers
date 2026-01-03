@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon, 
+  ChevronDownIcon 
+} from '@heroicons/react/24/outline';
 
 const GasBoilerReplacementScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -179,9 +186,11 @@ const GasBoilerReplacementScunthorpe = () => {
                     aria-label="Toggle navigation menu"
                     aria-expanded={menuActive}
                     aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-primary" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -194,9 +203,9 @@ const GasBoilerReplacementScunthorpe = () => {
                 <a href="https://nimbusheatpumps.co.uk/boiler-upgrade-scheme-eligibility-7500-heat-pump-grants-scunthorpe/"
                     className="nimbus-link">£7,500 Boiler Upgrade Scheme Grants in Scunthorpe</a>
               </li>
-              <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
+              <li className={`nimbus-menu-item nimus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(0)}>
-                  Heat Pump & Boiler Manufacturers <span>▼</span>
+                  Heat Pump & Boiler Manufacturers <ChevronDownIcon className="inline-block h-4 w-4 ml-1" />
                 </a>
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
@@ -213,22 +222,6 @@ const GasBoilerReplacementScunthorpe = () => {
                       target="_blank"
                       rel="noopener noreferrer">
                       Baxi Heat Pumps
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.idealheating.com/products/heat-pumps"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Ideal Heat Pumps
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.intergasheating.co.uk/homeowner/products/xtend-split/"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Intergas Heat Pumps
                     </a>
                   </li>
                   <li className="nimbus-dropdown-item">
@@ -271,70 +264,14 @@ const GasBoilerReplacementScunthorpe = () => {
                       Worcester Bosch Heat Pumps
                     </a>
                   </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.alpha-innovation.co.uk/products"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Alpha Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.baxi.co.uk/products/boilers"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Baxi Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.idealheating.com/products/boilers"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Ideal Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.intergasheating.co.uk/homeowner/products/"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Intergas Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.vaillant.com/home/products/energy-type/gas/"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Vaillant Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.viessmann.co.uk/en/products/gas-boilers.html"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Viessmann Boilers
-                    </a>
-                  </li>
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.worcester-bosch.co.uk/products/boilers"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Worcester Bosch Boilers
-                    </a>
-                  </li>
                 </ul>
               </li>
-              <li className="nimbus-menu-item">
+              <li className="nimus-menu-item">
                 <a href="/" className="nimbus-link">Home</a>
               </li>
-              <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 1 ? 'dropdown-active' : ''}`}>
+              <li className={`nimbus-menu-item nimus-has-dropdown ${dropdownActive === 1 ? 'dropdown-active' : ''}`}>
                 <a href="#" className="nimbus-link" onClick={() => toggleDropdown(1)}>
-                  Policies <span>▼</span>
+                  Policies <ChevronDownIcon className="inline-block h-4 w-4 ml-1" />
                 </a>
                 <ul className="nimbus-dropdown">
                   <li className="nimbus-dropdown-item">
@@ -381,10 +318,8 @@ const GasBoilerReplacementScunthorpe = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Gas Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Heat Pump Quote</a>
               <a href="mailto:info@nimbusheatpumps.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary" aria-label="Call Now: 01724 622069">Call Now</a>
             </div>
           </div>
         </div>
@@ -428,7 +363,7 @@ const GasBoilerReplacementScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="/images/hero-install.webp" alt="gas boiler replacement Scunthorpe by expert Nimbus engineers" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
+              <img decoding="async" src="/images/hero-install.webp" alt="Professional combi boiler installation Scunthorpe North Lincolnshire" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
             </div>
           </div>
         </section>
@@ -520,7 +455,16 @@ const GasBoilerReplacementScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
                 </div>
               ))}
@@ -571,18 +515,18 @@ const GasBoilerReplacementScunthorpe = () => {
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://idealheating.com/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/ideal-logo.webp" alt="Ideal boilers gas boiler replacement Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                <a href="https://les.mitsubishielectric.co.uk/homeowners/our-heat-pumps" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="/images/mitsubishi-electric-logo.webp" alt="Mitsubishi Electric heat pumps Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
-                <a href="https://www.vaillant.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/vaillant-logo.webp" alt="Vaillant boilers gas boiler replacement Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                <a href="https://samsung-climatesolutions.com/gb/b2c/our-solutions/home/heat-pump-solutions/heating.html" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
+                  <img decoding="async" src="/images/samsung-logo.webp" alt="Samsung heat pump boilers Scunthorpe" style={{maxWidth: '150px', maxHeight: '60px', display: 'block'}} loading="lazy" />
                 </a>
               </div>
               <div style={{padding: '20px', border: '1px solid #A8D5BA', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)', backgroundColor: '#f9f9f9', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease'}}>
                 <a href="https://www.worcester-bosch.co.uk/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block', textDecoration: 'none'}}>
-                  <img decoding="async" src="/images/worcester-logo.webp" alt="Worcester Bosch boilers gas boiler replacement Scunthorpe" style={{maxWidth: '150px', maxHeight: '100px', display: 'block'}} loading="lazy" />
+                  <img decoding="async" src="/images/worcester-bosch-logo.webp" alt="Worcester Bosch gas boilers Scunthorpe" style={{maxWidth: '150px', maxHeight: '60px', display: 'block'}} loading="lazy" />
                 </a>
               </div>
             </div>
@@ -762,6 +706,7 @@ const GasBoilerReplacementScunthorpe = () => {
           .nimbus-cta-primary:hover {
             background: var(--dark-green);
             transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
           }
           .nimbus-cta-secondary {
             background: transparent;

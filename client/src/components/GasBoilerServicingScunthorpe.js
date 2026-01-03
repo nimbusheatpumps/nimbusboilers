@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon, 
+  ChevronDownIcon 
+} from '@heroicons/react/24/outline';
 
 const GasBoilerServicingScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -184,9 +191,11 @@ const GasBoilerServicingScunthorpe = () => {
               aria-label="Toggle navigation menu"
               aria-expanded={menuActive}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-primary" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`}>
               <li className="nimbus-menu-item">
@@ -200,7 +209,7 @@ const GasBoilerServicingScunthorpe = () => {
               </li>
               <li className="nimbus-menu-item nimbus-has-dropdown">
                 <a href="#" className="nimbus-link" onClick={(e) => {e.preventDefault(); toggleDropdown(0);}}>
-                  Services <span>▼</span>
+                  Services <ChevronDownIcon className="inline-block h-4 w-4 ml-1" />
                 </a>
                 <ul className="nimbus-dropdown">
                   <li><a href="/gas-boiler-servicing-scunthorpe" className="nimbus-dropdown-link">Boiler Servicing</a></li>
@@ -218,9 +227,8 @@ const GasBoilerServicingScunthorpe = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Get Quote</a>
               <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Call 01724 622069</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-primary">Call Now</a>
+              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-primary" aria-label="Call Now: 01724 622069">Call Now</a>
             </div>
           </div>
         </div>
@@ -266,7 +274,7 @@ const GasBoilerServicingScunthorpe = () => {
               </div>
             </div>
             <div className="hero-image">
-              <img src="/images/hero-home.webp" alt="Gas boiler servicing Scunthorpe" loading="lazy" />
+              <img src="/images/hero-home.webp" alt="Premium gas boiler installation Scunthorpe home heating" loading="lazy" />
             </div>
           </div>
         </section>
@@ -322,8 +330,15 @@ const GasBoilerServicingScunthorpe = () => {
             <div className="faq-list">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 onClick={() => toggleFaq(index)} className="faq-question">
+                  <h3 onClick={() => toggleFaq(index)} className="faq-question flex justify-between items-center">
                     {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
                   </h3>
                   <p className="faq-answer">{faq.answer}</p>
                 </div>

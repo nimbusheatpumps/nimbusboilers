@@ -11,7 +11,7 @@ const Blog = () => {
       body: `
 <p class="text-xl text-gray-700 leading-relaxed mb-10">Living in Scunthorpe means enduring the biting cold of North Lincolnshire winters, where a dependable boiler is the cornerstone of home comfort and safety. However, even the most reliable systems have a finite lifespan. Recognizing the early warning signs that your boiler needs replacement can save you from emergency breakdowns, skyrocketing energy bills, and potential safety risks. In this comprehensive guide, we'll explore the key indicators that signal it's time for professional <strong class="text-blue-600">gas boiler installation Scunthorpe</strong> services.</p>
 
-<img src="/images/hero-boiler-room.webp" alt="Boiler room in Scunthorpe home showing wear and tear signs" class="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-2xl mb-16 mx-auto" loading="lazy" />
+<img src="/images/hero-boiler-room.webp" alt="Modern gas boiler installation Scunthorpe utility room" class="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-2xl mb-16 mx-auto" loading="lazy" />
 
 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-24 mb-8 border-b-4 border-blue-200 pb-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">1. Strange and Unusual Noises</h2>
 
@@ -61,7 +61,7 @@ const Blog = () => {
 
 <div>
 
-<img src="/images/hero-boiler-room.webp" alt="Old boiler needing replacement" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" />
+<img src="/images/hero-boiler-room.webp" alt="Modern gas boiler installation Scunthorpe utility room" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" />
 
 </div>
 
@@ -108,7 +108,7 @@ const Blog = () => {
 <p class="text-sm text-gray-500 text-center italic mt-12">Serving Scunthorpe, North Lincolnshire & surrounding areas | Gas Safe Registered #123456</p>
       `,
       images: [
-        { src: "/images/hero-boiler-room.webp", alt: "Scunthorpe boiler room indicating replacement needed" }
+        { src: "/images/hero-boiler-room.webp", alt: "Modern gas boiler installation Scunthorpe utility room" }
       ]
     }
   ];
@@ -131,33 +131,35 @@ const Blog = () => {
           <p className="text-xl text-gray-600 text-center mb-20 max-w-2xl mx-auto">Expert heating advice for Scunthorpe & North Lincolnshire homeowners</p>
 
           {/* Recent Posts List */}
-          <section className="mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Recent Posts</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-              {posts.slice(0, 3).map((post) => (
-                <article key={post.id} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
-                  <div className="relative overflow-hidden">
-                    {post.images[0] && (
-                      <img 
-                        src={post.images[0].src} 
-                        alt={post.images[0].alt} 
-                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" 
-                        loading="lazy" 
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="p-8">
-                    <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">{post.date}</p>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">{post.title}</h3>
-                    <p className="text-gray-600 leading-relaxed line-clamp-4 mb-6">{post.excerpt}</p>
-                    <a href="#featured-post" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-                      Read Full Post 
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                  </div>
-                </article>
-              ))}
+          <section className="section-padding bg-white">
+            <div className="section-container">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Recent Posts</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-12">
+                {posts.slice(0, 3).map((post) => (
+                  <article key={post.id} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
+                    <div className="relative overflow-hidden">
+                      {post.images[0] && (
+                        <img 
+                          src={post.images[0].src} 
+                          alt={post.images[0].alt} 
+                          className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" 
+                          loading="lazy" 
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-8">
+                      <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">{post.date}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">{post.title}</h3>
+                      <p className="text-gray-600 leading-relaxed line-clamp-4 mb-6">{post.excerpt}</p>
+                      <a href="#featured-post" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                        Read Full Post 
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
 

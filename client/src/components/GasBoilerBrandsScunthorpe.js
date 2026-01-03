@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const GasBoilerBrandsScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -191,9 +197,11 @@ const GasBoilerBrandsScunthorpe = () => {
               aria-label="Toggle navigation menu"
               aria-expanded={menuActive}
               aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-white" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-white" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -212,9 +220,8 @@ const GasBoilerBrandsScunthorpe = () => {
           </div>
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Get Boiler Quote</a>
               <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Free Consultation</a>
-              <a href="tel:+447487546550" className="nimbus-cta nimbus-cta-primary">Call Now</a>
+              <a href="tel:+447487546550" className="nimbus-cta nimbus-cta-primary" aria-label="Call Now: 07487 546550">Call Now</a>
             </div>
           </div>
         </div>
@@ -260,7 +267,7 @@ const GasBoilerBrandsScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img src="/images/hero-team-service.webp" alt="gas boiler brands Scunthorpe expert installation team" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
+              <img src="/images/hero-team-service.webp" alt="Gas Safe registered engineer performing boiler service Scunthorpe" className="w-full h-96 object-cover lg:h-screen rounded-lg" loading="lazy" />
             </div>
           </div>
         </section>
@@ -384,7 +391,16 @@ const GasBoilerBrandsScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer" aria-hidden={faqActive !== index}>{faq.answer}</div>
                 </div>
               ))}

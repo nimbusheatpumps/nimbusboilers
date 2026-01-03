@@ -11,11 +11,11 @@ module.exports = {
           light: '#3b82f6',
         },
         secondary: {
-          DEFAULT: '#f97316', // Orange
-          dark: '#ea580c',
-          light: '#fb923c',
+          DEFAULT: '#c2410c', // Darker Orange for better contrast
+          dark: '#9a3412',
+          light: '#f97316',
         },
-        accent: '#f97316',
+        accent: '#c2410c',
         navy: {
           DEFAULT: '#1e3a8a',
           dark: '#172554',

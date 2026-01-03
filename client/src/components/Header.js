@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { 
+  Bars3Icon, 
+  XMarkIcon, 
+  ChevronDownIcon 
+} from '@heroicons/react/24/outline';
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -22,6 +27,8 @@ const Header = () => {
                     src="/images/nimbus-logo.webp" 
                     alt="Nimbus Boilers & Heat Pumps" 
                     className="h-12 md:h-16 w-auto"
+                    width="192"
+                    height="64"
                   />
                 </Link>
               </div>
@@ -37,7 +44,7 @@ const Header = () => {
                 
                 <div className="relative group">
                   <button className="flex items-center text-slate-600 hover:text-primary font-semibold transition-colors">
-                    Policies <span className="ml-1 text-xs">▼</span>
+                    Policies <ChevronDownIcon className="ml-1 h-4 w-4" />
                   </button>
                   <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="bg-white border border-slate-200 rounded-xl shadow-xl py-2 min-w-[200px)">
@@ -52,7 +59,7 @@ const Header = () => {
               {/* Desktop CTAs */}
               <div className="hidden lg:flex lg:items-center lg:space-x-4">
                 <Link to="/quote" className="btn-primary !px-6 !py-2.5 !text-sm">Gas Boiler Quote</Link>
-                <a href="tel:01724622069" className="btn-secondary !px-6 !py-2.5 !text-sm">Call Now</a>
+                <a href="tel:01724622069" className="btn-secondary !px-6 !py-2.5 !text-sm" aria-label="Call Now: 01724 622069">Call Now</a>
               </div>
 
               {/* Mobile menu button */}
@@ -65,13 +72,9 @@ const Header = () => {
                 >
                   <span className="sr-only">Open main menu</span>
                   {menuActive ? (
-                    <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <XMarkIcon className="block h-6 w-6" />
                   ) : (
-                    <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                    <Bars3Icon className="block h-6 w-6" />
                   )}
                 </button>
               </div>
@@ -89,7 +92,7 @@ const Header = () => {
               <Link to="/faq" className="block px-3 py-4 text-base font-bold text-slate-700 border-b border-slate-50 hover:text-primary transition-colors">FAQ</Link>
               <div className="grid grid-cols-2 gap-4 p-4">
                 <Link to="/quote" className="btn-primary !text-sm !py-3">Boiler Quote</Link>
-                <a href="tel:01724622069" className="btn-secondary !text-sm !py-3 text-center">Call Now</a>
+                <a href="tel:01724622069" className="btn-secondary !text-sm !py-3 text-center" aria-label="Call Now: 01724 622069">Call Now</a>
               </div>
             </div>
           </div>

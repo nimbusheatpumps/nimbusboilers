@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CallToAction from './CallToAction';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const BoilerFinanceScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -192,9 +198,11 @@ const BoilerFinanceScunthorpe = () => {
               aria-label="Toggle navigation menu"
               aria-expanded={menuActive}
               aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-white" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-white" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -261,7 +269,7 @@ const BoilerFinanceScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="/images/hero-home.webp" alt="boiler finance Scunthorpe 0% monthly payments" style={{width: '100%', height: 'auto', borderRadius: '8px'}} loading="lazy" />
+              <img decoding="async" src="/images/hero-home.webp" alt="Premium gas boiler installation Scunthorpe home heating" style={{width: '100%', height: 'auto', borderRadius: '8px'}} loading="lazy" />
             </div>
           </div>
         </section>
@@ -344,7 +352,16 @@ const BoilerFinanceScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer" aria-hidden={faqActive !== index} dangerouslySetInnerHTML={{__html: faq.answer}} />
                 </div>
               ))}

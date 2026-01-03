@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import QuoteForm from './QuoteForm';
+import { 
+  PlusIcon, 
+  MinusIcon, 
+  Bars3Icon, 
+  XMarkIcon 
+} from '@heroicons/react/24/outline';
 
 const CombiBoilerInstallationScunthorpe = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -90,9 +96,11 @@ const CombiBoilerInstallationScunthorpe = () => {
               <img decoding="async" src="/images/nimbus-logo.webp" alt="Nimbus Boilers - Combi Boiler Installation Scunthorpe" className="nimbus-logo" loading="lazy" />
             </a>
             <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation menu" aria-expanded={menuActive} aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+              {menuActive ? (
+                <XMarkIcon className="h-6 w-6 text-white" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-white" />
+              )}
             </button>
             <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
               <li className="nimbus-menu-item">
@@ -126,9 +134,9 @@ const CombiBoilerInstallationScunthorpe = () => {
           <div className="nimbus-cta-container">
             <div className="nimbus-cta-row">
               <a href="/quote" className="nimbus-cta nimbus-cta-primary">Combi Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Get Quote</a>
+              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary" aria-label="Get Quote: Contact us for a free quote">Get Quote</a>
               <a href="mailto:info@nimbusboilers.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
+              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary" aria-label="Call Now: 01724 622069">Call Now</a>
             </div>
           </div>
         </div>
@@ -172,14 +180,14 @@ const CombiBoilerInstallationScunthorpe = () => {
               </div>
             </div>
             <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="/images/hero-install.webp" alt="combi boiler installation Scunthorpe expert fitters" style={{width: '100%', height: 'auto', borderRadius: '8px'}} loading="lazy" />
+              <img decoding="async" src="/images/hero-install.webp" alt="Professional combi boiler installation Scunthorpe North Lincolnshire" style={{width: '100%', height: 'auto', borderRadius: '8px'}} loading="lazy" />
             </div>
           </div>
         </section>
         <section className="benefits-section section nimbus-section-base">
           <div style={{maxWidth: '1400px', margin: '0 auto'}}>
             <h2 className="section-heading section-heading--spaced">Benefits of Combi Boiler Installation</h2>
-            <img decoding="async" src="/images/hero-home.webp" alt="combi boiler benefits space saving efficiency" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
+            <img decoding="async" src="/images/hero-home.webp" alt="Premium gas boiler installation Scunthorpe home heating" style={{width: '100%', maxWidth: '600px', height: 'auto', margin: '0 auto 30px', borderRadius: '8px'}} loading="lazy" />
             <p className="section-text">Upgrade to a modern combi boiler for <strong>space-saving</strong>, <strong>high efficiency</strong> and <strong>instant hot water</strong>.</p>
             <ul className="section-list">
               <li><strong>Space-saving:</strong> No hot water tank or cylinder needed.</li>
@@ -238,7 +246,16 @@ const CombiBoilerInstallationScunthorpe = () => {
             <div className="faq-accordion">
               {faqData.map((faq, index) => (
                 <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
+                  <h3 className="faq-question flex justify-between items-center" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>
+                    {faq.question}
+                    <span>
+                      {faqActive === index ? (
+                        <MinusIcon className="h-5 w-5" />
+                      ) : (
+                        <PlusIcon className="h-5 w-5" />
+                      )}
+                    </span>
+                  </h3>
                   <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
                 </div>
               ))}
