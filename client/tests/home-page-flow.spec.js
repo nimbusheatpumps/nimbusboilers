@@ -30,7 +30,8 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
     await expect(page.locator('.why-choose-nimbus-boilers')).toBeVisible();
     await expect(page.locator('.why-choose-nimbus-boilers h2.section-heading')).toContainText('Why Choose Nimbus Boilers in Scunthorpe?');
     await expect(page.locator('.why-choose-nimbus-boilers .grid')).toBeVisible();
-    await expect(page.locator('.why-choose-nimbus-boilers .grid > div')).toHaveCount(4);
+    const whyChooseItems = page.locator('.why-choose-nimbus-boilers .grid > div, .why-choose-nimbus-boilers .grid > li');
+    await expect(whyChooseItems).toHaveCount(4);
     await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Instant Online Quote');
     await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Free ECO4');
     await expect(page.locator('.why-choose-nimbus-boilers')).toContainText('Same-Day Response');
@@ -80,7 +81,8 @@ test.describe('Home Page Flow: Hero → CTA → Services → Testimonials (8 rev
     await expect(mpage.locator('.why-choose-nimbus-boilers')).toBeVisible();
     await expect(mpage.locator('.why-choose-nimbus-boilers h2.section-heading')).toContainText('Why Choose Nimbus Boilers in Scunthorpe?');
     await expect(mpage.locator('.why-choose-nimbus-boilers .grid')).toBeVisible();
-    await expect(mpage.locator('.why-choose-nimbus-boilers .grid > div')).toHaveCount(4);
+    const mWhyChooseItems = mpage.locator('.why-choose-nimbus-boilers .grid > div, .why-choose-nimbus-boilers .grid > li');
+    await expect(mWhyChooseItems).toHaveCount(4);
     await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Instant Online Quote');
     await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Free ECO4');
     await expect(mpage.locator('.why-choose-nimbus-boilers')).toContainText('Same-Day Response');

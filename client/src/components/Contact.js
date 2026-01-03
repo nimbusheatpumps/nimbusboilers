@@ -33,20 +33,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto bg-white shadow-2xl rounded-3xl p-8 md:p-12">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 text-center">Customer Feedback</h1>
-        <p className="text-xl text-gray-600 mb-12 text-center">Share your experience with our boiler service Scunthorpe. Your review helps us serve you better!</p>
+    <div className="min-h-screen bg-slate-50 section-padding px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto bg-white shadow-premium rounded-3xl p-8 md:p-16 border border-slate-100">
+        <h1 className="text-center mb-6">Customer Feedback</h1>
+        <p className="section-subheading !mb-12">Share your experience with our boiler service. Your review helps us serve you better!</p>
         {message && (
           <div className={`p-6 rounded-2xl mb-8 font-medium text-center ${
-            message.includes('successfully') ? 'bg-green-100 border-2 border-green-300 text-green-800' : 'bg-red-100 border-2 border-red-300 text-red-800'
+            message.includes('successfully') ? 'bg-green-50 border border-green-200 text-green-800' : 'bg-red-50 border border-red-200 text-red-800'
           }`}>
             {message}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-lg font-semibold text-gray-900 mb-3">Full Name</label>
+            <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
             <input
               type="text"
               id="name"
@@ -54,12 +54,12 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 shadow-sm"
+              className="input-field"
               placeholder="Enter your full name"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-lg font-semibold text-gray-900 mb-3">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
             <input
               type="email"
               id="email"
@@ -67,21 +67,21 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 shadow-sm"
+              className="input-field"
               placeholder="your@email.com"
             />
           </div>
           <div>
-            <label htmlFor="rating" className="block text-lg font-semibold text-gray-900 mb-3">Rating</label>
+            <label htmlFor="rating" className="block text-sm font-bold text-slate-700 mb-2">Rating</label>
             <select
               id="rating"
               name="rating"
               value={formData.rating}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 shadow-sm appearance-none bg-white"
+              className="input-field appearance-none bg-white"
             >
-              <option value={5}>⭐⭐⭐⭐⭐ Excellent - Best boiler service Scunthorpe!</option>
+              <option value={5}>⭐⭐⭐⭐⭐ Excellent</option>
               <option value={4}>⭐⭐⭐⭐ Good</option>
               <option value={3}>⭐⭐⭐ Average</option>
               <option value={2}>⭐⭐ Poor</option>
@@ -89,24 +89,25 @@ const Contact = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="review" className="block text-lg font-semibold text-gray-900 mb-3">Your Review</label>
+            <label htmlFor="review" className="block text-sm font-bold text-slate-700 mb-2">Your Review</label>
             <textarea
               id="review"
               name="review"
-              rows={8}
+              rows={6}
               value={formData.review}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 shadow-sm resize-vertical"
-              placeholder="Review our boiler service Scunthorpe. Tell us about your experience with Gas Boiler Service Scunthorpe, installation, repair, or maintenance. How can we improve?"
+              className="input-field resize-none"
+              placeholder="Tell us about your experience..."
             />
           </div>
           <button
             type="submit"
+            id="feedback-submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-6 px-8 rounded-2xl font-bold text-xl shadow-xl hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="btn-primary w-full py-4 text-lg"
           >
-            {loading ? 'Submitting Your Feedback...' : 'Submit Review'}
+            {loading ? 'Submitting...' : 'Submit Review'}
           </button>
         </form>
       </div>

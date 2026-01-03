@@ -30,10 +30,10 @@ const Testimonials = () => {
           id: 'ChIJEWnr9yN396sRQM7LYNrsuWA',
           map: null,
           requestOptions: {
-            fields: ['reviews', 'name', 'rating']
+            fields: ['reviews', 'rating']
           }
         });
-        const details = await place.fetchFields({ fields: ['reviews', 'name', 'rating'] });
+        const details = await place.fetchFields({ fields: ['reviews', 'rating'] });
         console.log(`# Live Google Reviews fetched: ${details.reviews?.length || 0}`);
         if (details.reviews && details.reviews.length > 0) {
           setLiveReviews(details.reviews.slice(0, 5));
@@ -133,45 +133,41 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100" aria-labelledby="testimonials-title">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <h2 id="testimonials-title" className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-          What Our Customers Say
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
-          {displayedTestimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 md:p-10 text-center group border border-gray-100 hover:border-blue-200"
-              role="article"
-              aria-label={`Testimonial by ${testimonial.name}`}
-            >
-              <div className="text-3xl md:text-4xl text-yellow-400 mb-6 flex justify-center">
-                <span aria-label={`${testimonial.stars} out of 5 stars`}>{renderStars(testimonial.stars)}</span>
-              </div>
-              <blockquote className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed italic font-medium">
-                "{testimonial.text}"
-              </blockquote>
-              <div className="flex flex-col items-center space-y-1">
-                <h3 className="font-bold text-xl md:text-2xl text-gray-900">
-                  {testimonial.name}
-                </h3>
-                {testimonial.date && (
-                  <time className="text-sm text-gray-500 font-medium" dateTime={testimonial.dateTime || testimonial.date.replace(/ /g, 'T00:00:00')}>
-                    {testimonial.date}
-                  </time>
-                )}
-              </div>
+    <div className="testimonials-section testimonials-grid" aria-labelledby="testimonials-title">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {displayedTestimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="card-premium text-center flex flex-col items-center !p-10"
+            role="article"
+            aria-label={`Testimonial by ${testimonial.name}`}
+          >
+            <div className="text-3xl text-yellow-400 mb-8 flex justify-center">
+              <span aria-label={`${testimonial.stars} out of 5 stars`}>{renderStars(testimonial.stars)}</span>
             </div>
-          ))}
-        </div>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          suppressHydrationWarning={true}
-        />
+            <blockquote className="text-lg text-slate-600 mb-10 leading-relaxed italic flex-grow">
+              "{testimonial.text}"
+            </blockquote>
+            <div className="flex flex-col items-center pt-6 border-t border-slate-100 w-full">
+              <h3 className="font-black text-xl text-slate-900 mb-1">
+                {testimonial.name}
+              </h3>
+              {testimonial.date && (
+                <time className="text-sm text-slate-400 font-bold uppercase tracking-widest" dateTime={testimonial.dateTime || testimonial.date.replace(/ /g, 'T00:00:00')}>
+                  {testimonial.date}
+                </time>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+      
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        suppressHydrationWarning={true}
+      />
+    </div>
   );
 };
 

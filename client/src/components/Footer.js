@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Chat from './Chat';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const loadedRef = useRef(false);
@@ -563,72 +564,64 @@ const Footer = () => {
         </script>
       </Helmet>
       <style dangerouslySetInnerHTML={{__html: 'footer div.text-xs { color: #ffffff !important; } footer a.group span { color: #ffffff !important; } footer a.group:hover span { color: #4ade80 !important; }'}} />
-      <footer className="bg-gray-900 text-white company-details-section">
-        <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-          {/* Gas Safe Trust Section */}
-          <section className="text-center mb-12">
-            <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-10 shadow-2xl border border-green-500/20">
-              <div className="flex flex-col lg:flex-row items-center gap-8 justify-center">
-                <div className="flex items-center gap-6">
-                  <img
-                    src="/gas-safe-logo.svg"
-                    alt="Official Gas Safe Register Logo"
-                    className="h-20 w-auto flex-shrink-0"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-2">
-                      Gas Safe Registered Engineer
-                    </h3>
-                    <p className="text-xl font-bold text-green-400 tracking-wide">#966812</p>
-                  </div>
+      <footer className="bg-navy text-white company-details-section">
+        <div className="section-container section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            {/* Gas Safe Trust Section */}
+            <div className="bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 flex flex-col md:flex-row items-center gap-8 shadow-2xl">
+              <div className="flex items-center gap-6">
+                <img
+                  src="/gas-safe-logo.svg"
+                  alt="Official Gas Safe Register Logo"
+                  className="h-20 w-auto flex-shrink-0"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">
+                    Gas Safe Registered
+                  </h3>
+                  <p className="text-secondary font-black tracking-[0.2em] text-lg">#966812</p>
                 </div>
-                <a
-                  href="https://www.gassaferegister.co.uk/search-register/?search=966812"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap flex items-center gap-2"
-                  aria-label="Verify Here - Verify our Gas Safe registration #966812 on the official website"
-                >
-                  Verify Here
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+              </div>
+              <a
+                href="https://www.gassaferegister.co.uk/search-register/?search=966812"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary !px-8 !py-4 w-full md:w-auto whitespace-nowrap shadow-xl"
+                aria-label="Verify our Gas Safe registration"
+              >
+                Verify Registration
+              </a>
+            </div>
+
+            {/* Contact Info */}
+            <div className="text-center lg:text-left space-y-6">
+              <h3 className="text-3xl font-extrabold">Nimbus Boilers & Heat Pumps</h3>
+              <p className="text-slate-400 text-lg max-w-md mx-auto lg:mx-0">Expert boiler installation and repair services across Scunthorpe and North Lincolnshire.</p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-8">
+                <a href="tel:01724622069" className="text-white hover:text-secondary transition-colors font-bold text-lg flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  01724 622069
+                </a>
+                <a href="mailto:info@nimbusheatpumps.co.uk" className="text-white hover:text-secondary transition-colors font-bold text-lg flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  info@nimbusheatpumps.co.uk
                 </a>
               </div>
             </div>
-          </section>
-          <div className="text-xs !text-white text-center md:text-left mt-2 max-w-4xl mx-auto" style={{color: '#ffffff'}}>
-            Calls recorded for training and quality purposes.
           </div>
-          {/* Social Links */}
-          <section className="text-center mb-8">
-            <div className="max-w-md mx-auto flex justify-center space-x-6 md:space-x-8">
-              <a
-                href="https://x.com/NimbusHeatPumps"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 !text-white hover:text-green-400 hover:scale-105 transition-all duration-300 font-medium" style={{color: 'white'}}
-                aria-label="Follow @NimbusHeatPumps on X"
-              >
-                <svg
-                  className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                <span style={{color: '#ffffff'}}>@NimbusHeatPumps</span>
-              </a>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p className="text-sm text-slate-500">&copy; 2025 Nimbus Boilers & Heat Pumps Ltd. All rights reserved.</p>
+            <div className="flex gap-10">
+              <Link to="/privacy-policy" className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Terms & Conditions</Link>
+              <a href="https://x.com/NimbusHeatPumps" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Twitter</a>
             </div>
-          </section>
-          {/* Copyright */}
-          <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-sm !text-white">&copy; 2025 Nimbus Boilers & Heat Pumps Ltd. All rights reserved | <a href="/privacy" className="hover:text-green-400 transition-colors !text-white">Privacy</a> | <a href="/terms" className="hover:text-green-400 transition-colors !text-white">Terms</a></p>
+          </div>
+          <div className="mt-10 text-center">
+            <p className="text-[11px] text-slate-600 uppercase tracking-[0.3em] font-bold">Calls recorded for training and quality purposes.</p>
           </div>
         </div>
       </footer>

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import CallToAction from './CallToAction';
-import QuoteForm from './QuoteForm';
 import { LoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 
 const AreasCovered = () => {

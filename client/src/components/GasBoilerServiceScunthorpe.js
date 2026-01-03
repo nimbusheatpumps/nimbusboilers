@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import QuoteForm from './QuoteForm';
+import { Link } from 'react-router-dom';
 
 const GasBoilerServiceScunthorpe = () => {
-  const [menuActive, setMenuActive] = useState(false);
-  const [dropdownActive, setDropdownActive] = useState(null);
   const [faqActive, setFaqActive] = useState(null);
-
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  };
-
-  const toggleDropdown = (index) => {
-    setDropdownActive(dropdownActive === index ? null : index);
-  };
 
   const toggleFaq = (index) => {
     setFaqActive(faqActive === index ? null : index);
@@ -55,373 +46,92 @@ const GasBoilerServiceScunthorpe = () => {
       <Helmet>
         <title>Gas Boiler Service Scunthorpe | Annual Boiler Servicing North Lincolnshire | Nimbus Boilers & Heat Pumps</title>
         <meta name="description" content="Expert gas boiler service Scunthorpe by Gas Safe registered engineers. Annual boiler servicing, safety checks and maintenance in North Lincolnshire. Fast, reliable service. Free quote." />
-        <meta name="keywords" content="gas boiler service Scunthorpe, boiler service North Lincolnshire, Gas Safe boiler service, annual boiler servicing Scunthorpe, boiler maintenance North Lincolnshire, emergency boiler service" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://nimbusheatpumps.co.uk/gas-boiler-service-scunthorpe/" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://nimbusheatpumps.co.uk/#organization",
-            "name": "Nimbus Heat Pumps Ltd",
-            "alternateName": "Nimbus Boilers & Heat Pumps",
-            "url": "https://nimbusheatpumps.co.uk/",
-            "logo": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png",
-            "description": "Gas Safe registered boiler service, repair and installation services in Scunthorpe and North Lincolnshire. Annual servicing, emergency response and energy-efficient upgrades.",
-            "image": "https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg",
-            "telephone": "+44 7487 546550",
-            "email": "info@nimbusheatpumps.co.uk",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "3 Crossbeck Road",
-              "addressLocality": "Scunthorpe",
-              "addressRegion": "North Lincolnshire",
-              "postalCode": "DN16 3HR",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "53.5723",
-              "longitude": "-0.6355"
-            },
-            "areaServed": [
-              {
-                "@type": "State",
-                "name": "North Lincolnshire"
-              },
-              {
-                "@type": "City",
-                "name": "Scunthorpe"
-              }
-            ],
-            "makesOffer": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gas Boiler Service Scunthorpe",
-                  "description": "Annual servicing for gas boilers in Scunthorpe by Gas Safe engineers."
-                }
-              }
-            ],
-            "hasCredential": [
-              {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Gas Safe Registered",
-                "credentialCategory": "license"
-              }
-            ],
-            "priceRange": "£",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "GBP",
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "17:00"
-            },
-            "sameAs": [
-              "https://x.com/NimbusHeatPumps",
-              "https://www.facebook.com/profile.php?id=61579773217395"
-            ]
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Gas Boiler Service Scunthorpe",
-            "provider": {
-              "@id": "https://nimbusheatpumps.co.uk/#organization",
-              "@type": "LocalBusiness"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Scunthorpe, North Lincolnshire"
-            },
-            "serviceType": "Gas Boiler Servicing",
-            "description": "Professional annual gas boiler service and maintenance by Gas Safe registered engineers serving Scunthorpe and North Lincolnshire. Includes safety inspection, efficiency testing and cleaning.",
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "GBP",
-              "price": "80-150",
-              "itemConditioned": "https://schema.org/NewCondition"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
       </Helmet>
-      {/* Navigation - same as model */}
-      <nav className="nimbus-nav" aria-label="Main navigation">
-        {/* Copy the entire nav from model lines 169-391 */}
-        <div className="nimbus-nav-container">
-          <div className="nimbus-nav-inner">
-            <a href="/" className="nimbus-logo-link" aria-label="Nimbus Boilers & Heat Pumps - Home">
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/Nimbus-Heat-Pumps-Logo.png"
-                    alt="Nimbus Boilers & Heat Pumps - Gas Boiler Service Scunthorpe"
-                    className="nimbus-logo" loading="lazy" />
-            </a>
-            <button className={`nimbus-mobile-toggle ${menuActive ? 'active' : ''}`}
-                    onClick={toggleMenu}
-                    aria-label="Toggle navigation menu"
-                    aria-expanded={menuActive}
-                    aria-controls="nimbusMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <ul className={`nimbus-menu ${menuActive ? 'active' : ''}`} id="nimbusMenu">
-              {/* Copy menu items from model */}
-              <li className="nimbus-menu-item">
-                <a href="https://nimbusheatpumps.co.uk/faq/" className="nimbus-link">Air Source Heat Pumps FAQ</a>
-              </li>
-              <li className="nimbus-menu-item">
-                <a href="https://nimbusheatpumps.co.uk/areas-we-cover/" className="nimbus-link">Areas We Cover</a>
-              </li>
-              <li className="nimbus-menu-item">
-                <a href="https://nimbusheatpumps.co.uk/boiler-upgrade-scheme-eligibility-7500-heat-pump-grants-scunthorpe/"
-                    className="nimbus-link">£7,500 Boiler Upgrade Scheme Grants in Scunthorpe</a>
-              </li>
-              <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 0 ? 'dropdown-active' : ''}`}>
-                <a href="#" className="nimbus-link" onClick={() => toggleDropdown(0)}>
-                  Heat Pump & Boiler Manufacturers <span>▼</span>
-                </a>
-                <ul className="nimbus-dropdown">
-                  {/* Copy dropdown items */}
-                  <li className="nimbus-dropdown-item">
-                    <a href="https://www.alpha-innovation.co.uk/products-category/air-source-heat-pumps"
-                      className="nimbus-dropdown-link"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Alpha Heat Pumps
-                    </a>
-                  </li>
-                  {/* ... all other dropdown items same as model ... */}
-                </ul>
-              </li>
-              <li className="nimbus-menu-item">
-                <a href="/" className="nimbus-link">Home</a>
-              </li>
-              <li className={`nimbus-menu-item nimbus-has-dropdown ${dropdownActive === 1 ? 'dropdown-active' : ''}`}>
-                <a href="#" className="nimbus-link" onClick={() => toggleDropdown(1)}>
-                  Policies <span>▼</span>
-                </a>
-                <ul className="nimbus-dropdown">
-                  {/* Copy policies */}
-                </ul>
-              </li>
-              <li className="nimbus-menu-item nimbus-social-item">
-                <div className="nimbus-social">
-                  {/* Copy social links */}
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="nimbus-cta-container">
-            <div className="nimbus-cta-row">
-              <a href="/quote" className="nimbus-cta nimbus-cta-primary">Gas Boiler Quote</a>
-              <a href="#contact-form" className="nimbus-cta nimbus-cta-secondary">Heat Pump Quote</a>
-              <a href="mailto:info@nimbusheatpumps.co.uk" className="nimbus-cta nimbus-cta-primary">Email Us</a>
-              <a href="tel:01724622069" className="nimbus-cta nimbus-cta-secondary">Call Now</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      {/* Install Banner - adjust for service */}
-      <div className="install-banner">
-        <div className="banner-wrapper">
-          <h2 className="banner-label">Every boiler service includes:</h2>
-          <div className="banner-scroller" aria-live="polite">
-            <div className="banner-track">
-              <div className="banner-items">
-                <span className="banner-item">Flue gas analysis</span>
-                <span className="banner-item">Safety device check</span>
-                <span className="banner-item">Combustion clean</span>
-                <span className="banner-item">Pressure test</span>
-                <span className="banner-item">Efficiency report</span>
-              </div>
-              <div className="banner-items" aria-hidden="true">
-                <span className="banner-item">Flue gas analysis</span>
-                <span className="banner-item">Safety device check</span>
-                <span className="banner-item">Combustion clean</span>
-                <span className="banner-item">Pressure test</span>
-                <span className="banner-item">Efficiency report</span>
+
+      <main className="bg-slate-50">
+        {/* Hero Section */}
+        <section className="bg-white section-padding">
+          <div className="section-container flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="mb-6">Gas Boiler Service Scunthorpe</h1>
+              <p className="text-xl md:text-2xl text-slate-600 font-medium mb-8">Annual Boiler Servicing North Lincolnshire | Gas Safe Engineers</p>
+              <p className="text-lg text-slate-500 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">Professional gas boiler service in Scunthorpe by certified Gas Safe engineers. Annual servicing ensures safety, efficiency and compliance.</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#contact-form" className="btn-primary">Book Service</a>
+                <a href="/quote" className="btn-outline">Get Instant Quote</a>
               </div>
             </div>
-          </div>
-        </div>
-        <p className="banner-footnote">
-          All work Gas Safe certified to UK safety standards.
-        </p>
-      </div>
-      {/* Main Content - adjust texts */}
-      <main>
-        {/* Hero */}
-        <section className="hero-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
-            <div style={{flex: '1 1 400px', textAlign: 'center'}}>
-              <h1 className="section-heading section-heading--hero">Gas Boiler Service Scunthorpe</h1>
-              <h2 className="section-subheading">Annual Boiler Servicing North Lincolnshire | Gas Safe Engineers</h2>
-              <p className="section-text section-text--intro section-text--compact">Professional gas boiler service in Scunthorpe by certified Gas Safe engineers. Annual servicing ensures safety, efficiency and compliance. Serving North Lincolnshire. Get your service booked today.</p>
-              <div className="section-cta-group">
-                <a href="#contact-form" className="cta-button cta-button--nowrap">Get Free Boiler Service Quote</a>
-                <a href="/quote" className="cta-button cta-button--nowrap">Instant Quote</a>
-              </div>
-            </div>
-            <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
-              <img decoding="async" src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="gas boiler service Scunthorpe by Nimbus" style={{width: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '8px'}} loading="lazy" />
+            <div className="flex-1 w-full max-w-xl">
+              <img src="https://nimbusheatpumps.co.uk/wp-content/uploads/2025/06/iStock-2211126281-scaled.jpg" alt="Gas boiler service Scunthorpe" className="w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl border-8 border-slate-50" loading="lazy" />
             </div>
           </div>
         </section>
-        {/* Services */}
-        <section className="our-services-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Gas Boiler Service Services in Scunthorpe</h2>
-            <div className="services-grid">
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Annual Boiler Service Scunthorpe</h3>
-                <p className="card-text">Comprehensive annual servicing for gas boilers to maintain peak performance.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Gas Safety Certificates</h3>
-                <p className="card-text">CP12 Gas Safety Certificates for landlords and homeowners.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Boiler Maintenance Plans</h3>
-                <p className="card-text">Affordable service plans for peace of mind throughout the year.</p>
-              </div>
-              <div className="service-card">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin: '0 auto 20px'}}>
-                  <circle cx="12" cy="12" r="12" fill="#00a676"/>
-                  <path d="M6 12.5L10 16.5L18 7.5" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <h3 className="card-heading">Emergency Service Calls</h3>
-                <p className="card-text">24/7 response for urgent boiler servicing needs.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Expert section */}
-        <section className="expert-repair-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Expert Gas Boiler Service in Scunthorpe</h2>
-            <p className="section-text">Nimbus provides professional <strong>gas boiler service Scunthorpe</strong> and <strong>boiler service North Lincolnshire</strong>. Our Gas Safe engineers perform thorough annual services to keep your boiler safe and efficient.</p>
-            <p className="section-text">Annual servicing detects issues early, improves efficiency and ensures compliance.</p>
-            <h3 className="card-heading" style={{textAlign: 'center', marginBottom: '20px', fontSize: '22px'}}>Why Choose Nimbus Boiler Service?</h3>
-            <ul className="section-list">
-              <li><strong>Gas Safe Certified:</strong> Fully qualified engineers.</li>
-              <li><strong>Fixed Price Servicing:</strong> No surprises.</li>
-              <li><strong>12 Month Guarantee:</strong> On service work.</li>
-              <li><strong>Landlord Approved:</strong> CP12 certificates issued.</li>
-              <li><strong>Fast Booking:</strong> Same week appointments available.</li>
-            </ul>
-            <div className="section-cta-group">
-              <a href="#contact-form" className="cta-button cta-button--nowrap">Book Boiler Service</a>
-            </div>
-          </div>
-        </section>
-        {/* Service section */}
-        <section className="gas-service-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Benefits of Annual Boiler Servicing</h2>
-            <p className="section-text">Regular <strong>gas boiler service Scunthorpe</strong> keeps your heating reliable. Our service includes everything needed for safety and performance.</p>
-            <ul className="section-list">
-              <li>Safety compliance and Gas Safe certification</li>
-              <li>Energy efficiency improvements</li>
-              <li>Breakdown prevention</li>
-              <li>Warranty and insurance validity</li>
-              <li>Landlord CP12 certificates</li>
-            </ul>
-            <div className="section-cta-group">
-              <a href="#contact-form" className="cta-button cta-button--nowrap">Book Service Today</a>
-            </div>
-          </div>
-        </section>
-        {/* FAQs */}
-        <section className="faqs-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">Gas Boiler Service FAQs Scunthorpe</h2>
-            <div className="faq-accordion">
-              {faqData.map((faq, index) => (
-                <div key={index} className={`faq-item ${faqActive === index ? 'active' : ''}`}>
-                  <h3 className="faq-question" onClick={() => toggleFaq(index)} role="button" tabIndex="0" aria-expanded={faqActive === index} aria-controls={`faq-answer-${index}`}>{faq.question}</h3>
-                  <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} aria-hidden={faqActive !== index}>{faq.answer}</div>
+
+        {/* Services Section */}
+        <section className="bg-slate-50 section-padding">
+          <div className="section-container">
+            <h2 className="section-heading">Our Servicing Options</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { title: "Annual Service", text: "Comprehensive annual servicing for gas boilers." },
+                { title: "Safety Checks", text: "Thorough safety inspections and reports." },
+                { title: "Efficiency Tuning", text: "Optimise your boiler for lower energy bills." },
+                { title: "Landlord CP12", text: "Gas Safety Certificates for rental properties." }
+              ].map((service, i) => (
+                <div key={i} className="card-premium flex flex-col items-center text-center">
+                  <h3 className="text-xl mb-4">{service.title}</h3>
+                  <p className="text-slate-600 mb-0">{service.text}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Testimonials - same */}
-        <section className="testimonials-section section nimbus-section-base">
-          {/* Copy testimonials from model */}
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading section-heading--spaced">What Our Customers Say About Our Boiler Service</h2>
-            <div className="testimonials-carousel-wrapper">
-              <div className="testimonials-carousel">
-                {/* Copy testimonial cards */}
-                <div className="testimonial-card">
-                  <div className="testimonial-stars">★★★★★</div>
-                  <p>"Excellent service, thorough check and peace of mind." - Customer</p>
+
+        {/* FAQs Section */}
+        <section className="bg-white section-padding">
+          <div className="section-container max-w-4xl">
+            <h2 className="section-heading">Service FAQs</h2>
+            <div className="space-y-6">
+              {faqData.map((faq, i) => (
+                <div key={i} className="border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <button
+                    className="w-full px-8 py-6 text-left font-bold text-lg flex justify-between items-center hover:bg-slate-50 transition-colors"
+                    onClick={() => toggleFaq(i)}
+                  >
+                    <span className="text-slate-900">{faq.question}</span>
+                    <span className={`flex items-center justify-center w-8 h-8 rounded-full bg-primary/5 text-primary transform transition-transform duration-300 ${faqActive === i ? 'rotate-45 bg-primary text-white' : ''}`}>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v12M6 12h12" /></svg>
+                    </span>
+                  </button>
+                  {faqActive === i && (
+                    <div className="px-8 py-6 bg-slate-50/50 text-slate-600 border-t border-slate-100 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  )}
                 </div>
-                {/* more same */}
-              </div>
+              ))}
             </div>
-            <div className="section-cta-group section-cta-group--spaced">
-              <a href="https://share.google/yk7F28G9VpVstANKx" target="_blank" rel="noopener noreferrer" className="cta-button cta-button--nowrap">
-                Read all Google reviews
+          </div>
+        </section>
+
+        {/* Contact Now Section */}
+        <section id="contact-form" className="section-padding bg-navy text-white text-center">
+          <div className="section-container">
+            <h2 className="text-white mb-6">Ready to Book Your Boiler Service?</h2>
+            <p className="text-xl mb-10 text-slate-300 max-w-2xl mx-auto">
+              Don't wait for a breakdown. Ensure your boiler is safe and efficient with a professional service from Nimbus Boilers.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link to="/contact" className="btn-primary">
+                Contact Us
+              </Link>
+              <a href="tel:01724488050" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-navy">
+                Call 01724 488050
               </a>
             </div>
           </div>
         </section>
-        {/* Manufacturers same */}
-        <section className="manufacturers-section section nimbus-section-base">
-          {/* Copy from model */}
-        </section>
-        {/* Quote */}
-        <section className="free-quote-section section nimbus-section-base">
-          <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-            <h2 className="section-heading">Request Your Free Boiler Service Quote</h2>
-            <p className="section-text section-text--intro">Book your gas boiler service in Scunthorpe today.</p>
-            <div id="contact-form">
-              <QuoteForm />
-            </div>
-          </div>
-        </section>
       </main>
-      {/* Styles - copy entire <style jsx> from model lines 631-1910 */}
-      <style>{`
-        /* Paste the entire CSS from the model here */
-        :root {
-          --primary-green: #00a676;
-          /* ... all CSS same as model ... */
-        }
-        /* ... rest of CSS ... */
-      `}</style>
     </>
   );
 };
